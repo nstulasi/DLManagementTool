@@ -204,3 +204,105 @@ c205c42f3d55df1704f56.js" for 67.198.104.185 at 2012-08-07 05:38:33 +0000
 2012-08-07T06:34:22+00:00 app[web.1]: cache: [GET /meta/new] miss
 2012-08-07T06:34:23+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/favicon.ico dyno=web.1 queue=0 wait=0ms service=1ms status=304 bytes=0
 2012-08-07T06:34:23+00:00 app[web.1]: cache: [GET /favicon.ico] miss
+2012-08-07T07:05:08+00:00 app[web.1]: cache: [GET /assets/UDCore-5db4ea947737bbc053c179b9b85b8a65.js] miss
+2012-08-07T07:05:08+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/UDCore-5db4ea947737bbc053c179b9b85b8a65.js dyno=web.1 queue=0 wait=0ms service=6ms status=304 bytes=0
+2012-08-07T07:05:08+00:00 app[web.1]: 
+2012-08-07T07:05:08+00:00 app[web.1]: 
+2012-08-07T07:05:08+00:00 app[web.1]: Started GET "/assets/UDModules-8e25da3f5f2345c3f85d94af3f48db53.js" for 67.198.104.185 at 2012-08-07 07:05:08 +0000
+2012-08-07T07:05:08+00:00 app[web.1]: cache: [GET /assets/UDModules-8e25da3f5f2345c3f85d94af3f48db53.js] miss
+2012-08-07T07:05:08+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/UDModules-8e25da3f5f2345c3f85d94af3f48db53.js dyno=web.1 queue=0 wait=0ms service=2ms status=304 bytes=0
+2012-08-07T07:05:08+00:00 app[web.1]: 
+2012-08-07T07:05:08+00:00 app[web.1]: 
+2012-08-07T07:05:08+00:00 app[web.1]: Started GET "/assets/nicEdit-48627f2013a629fd8ee4400e84931e23.js" for 67.198.104.185 at 2012-08-07 07:05:08 +0000
+2012-08-07T07:05:08+00:00 app[web.1]: cache: [GET /assets/nicEdit-48627f2013a629fd8ee4400e84931e23.js] miss
+2012-08-07T07:05:08+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/nicEdit-48627f2013a629fd8ee4400e84931e23.js dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
+2012-08-07T07:05:08+00:00 app[web.1]: 
+2012-08-07T07:05:08+00:00 app[web.1]: Started GET "/assets/locale-23fab709d279260c3a1cb21f2f744e18.js" for 67.198.104.185 at 2012-08-07 07:05:08 +0000
+2012-08-07T07:05:08+00:00 app[web.1]: 
+2012-08-07T07:05:08+00:00 app[web.1]: cache: [GET /assets/locale-23fab709d279260c3a1cb21f2f744e18.js] miss
+2012-08-07T07:05:08+00:00 app[web.1]: 
+2012-08-07T07:05:08+00:00 app[web.1]: 
+2012-08-07T07:05:08+00:00 app[web.1]: Started GET "/assets/popup-6f57e8eca216630edc2baa6235f138eb.js" for 67.198.104.185 at 2012-08-07 07:05:08 +0000
+2012-08-07T07:05:08+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/locale-23fab709d279260c3a1cb21f2f744e18.js dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
+2012-08-07T07:05:08+00:00 app[web.1]: cache: [GET /assets/popup-6f57e8eca216630edc2baa6235f138eb.js] miss
+2012-08-07T07:05:08+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/popup-6f57e8eca216630edc2baa6235f138eb.js dyno=web.1 queue=0 wait=0ms service=5ms status=304 bytes=0
+2012-08-07T07:05:09+00:00 app[web.1]: cache: [GET /assets/blueprint/print-d2906861201301d0dab5194f4f57d51e.css] miss
+2012-08-07T07:05:09+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/blueprint/print-d2906861201301d0dab5194f4f57d51e.css dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
+2012-08-07T07:05:10+00:00 app[web.1]: 
+2012-08-07T07:05:10+00:00 app[web.1]: 
+2012-08-07T07:05:10+00:00 app[web.1]: Started GET "/__history__.html?0" for 67.198.104.185 at 2012-08-07 07:05:10 +0000
+2012-08-07T07:05:10+00:00 app[web.1]: 
+2012-08-07T07:05:10+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/__history__.html"):
+2012-08-07T07:05:10+00:00 app[web.1]:   
+2012-08-07T07:05:10+00:00 app[web.1]: 
+2012-08-07T07:05:10+00:00 app[web.1]: 
+2012-08-07T07:05:10+00:00 app[web.1]: cache: [GET /__history__.html?0] miss
+2012-08-07T07:05:10+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/logo-3d64b2c8715c64bd3f6a704b8ab14f2e.png dyno=web.1 queue=0 wait=0ms service=1ms status=304 bytes=0
+2012-08-07T07:05:10+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/__history__.html?0 dyno=web.1 queue=0 wait=0ms service=4ms status=404 bytes=728
+2012-08-07T07:05:10+00:00 app[web.1]: cache: [GET /assets/logo-3d64b2c8715c64bd3f6a704b8ab14f2e.png] miss
+2012-08-07T07:05:10+00:00 app[web.1]: 
+2012-08-07T07:05:10+00:00 app[web.1]: Started GET "/projects" for 67.198.104.185 at 2012-08-07 07:05:10 +0000
+2012-08-07T07:05:10+00:00 app[web.1]: 
+2012-08-07T07:05:10+00:00 app[web.1]: cache: [GET /projects] miss
+2012-08-07T07:05:10+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/projects dyno=web.1 queue=0 wait=0ms service=42ms status=200 bytes=184
+2012-08-07T07:05:10+00:00 app[web.1]: cache: [GET /assets/page_edit-7aa6a6e82f6226bb95cc0921facae29f.png] miss
+2012-08-07T07:05:10+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/page_edit-7aa6a6e82f6226bb95cc0921facae29f.png dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=807
+2012-08-07T07:05:10+00:00 app[web.1]: cache: [GET /assets/cross-ba68777391efcf1a25f74e7e54314eb6.png] miss
+2012-08-07T07:05:10+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/cross-ba68777391efcf1a25f74e7e54314eb6.png dyno=web.1 queue=0 wait=0ms service=1ms status=200 bytes=655
+2012-08-07T07:05:10+00:00 app[web.1]: cache: [GET /assets/sort_asc.png] miss
+2012-08-07T07:05:10+00:00 app[web.1]: cache: [GET /assets/sort_both.png] miss
+2012-08-07T07:05:10+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/sort_asc.png dyno=web.1 queue=0 wait=0ms service=1ms status=200 bytes=1118
+2012-08-07T07:05:10+00:00 app[web.1]: cache: [GET /assets/back_disabled.png] miss
+2012-08-07T07:05:10+00:00 app[web.1]: cache: [GET /assets/forward_disabled.png] miss
+2012-08-07T07:05:10+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/forward_disabled.png dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=1363
+2012-08-07T07:05:10+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/back_disabled.png dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=1361
+2012-08-07T07:05:10+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/sort_both.png dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=1136
+2012-08-07T07:05:10+00:00 app[web.1]: cache: [GET /assets/bar.png] miss
+2012-08-07T07:05:10+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/bar.png dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=2802
+2012-08-07T07:05:47+00:00 app[web.1]: 
+2012-08-07T07:05:47+00:00 app[web.1]: Started GET "/projects/new" for 67.198.104.185 at 2012-08-07 07:05:47 +0000
+2012-08-07T07:05:47+00:00 app[web.1]: 
+2012-08-07T07:05:47+00:00 app[web.1]: 
+2012-08-07T07:05:47+00:00 app[web.1]: ActionView::Template::Error (PG::Error: ERROR:  column "delegations.id" must appear in the GROUP BY clause or be used in an aggregate function
+2012-08-07T07:05:47+00:00 app[web.1]:     3: <div>People grouped by role <%=image_tag("group.png", :alt=>"People")%></div>
+2012-08-07T07:05:47+00:00 app[web.1]:     4: <%end%>
+2012-08-07T07:05:47+00:00 app[web.1]:     6: <%@uniq_roles = Delegation.find(:all,:group=>:role,:conditions=>["delegations.role IS NOT NULL AND project_id=?",current_project.id])%>
+2012-08-07T07:05:47+00:00 app[web.1]:   app/views/projects/_projects_sidemenu.html.erb:1:in `_app_views_projects__projects_sidemenu_html_erb___4352969323747750147_48395740'
+2012-08-07T07:05:47+00:00 app[web.1]:     9: 	<%if !@uniq_roles.nil?%>
+2012-08-07T07:05:47+00:00 app[web.1]: : SELECT "delegations".* FROM "delegations"  WHERE (delegations.role IS NOT NULL AND project_id=1) GROUP BY role):
+2012-08-07T07:05:47+00:00 app[web.1]:     5: <%if !current_project.nil?%>
+2012-08-07T07:05:47+00:00 app[web.1]:   app/views/projects/new.html.erb:1:in `_app_views_projects_new_html_erb___1167534281893308870_48417160'
+2012-08-07T07:05:47+00:00 app[web.1]:     7: <%end%>
+2012-08-07T07:05:47+00:00 app[web.1]:     8: <%if !current_project.nil?%>
+2012-08-07T07:0
+5:47+00:00 app[web.1]:   app/views/users/_users_sidemenu.html.erb:6:in `_app_views_users__users_sidemenu_html_erb___1532355987804465050_48388920'
+2012-08-07T07:05:47+00:00 app[web.1]:   app/views/projects/new.html.erb:2:in `block in _app_views_projects_new_html_erb___1167534281893308870_48417160'
+2012-08-07T07:05:47+00:00 app[web.1]:   app/controllers/projects_controller.rb:32:in `new'
+2012-08-07T07:05:47+00:00 app[web.1]: 
+2012-08-07T07:05:47+00:00 app[web.1]: 
+2012-08-07T07:05:47+00:00 app[web.1]: cache: [GET /projects/new] miss
+2012-08-07T07:05:47+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/projects/new dyno=web.1 queue=0 wait=0ms service=343ms status=500 bytes=728
+2012-08-07T07:05:48+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/favicon.ico dyno=web.1 queue=0 wait=0ms service=2ms status=304 bytes=0
+2012-08-07T07:05:48+00:00 app[web.1]: cache: [GET /favicon.ico] miss
+2012-08-07T07:05:51+00:00 app[web.1]: 
+2012-08-07T07:05:51+00:00 app[web.1]: 
+2012-08-07T07:05:51+00:00 app[web.1]: Started GET "/projects/new" for 67.198.104.185 at 2012-08-07 07:05:51 +0000
+2012-08-07T07:05:51+00:00 app[web.1]: 
+2012-08-07T07:05:51+00:00 app[web.1]: ActionView::Template::Error (PG::Error: ERROR:  column "delegations.id" must appear in the GROUP BY clause or be used in an aggregate function
+2012-08-07T07:05:51+00:00 app[web.1]: : SELECT "delegations".* FROM "delegations"  WHERE (delegations.role IS NOT NULL AND project_id=1) GROUP BY role):
+2012-08-07T07:05:51+00:00 app[web.1]:     3: <div>People grouped by role <%=image_tag("group.png", :alt=>"People")%></div>
+2012-08-07T07:05:51+00:00 app[web.1]:     4: <%end%>
+2012-08-07T07:05:51+00:00 app[web.1]:     5: <%if !current_project.nil?%>
+2012-08-07T07:05:51+00:00 app[web.1]:     7: <%end%>
+2012-08-07T07:05:51+00:00 app[web.1]:     6: <%@uniq_roles = Delegation.find(:all,:group=>:role,:conditions=>["delegations.role IS NOT NULL AND project_id=?",current_project.id])%>
+2012-08-07T07:05:51+00:00 app[web.1]:     8: <%if !current_project.nil?%>
+2012-08-07T07:05:51+00:00 app[web.1]:     9: 	<%if !@uniq_roles.nil?%>
+2012-08-07T07:05:51+00:00 app[web.1]:   app/views/users/_users_sidemenu.html.erb:6:in `_app_views_users__users_sidemenu_html_erb___1532355987804465050_48388920'
+2012-08-07T07:05:51+00:00 app[web.1]:   app/views/projects/new.html.erb:2:in `block in _app_views_projects_new_html_erb___1167534281893308870_48417160'
+2012-08-07T07:05:51+00:00 app[web.1]:   app/views/projects/_projects_sidemenu.html.erb:1:in `_app_views_projects__projects_sidemenu_html_erb___4352969323747750147_48395740'
+2012-08-07T07:05:51+00:00 app[web.1]:   app/views/projects/new.html.erb:1:in `_app_views_projects_new_html_erb___1167534281893308870_48417160'
+2012-08-07T07:05:51+00:00 app[web.1]:   app/controllers/projects_controller.rb:32:in `new'
+2012-08-07T07:05:51+00:00 app[web.1]: 
+2012-08-07T07:05:51+00:00 app[web.1]: 
+2012-08-07T07:05:51+00:00 app[web.1]: cache: [GET /projects/new] miss
+2012-08-07T07:05:51+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/projects/new dyno=web.1 queue=0 wait=0ms service=56ms status=500 bytes=728
