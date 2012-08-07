@@ -6,16 +6,6 @@ GIT
       actionpack (>= 2.3.0)
       json
 
-GIT
-  remote: https://github.com/jejacks0n/mercury.git
-  revision: 6d9c99fe20958ed87e4f1a05e9de19825af702ef
-  ref: 6d9c99fe20958ed87e4f1a05e9de19825af702ef
-  specs:
-    mercury-rails (0.3.1)
-      coffee-script
-      paperclip (>= 2.5.2)
-      rails (>= 3.1.0)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -58,9 +48,6 @@ GEM
     builder (3.0.0)
     carrierwave (0.5.8)
       activesupport (~> 3.0)
-    chosen-rails (0.9.8)
-      railties (~> 3.0)
-      thor (~> 0.14)
     client_side_validations (3.1.4)
     cocaine (0.2.1)
     coffee-rails (3.1.1)
@@ -186,7 +173,6 @@ DEPENDENCIES
   awesome_nested_set
   best_in_place
   carrierwave
-  chosen-rails
   client_side_validations
   coffee-rails (~> 3.1.1)
   event-calendar
@@ -196,7 +182,6 @@ DEPENDENCIES
   gon!
   gravatar_image_tag (= 0.1.0)
   jquery-rails
-  mercury-rails!
   meta_search
   nokogiri
   paperclip (~> 3.0)
