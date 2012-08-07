@@ -1153,9 +1153,6 @@ Functions needed to show a custom context menu.
 						})(this), $.vakata.context.settings.hide_onmouseleave);
 				}
 			})
-			.delegate("a", "click", function (e) { 
-				e.preventDefault(); 
-			})
 			.delegate("a", "mouseup", function (e) {
 				if(!$(this).blur().parent().hasClass("vakata-context-disabled") && $.vakata.context._execute($(this).attr("rel")) !== false) {
 					$.vakata.context.hide();

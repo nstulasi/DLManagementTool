@@ -49,7 +49,8 @@ Application.prototype._generateStructure = function(b) {
     e.setAttribute("id", "ud_tools_ul2");
     d.appendChild(f);
     d.appendChild(e);
-    g.appendChild(d);
+    if(g!=null){
+    g.appendChild(d);}
     this._tools_div = d;
     this._tools_ul1 = f;
     this._tools_ul2 = e;

@@ -8,7 +8,6 @@
 //= require jquery_ujs
 //= require best_in_place
 //= require rails.validations
-//= require_tree .
  
 $(document).ready(function() { $("#user_id").select2({
 					placeholder: "Choose user to assign task to",
