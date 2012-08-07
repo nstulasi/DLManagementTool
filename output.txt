@@ -1,0 +1,104 @@
+2012-08-07T05:38:33+00:00 app[web.1]: cache: [GET /assets/jquery.purr-c949f8a42176e5e654462b1572fc16ff.js] miss
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: Started GET "/assets/joint.all.min-147cc09daca67f66eaee673910eb1595.js" for 67.198.104.185 at 2012-08-07 05:38:33 +0000
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/joint.all.min-147cc09daca67f66eaee673910eb1595.js"):
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]:   
+2012-08-07T05:38:33+00:00 app[web.1]: cache: [GET /assets/joint.all.min-147cc09daca67f66eaee673910eb1595.js] miss
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/joint.all.min-147cc09daca67f66eaee673910eb1595.js dyno=web.1 queue=0 wait=0ms service=12ms status=404 bytes=728
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: Started GET "/assets/jquery.ui.widget-baf2c1cfea2ee57ee2ce4b6decd71764.js" for 67.198.104.185 at 2012-08-07 05:38:33 +0000
+2012-08-07T05:38:33+00:00 app[web.1]:   
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/jquery.ui.widget-baf2c1cfea2ee57ee2ce4b6decd71764.js"):
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: cache: [GET /assets/jquery.u
+i.widget-baf2c1cfea2ee57ee2ce4b6decd71764.js] miss
+2012-08-07T05:38:33+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/jquery.ui.widget-baf2c1cfea2ee57ee2ce4b6decd71764.js dyno=web.1 queue=0 wait=0ms service=11ms status=404 bytes=728
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: Started GET "/assets/jquery.iframe-transport-64a1cc5685ecf9c468291ae5c595d5e3.js" for 67.198.104.185 at 2012-08-07 05:38:33 +0000
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/jquery.iframe-transport-64a1cc5685ecf9c468291ae5c595d5e3.js"):
+2012-08-07T05:38:33+00:00 app[web.1]:   
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: cache: [GET /assets/jquery.iframe-transport-64a1cc5685ecf9c468291ae5c595d5e3.js] miss
+2012-08-07T05:38:33+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/jquery.iframe-transport-64a1cc5685ecf9c468291ae5c595d5e3.js dyno=web.1 queue=0 wait=0ms service=7ms status=404 bytes=728
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: Started GET "/assets/jquery.fileupload-825a31ae57c29e1c8b8a3ac392ba9ccc.js" for 67.198.104.185 at 2012-08-07 05:38:33 +0000
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/jquery.fileupload-825a31ae57c29e1c8b8a3ac392ba9ccc.js"):
+2012-08-07T05:38:33+00:00 app[web.1]:   
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: cache: [GET /assets/jquery.fileupload-825a31ae57c29e1c8b8a3ac392ba9ccc.js] miss
+2012-08-07T05:38:33+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/jquery.fileupload-825a31ae57c29e1c8b8a3ac392ba9ccc.js dyno=web.1 queue=0 wait=0ms service=5ms status=404 bytes=728
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: Started GET "/assets/jquery.fileupload-fp-9f07cff3ae49c6d17ec0329d714b9c3d.js" for 67.198.104.185 at 2012-08-07 05:38:33 +0000
+2012-08-07T05:38:33+00:00 app[web.1]:   
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: cache: [GET /assets/jquery.fileupload-fp-9f07cff3ae49c6d17ec0329d714b9c3d.js] miss
+2012-08-07T05:38:33+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/jquery.fileupload-fp-9f07cff3ae49c6d17ec0329d714b9c3d.js"):
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: Started GET "/assets/jquery.fileupload-ui-c10350d777f
+c205c42f3d55df1704f56.js" for 67.198.104.185 at 2012-08-07 05:38:33 +0000
+2012-08-07T05:38:33+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/jquery.fileupload-fp-9f07cff3ae49c6d17ec0329d714b9c3d.js dyno=web.1 queue=0 wait=0ms service=7ms status=404 bytes=728
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/jquery.fileupload-ui-c10350d777fc205c42f3d55df1704f56.js"):
+2012-08-07T05:38:33+00:00 app[web.1]:   
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: 
+2012-08-07T05:38:33+00:00 app[web.1]: cache: [GET /assets/jquery.fileupload-ui-c10350d777fc205c42f3d55df1704f56.js] miss
+2012-08-07T05:38:33+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/jquery.fileupload-ui-c10350d777fc205c42f3d55df1704f56.js dyno=web.1 queue=0 wait=0ms service=6ms status=404 bytes=728
+2012-08-07T05:38:35+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/group-7abc96bdd1cd64e44494ac3038b21d71.png dyno=web.1 queue=0 wait=0ms service=3ms status=304 bytes=0
+2012-08-07T05:38:35+00:00 app[web.1]: cache: [GET /assets/group-7abc96bdd1cd64e44494ac3038b21d71.png] miss
+2012-08-07T05:38:35+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/world-831cadb56144a3690f8370c9e1ee3700.png dyno=web.1 queue=0 wait=0ms service=2ms status=304 bytes=0
+2012-08-07T05:38:35+00
+:00 app[web.1]: cache: [GET /assets/world-831cadb56144a3690f8370c9e1ee3700.png] miss
+2012-08-07T05:38:35+00:00 app[web.1]: cache: [GET /assets/timeline_marker-7ba99cb533b57ee61291c76a721b34ae.png] miss
+2012-08-07T05:38:35+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/timeline_marker-7ba99cb533b57ee61291c76a721b34ae.png dyno=web.1 queue=0 wait=0ms service=1ms status=304 bytes=0
+2012-08-07T05:38:35+00:00 app[web.1]: cache: [GET /assets/table-34c3304155537d4b9ff57b45ccb8b038.png] miss
+2012-08-07T05:38:35+00:00 app[web.1]: cache: [GET /assets/page_white_zip-2c421c0fb8a6c30a38620b8ad8c6614e.png] miss
+2012-08-07T05:38:35+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/table-34c3304155537d4b9ff57b45ccb8b038.png dyno=web.1 queue=0 wait=0ms service=1ms status=304 bytes=0
+2012-08-07T05:38:35+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/page_white_zip-2c421c0fb8a6c30a38620b8ad8c6614e.png dyno=web.1 queue=0 wait=0ms service=2ms status=304 bytes=0
+2012-08-07T05:38:35+00:00 app[web.1]: cache: [GET /assets/lock-ec99724746dc8db767a77106b86edd72.png] miss
+2012-08-07T05:38:35+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/assets/lock-ec99724746dc8db767a77106b86edd72.png dyno=web.1 queue=0 wait=0ms service=6ms status=304 bytes=0
+2012-08-07T05:38:35+00:00 app[web.1]: 
+2012-08-07T05:38:35+00:00 app[web.1]: 
+2012-08-07T05:38:35+00:00 app[web.1]: Started GET "/__history__.html?0" for 67.198.104.185 at 2012-08-07 05:38:35 +0000
+2012-08-07T05:38:35+00:00 app[web.1]: 
+2012-08-07T05:38:35+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/__history__.html"):
+2012-08-07T05:38:35+00:00 app[web.1]:   
+2012-08-07T05:38:35+00:00 app[web.1]: 
+2012-08-07T05:38:35+00:00 app[web.1]: 
+2012-08-07T05:38:35+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/__history__.html?0 dyno=web.1 queue=0 wait=0ms service=5ms status=404 bytes=728
+2012-08-07T05:38:35+00:00 app[web.1]: cache: [GET /__history__.html?0] miss
+2012-08-07T05:39:04+00:00 app[web.1]: Started GET "/validators/uniqueness.json?case_sensitive=false&user%5Bemail%5D=sai%40sai.com" for 67.198.104.185 at 2012-08-07 05:39:04 +0000
+2012-08-07T05:39:04+00:00 app[web.1]: 
+2012-08-07T05:39:04+00:00 app[web.1]: 
+2012-08-07T05:39:04+00:00 app[web.1]: cache: [GET /validators/uniqueness.json?case_sensitive=false&user%5Bemail%5D=sai%40sai.com] miss
+2012-08-07T05:39:04+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/validators/uniqueness.json?case_sensitive=false&user%5Bemail%5D=sai%40sai.com dyno=web.1 queue=0 wait=4ms service=43ms status=404 bytes=4
+2012-08-07T05:39:31+00:00 app[web.1]: 
+2012-08-07T05:39:31+00:00 app[web.1]: 
+2012-08-07T05:39:31+00:00 app[web.1]: Started POST "/users" for 67.198.104.185 at 2012-08-07 05:39:31 +0000
+2012-08-07T05:39:31+00:00 app[web.1]: 
+2012-08-07T05:39:31+00:00 app[web.1]:                              ^
+2012-08-07T05:39:31+00:00 app[web.1]: ActiveRecord::StatementInvalid (PG::Error: ERROR:  column "admin" of relation "users" does not exist
+2012-08-07T05:39:31+00:00 app[web.1]: : INSERT INTO "users" ("admin", "created_at", "email", "encrypted_password", "name", "number", "responsibilities", "role", "salt", "updated_at", "webpage") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"):
+2012-08-07T05:39:31+00:00 app[web.1]:   app/controllers/users_controller.rb:89:in `create'
+2012-08-07T05:39:31+00:00 app[web.1]: 
+2012-08-07T05:39:31+00:00 app[web.1]: LINE 1: INSERT INTO "users" ("admin", "created_at", "email", "encryp...
+2012-08-07T05:39:31+00:00 app[web.1]: 
+2012-08-07T05:39:31+00:00 app[web.1]: cache: [POST /users] invalidate, pass
+2012-08-07T05:39:31+00:00 heroku[router]: POST radiant-escarpment-5330.herokuapp.com/users dyno=web.1 queue=0 wait=0ms service=159ms status=500 bytes=728
