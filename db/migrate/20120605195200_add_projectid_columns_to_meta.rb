@@ -1,5 +1,5 @@
 class AddProjectidColumnsToMeta < ActiveRecord::Migration
   def change
-    add_column :meta, :project_id, :string
+    add_column :meta, :project_id, :integer
   end
 end
