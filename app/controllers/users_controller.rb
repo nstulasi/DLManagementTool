@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   respond_to :html, :json
   before_filter :authenticate, :only => [:index, :edit, :update, :destroy]
-  before_filter :admin_user , :only => :destroy, :dependent => :destroy
+  #before_filter :admin_user , :only => :destroy, :dependent => :destroy
   
   def new
     @title = "Sign up"
