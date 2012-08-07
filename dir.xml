@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<streams>
+  <content>
+    <type>
+      <name checked="false">Character</name>
+    </type>
+    <type>
+      <name checked="false">Text</name>
+    </type>
+    <type>
+      <name checked="false">Audio</name>
+    </type>
+    <type>
+      <name checked="false">Video</name>
+    </type>
+    <type>
+      <name checked="false">Image</name>
+    </type>
+    <type>
+      <name checked="false">Program</name>
+    </type>
+  </content>
+</streams>

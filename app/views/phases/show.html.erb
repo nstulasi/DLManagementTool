@@ -1,0 +1,44 @@
+<%content_for :side do%>
+<%= render 'phases_sidemenu'%>
+<%end%>
+<%content_for :main do%>
+<div class="outer_div">
+	<div class="bigger_inner_div clearfix">
+		<p id="notice">
+			<%= notice %>
+		</p>
+		<p>
+			<b><%= image_tag("star.png",:alt=>"Phase")%>&nbsp;Name:</b>
+			<%= @phase.name %>
+		</p>
+		<p>
+			<div style="display: block;font-size:16px" class="clearfix">
+			<b><%= image_tag("note_edit.png",:alt=>"Content")%>&nbsp;Content:</b>
+				<div style="width: 85%;float:right">
+			<%= raw @phase.content %>
+			</div>
+		</div>
+		</p>
+		<p>
+			<b><%= image_tag("time.png",:alt=>"Start")%>&nbsp;Start date:</b>
+			<%= @phase.start %>
+		</p>
+		<p>
+			<b><%= image_tag("time.png",:alt=>"End")%>&nbsp;End date:</b>
+			<%= @phase.end%>
+		</p>
+		<p>
+			<b><%= image_tag("note_edit.png",:alt=>"Parent")%>&nbsp;Parent phase:</b>
+			<%if !@phase.parent_id.nil?%>
+			<%= Phase.find_by_id(@phase.parent_id).name %>
+			<%else%>
+			No parent phase
+			<%end%>
+		</p>
+		<%= link_to 'Edit', edit_phase_path(@phase),:class=>"custom_better_button lefty" %> &nbsp;
+		<%= link_to 'Back', phases_path,:class=>"custom_better_button righty" %>
+		<%= link_to 'Delete phase', @phase, confirm: 'Are you sure?', method: :delete,:class=>"custom_better_button round" %>
+
+	</div>
+</div>
+<%end%> 

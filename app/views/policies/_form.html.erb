@@ -1,0 +1,35 @@
+<%@policy=Policy.new%>
+<%= form_for(@policy) do |f| %>
+<% if @policy.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@policy.errors.count, "error") %> prohibited this policy from being saved:</h2>
+	<ul>
+		<% @policy.errors.full_messages.each do |msg| %>
+		<li>
+			<%= msg %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+<br/>
+<p>
+	<p><%= f.label :name %><span class="hint">: Enter the name of the policy</span></p>
+	<%= field_set_tag nil, :class => 'field' do %>
+	<p><%= f.text_field :name %></p>
+	<%end%>
+</p>
+<br/>
+<p>
+	<p><%= f.label :description %><span class="hint">: Enter the details of the policy</span></p>
+	<%= field_set_tag nil, :class => 'field' do %>
+	<p><%= f.text_area :description %></p>
+	<%end%>
+</p>
+   <%if !default_id.nil?%>
+	 <%= hidden_field_tag :'default[id]', default_id%>
+	 <%end%>
+<div class="actions">
+	<%= f.submit "Submit", :class=>"custom_better_button righty"%>
+</div>
+<% end %> 

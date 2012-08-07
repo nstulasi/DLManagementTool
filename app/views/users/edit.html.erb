@@ -1,0 +1,12 @@
+<%content_for :side do%>
+	<%= render 'users_sidemenu'%>
+<%end%>
+
+<%content_for :main do%>
+	<%if params[:project_user].nil?%>
+	<%=render 'form'%>
+	<%else%>
+	<%=render 'project_user'%>
+	<%end%>
+</div>
+<%end%>

@@ -1,0 +1,36 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+<p>
+  Download:
+  <%= link_to "CSV", users_path(format: "csv") %> |
+  <%= link_to "Excel", users_path(format: "xls") %>
+  <%= link_to "Printable PDF", users_path(format: "pdf"), :class=>"righty"%>
+</p>
+<table class="display" id="dynamic_table">
+	<thead>
+		<tr>
+			<th>Name <%=image_tag("flag_green.png",:alt=>"User")%></th>
+			<th>email  <%=image_tag("arrow_right.png",:alt=>"email")%> </th>
+			<th>Webpage  <%=image_tag("exclamation.png",:alt=>"webpage")%></th>
+			<th>Contact number <%=image_tag("date_next.png",:alt=>"contact number")%></th>
+			<!--<th></th>=-->
+		</tr>
+	</thead>
+	<tbody>
+		<% current_project.users.uniq.each do |user| %>
+		<tr>
+			
+			<td><%= link_to user.name,user %></td>
+			<td><%= user.email%></td>
+			<td><%= user.webpage%></td>
+			<td><%= user.number %></td>
+			<!--<td>
+				<%if user.encrypted_password.nil?%>
+					    <%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %> 
+				<%end%> 
+			</td>-->
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<br/>

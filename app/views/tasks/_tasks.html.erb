@@ -1,0 +1,61 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+<h2 class="custom_text">Task List</h2>
+<!--<%@resource=Resource.new%>
+<%= form_tag('/rake_tasks', :method=>'post', :multipart => true,:'data-remote'=>true,:class=>"clearfix") do%>
+	<%=file_field_tag :file%>
+	<%= submit_tag "Submit",:class=>"custom_better_button"%>
+<%end%>-->
+<p>
+  Download:
+  <%= link_to "CSV", tasks_path(format: "csv") %> |
+  <%= link_to "Excel", tasks_path(format: "xls") %>
+  <%= link_to "Printable PDF", tasks_path(format: "pdf"), :class=>"righty"%>
+</p>
+<table class="display" id="dynamic_table">
+	<thead>
+		<tr class="custom_background">
+			<th>Task  <!--<%=image_tag("flag_green.png",:alt=>"Task")%>--></th>
+			<th>Status  <!--<%=image_tag("arrow_right.png",:alt=>"Status")%>--> </th>
+			<th>Priority <!-- <%=image_tag("exclamation.png",:alt=>"Priority")%>--></th>
+			<th>Start Date  <!--<%=image_tag("date_next.png",:alt=>"Start date")%>--></th>
+			<th>End date  <!--<%=image_tag("date_previous.png",:alt=>"End date")%>--></th>
+			<th>People</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% current_project_tasks.each do |task| %>
+		<tr>
+			<td style="text-align: left"><%= link_to task.name,task %></td>
+			<td><%= status_name(task.status.to_i)%></td>
+			<td><%= priority_name(task.priority.to_i)%></td>
+			
+			<td>
+				<%if !task.start_at.nil?%>
+				<%= task.start_at.strftime("%B %d, %Y") %>
+				<%end%>
+			</td>
+			
+			<td><%if !task.end_at.nil?%>
+				<%= task.end_at.strftime("%B %d, %Y") %>
+				<%end%>
+			</td>
+			<td>
+				<%@user_assignments=[]%>
+				<%task.assignments.each do |d| %>
+				<% @user_id=Delegation.find(:first,:conditions=>["id=?",d.delegation_id]).user_id%>
+				<%@user_assignments<<User.find(:first,:conditions=>["id=?",@user_id]).name%>
+				<%end%>
+				<%@user_assignments.uniq.each do |u|%>
+				<%=u%><br/>
+				<%end%>
+			</td>
+			<!--<td> 
+				<%= link_to image_tag("page_edit.png", :alt=>"Edit"),edit_task_path(task)%>&nbsp;&nbsp;
+				<%= link_to image_tag("cross.png", :alt=>"Delete"),task, confirm: 'Delete this task?', method: :delete%> 
+			</td>-->
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<br/>

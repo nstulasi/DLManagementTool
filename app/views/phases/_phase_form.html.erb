@@ -1,0 +1,57 @@
+
+<style type="text/css" media="screen">
+	#sortable {
+		width: 300px;
+	}
+	ul {
+		margin-bottom: 1px;
+	}
+	.highlight {
+		background-color: #d6d88e;
+	}
+</style>
+<div class="outer_div">
+	<div class="bigger_inner_div clearfix">
+
+<%= form_tag phases_make_path do %>
+<ul id="sitemap">
+	<% for p in Defaultphase.roots%>
+	<li>
+			<a href="#">
+			<%=  check_box_tag "phases[]",p.name %>
+		<%= p.name %>:</a>
+		<span class="hint"><%=p.content%></span>
+		<ul>
+			<%for sp in p.children%>
+			<li>
+				<a href ="#">
+				<%= check_box_tag "phases[]",sp.name %>
+				<%= sp.name%>
+				<span class="hint"><%=sp.content%></span>
+				<a>
+			<li>
+			<%end%>
+		</ul>
+	</li>
+	<%end%>
+</ul>
+<%= submit_tag "Save changes",:class=>"custom_better_button righty" %>
+<% end %> 
+</div>
+</div>
+<!--
+<h1>Category Sorting Example</h1>
+<p>
+	Drag and drop the categories into a nested set then hit save
+</p>
+
+<h3><a href='#' id='serialize'>Save Sorted Elements</a></h3>
+<ul id='sortable'>
+	<% for p in Phase.roots %>
+	<li id='phase_<%= p.id %>'>
+		<span><%= p.name %></span>
+		<%= render 'children', :item => p unless p.leaf? %>
+	</li>
+	<% end -%>
+</ul>
+-->

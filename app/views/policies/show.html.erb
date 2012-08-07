@@ -1,0 +1,26 @@
+<%content_for :side do%>
+<%= render 'policies_sidemenu'%>
+<%end%>
+<%content_for :main do%>
+<div class="outer_div">
+	<div class="bigger_inner_div clearfix">
+		<%= form_tag( :method=>'post', :multipart => true) do%>
+		<p id="notice">
+			<%= notice %>
+		</p>
+		<p>
+			<b><%= image_tag("star.png",:alt=>"Policy")%>&nbsp;Name:</b>
+			<%= best_in_place @policy,:name %>
+		</p>
+		<p>
+			<b><%= image_tag("note.png",:alt=>"Content")%>&nbsp;Content:</b>
+			<%= text_area_tag "description", @policy.description %>
+		</p>
+		<%= submit_tag 'Save',:class=>"custom_button round righty "%>
+		<%end%>
+		<!--<%= link_to 'Edit', edit_policy_path(@policy),:class=>"custom_button round righty" %> |-->
+		
+		<%= link_to 'Back', policies_path,:class=>"custom_button round righty"%>
+	</div>
+</div>
+<%end%> 

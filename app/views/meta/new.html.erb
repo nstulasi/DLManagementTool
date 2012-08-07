@@ -1,0 +1,56 @@
+<div class="outer_div">
+			<%if !current_project.nil?%>
+			<div id="tabs">
+				<ul>
+					<li>
+						<a href="#tabs-1" >Streams </a>
+					</li>
+					<li>
+						<a href="#tabs-2">Structures</a>
+					</li>
+					<li>
+						<a href="#tabs-3">Spaces</a>
+					</li>
+					<li>
+						<a href="#tabs-4">Scenarios</a>
+					</li>
+					<li>
+						<a href="#tabs-5">Societies</a>
+					</li>
+				</ul>
+				<div id="tabs-1">
+				    <%=render 'streams'%>
+				</div>
+				<div id="tabs-3">
+					<%=render 'spaces'%>
+				</div>
+				<div id="tabs-4">
+						<p class="custom_better_div" style="text-align: center;margin-bottom:5px;">
+					Scenarios describe interactions between system components in order to deliver a service. Draw sequence diagrams representing services offered by the digital library. 
+					Name them to access them in the societies model. Examples of services include searching, browsing or editing<br/>Click on a saved scenario to open and edit it. 
+						</p>
+					   <div id="umldiagram" class="clearfix">
+        			</div>
+				</div>
+				<div id="tabs-5">
+					<%=render 'societies'%>
+				</div>
+				<div id="tabs-2">
+					<%=render 'structures'%>
+				</div>
+			
+		</div>
+		<%else%>
+		<div class="outer_div">
+			<div class="bigger_inner_div">
+			<h4 style="text-align: center;">Create a new digital library project to describe its metamodel</h4>
+				</div>
+		</div>
+		<%end%>
+	</div>
+
+
+<!--<div id="canvas_container"></div>--> 
+
+ 
+       

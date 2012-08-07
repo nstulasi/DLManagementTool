@@ -1,0 +1,8 @@
+<%content_for :side do%>
+<%= render 'projects_sidemenu'%>
+<%end%>
+<%content_for :main do%> <!--Renders the project_user partial which lists all the project users-->
+<%= render 'project_user' %>
+<%= link_to 'Back', projects_path %>
+</div>
+<%end%> 

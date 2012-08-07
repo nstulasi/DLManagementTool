@@ -1,0 +1,29 @@
+<%content_for :side do%>
+	<%= render 'events_sidemenu'%>
+<%end%>
+<%content_for :main do%>
+<br/>
+<%if !current_project.nil?%>
+<h2>Calendar</h2>
+	<%if current_project.nil?%>
+		<%=empty_display("projects")%>
+	<%elsif current_project_events.nil?%>
+		<%=empty_display("events")%>
+	<%end%>
+	<p>
+  Download:
+  <%= link_to "CSV", events_path(format: "csv") %> |
+  <%= link_to "Excel", events_path(format: "xls") %>
+  <%= link_to "Printable PDF", events_path(format: "pdf"), :class=>"righty"%>
+</p>
+
+	<%= raw(event_calendar) %>
+<%else%>
+<div class="outer_div">
+	<div class="bigger_inner_div clearfix">
+		<h4 style="text-align: center;">View project events in calendar format.</h4>
+	</div>
+</div>
+<%end%>
+</div>
+<%end%>

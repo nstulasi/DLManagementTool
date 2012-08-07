@@ -1,0 +1,39 @@
+
+<div class="outer_div">
+	<div class="much_bigger_inner_div clearfix">
+			  <h3><b><%= @default_policy.name %></b></h3>
+			</p>
+			
+			<p class="custom_better_div">
+					<%= @default_policy.hint %>
+			</p>
+			<%if !current_project.nil?%>
+			<div id="default_sample_div" class="disp_div clearfix">
+				<div class="wraparounddiv">
+					<h4 style="text-align:center;">Custom Policies</h4>
+					<ul>
+					
+						<%@default_policy.policies.each do |p|%>
+							<%if current_project.policies.include?(p)%>
+						  		<li>>> <%= link_to p.name,p %></li>
+					  		<%end%>
+					  	<%end%>
+	
+				  	</ul>
+				  	<a href="#" class="custom_better_button" id="creator">Create new policy</a> 
+				</div>
+				<div>
+			<%end%>
+			<p>
+			  <b>Sample:</b>
+			  <p style="display: block;float"><%=raw(@default_policy.sample) %></p>
+			</p>
+			</div>
+		</div>
+		<br/>
+		<div id="new_policy_div" class="disp_none clearfix">
+			<%=render "policies/form",:default=>true,:default_id=>@default_policy.id %>
+		</div>
+		
+	</div>
+</div>

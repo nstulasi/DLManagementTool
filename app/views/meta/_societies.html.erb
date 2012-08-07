@@ -1,0 +1,143 @@
+<div id="societies">
+		<p class="custom_better_div" style="text-align: center;margin-bottom:5px">
+			Societies are a set of entities along with relationships among them. Describing the digital libraries societies model constitutes describing the different communities interacting with the digital library. Examples: Librarians, End-users
+		</p>
+<div id="soc_feedback_div"></div>
+<%if !soc.nil?%>
+	<div id="society_accordion">
+  <% if !soc["societies"]["group"].kind_of?(Array)%>
+	<%s=soc["societies"]["group"]%>
+	<h3><a href="#"><%=s["name"]%></a></h3>
+	<%= form_tag('/generate_society', :method=>'post', :multipart => true,:'data-remote'=>true,:id=>"soc_form0",:class=>"clearfix") do%>
+		<%params[:id]=0%>
+		<%= hidden_field_tag :id, params[:id]%>
+		<p>
+			<b>Name:</b><span class="hint"> Enter the name of the group </span>
+			<%= field_set_tag nil, :class => 'field' do %>
+			<%= text_field_tag "group_name",s["name"], :onfocus=>"setSocStyle('soc_form0')"%>
+			<span id="soc_name_feedback0"></span> </p>
+			<%end%>
+		</p>
+		<br/>
+		<p>
+			<b>Services</b><span class="hint"> Select services the user group participates in</span>
+			<%= field_set_tag nil, :class => 'field' do %>
+				<%services.each_with_index do |service,i|%>
+				<p>
+				      <%= check_box_tag service,service,s["services"]["service"].include?(service) ? true : false,:class => service %> <%=service%>
+				</p>       
+				<%end%>
+			<%end%>
+		</p>
+		<br/>
+		<p>
+			<b>Goals</b><span class="hint"> Write the goals for the group</span>
+			<%= field_set_tag nil, :class => 'field' do %>
+			<%=text_area_tag 'goals', s["goals"],:rows => 2, :cols => 100%>       
+			<%end%>
+		</p>
+		<p>
+				  <%= submit_tag 'Submit',:class=>"custom_better_button submittable righty",:onclick=>"validateSocForm(this)" %>
+				  <%= link_to "delete", :controller =>"meta",:action => 'soc_del',:id=>0%>
+		</p>
+		<!--ELSE Starts-->
+	<%end%>
+	<%else%>
+		<%soc["societies"]["group"].each_with_index do |s,i|%>
+		<h3><a href="#"><%=s["name"]%></a>
+			</h3>
+		<%= form_tag('/generate_society', :method=>'post', :multipart => true,:'data-remote'=>true,:id=>"soc_form"+i.to_s) do%>
+			<%params[:id]=i%>
+			<%= hidden_field_tag :id, params[:id]%>
+                          
+			<p>
+				<b>Name:</b><span class="hint"> Enter the name of the group </span>
+				<%= field_set_tag nil, :class => 'field' do %>
+				<%= text_field_tag "group_name",s["name"],:onfocus=>"setSocStyle(getParentByTagName(this,'form').getAttribute('id'))" %>
+				<span id=<%="soc_name_feedback"+i.to_s%>></span></p>
+				<%end%>
+			</p>
+			<br/>
+			<p>
+				<b>Services</b><span class="hint"> Select services the user group participates in</span>
+				<%= field_set_tag nil, :class => 'field' do %>
+					<%services.each_with_index do |service,i|%>
+					<p>
+					      <%= check_box_tag service,service,s["services"]["service"].include?(service) ? true : false,:class => service %> <%=service%>
+					</p>       
+					<%end%>
+				<%end%>
+			</p>
+			<br/>
+			<p>
+				<b>Goals</b><span class="hint"> Write the goals for the group</span>
+				<%= field_set_tag nil, :class => 'field' do %>
+				<%=text_area_tag 'goals', s["goals"],:rows => 2, :cols => 100%>       
+				<%end%>
+			</p>
+			<p>
+					  <%= submit_tag 'Submit',:class=>"custom_better_button righty submittable",:onclick=>"validateSocForm(this)" %>
+					  <%= link_to "delete", :controller =>"meta",:action => 'soc_del',:id=>i%>
+			</p>
+		<%end%>	
+	<%end%>
+<%end%>
+</div>
+<%end%>
+<!--If there haven't been created any societies yet-->
+<h3><a href="#">Create a new group</a></h3>
+<%if !@soc_errors.nil?%>
+<ul>
+<%@soc_errors.each do |err|%>
+	<li>
+	<%=err%>
+	</li>
+<%end%>
+</ul>
+<%end%>
+<%= form_tag('/generate_society', :method=>'post', :multipart => true,:class=>"clearfix") do%>
+	<%if soc.nil?%>
+		<%params[:id]=1%> <!--For first society-->
+	<%else%>
+		<%if soc["societies"]["group"].kind_of?(Array)%>
+			 <% params[:id]=soc["societies"]["group"].length+1%> <!--For other societies-->
+		<%else%>
+			 <%params[:id]=2%> <!--For first society-->
+		<%end %>
+	<%end%> 
+			<%= hidden_field_tag :id, params[:id]%>
+			<p>
+				<b>Name:</b><span class="hint"> Enter the name of the group </span>
+				<%= field_set_tag nil, :class => 'field' do %>
+				<%= text_field_tag "group_name" %>
+				<%end%>
+			</p>
+			<br/>
+			
+			<p>
+				<b>Scenarios:</b><span class="hint"> Select those the user group participates in</span>
+				<%= field_set_tag nil, :class => 'field' do %>
+					<%if !services.nil?%>
+						<%services.each_with_index do |s,i|%>
+						<p>
+						      <%= check_box_tag s,s,false,:class => s %> <%=s%>
+						</p>       
+						<%end%>
+					<%else%>
+						<span>Create some services in the scenario page</span>
+					<%end%>
+						
+				<%end%>
+			</p>
+			<br/>
+			<p>
+				<b>Goals</b><span class="hint"> Write the goals for the group</span>
+				<%= field_set_tag nil, :class => 'field' do %>
+				<%=text_area_tag 'goals', "Goals go here",:rows => 2, :cols => 100%>       
+				<%end%>
+			</p>
+			<p>
+				<%= submit_tag 'Submit',:class=>"custom_better_button righty" %>
+			</p>
+<%end%><!--form end-->
+</div>
