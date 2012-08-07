@@ -401,3 +401,50 @@ er]: GET electric-cloud-9166.herokuapp.com/assets/table-34c3304155537d4b9ff57b45
 2012-07-26T08:53:54+00:00 heroku[router]: GET electric-cloud-9166.herokuapp.com/tasks/new dyno=web.1 queue=0 wait=0ms service=63ms status=500 bytes=728
 2012-07-26T08:53:55+00:00 app[web.1]: cache: [GET /favicon.ico] miss
 2012-07-26T08:53:55+00:00 heroku[router]: GET electric-cloud-9166.herokuapp.com/favicon.ico dyno=web.1 queue=0 wait=0ms service=2ms status=304 bytes=0
+2012-08-07T03:24:12+00:00 heroku[slugc]: Slug compilation started
+2012-08-07T03:26:49+00:00 heroku[api]: Add shared-database:5mb add-on by tulasi.neppali@gmail.com
+2012-08-07T03:26:49+00:00 heroku[api]: Release v2 created by tulasi.neppali@gmail.com
+2012-08-07T03:26:49+00:00 heroku[api]: Add RAILS_ENV, LANG, PATH, RACK_ENV, GEM_PATH config by tulasi.neppali@gmail.com
+2012-08-07T03:26:49+00:00 heroku[api]: Release v3 created by tulasi.neppali@gmail.com
+2012-08-07T03:26:49+00:00 heroku[api]: Release v4 created by tulasi.neppali@gmail.com
+2012-08-07T03:26:49+00:00 heroku[api]: Deploy 9c2a88a by tulasi.neppali@gmail.com
+2012-08-07T03:26:51+00:00 heroku[slugc]: Slug compilation finished
+2012-08-07T03:26:53+00:00 heroku[web.1]: Starting process with command `bundle exec thin start -R config.ru -e production -p 18969`
+2012-08-07T03:27:05+00:00 app[web.1]: >> Thin web server (v1.4.1 codename Chromeo)
+2012-08-07T03:27:05+00:00 app[web.1]: >> Maximum connections set to 1024
+2012-08-07T03:27:05+00:00 app[web.1]: >> Listening on 0.0.0.0:18969, CTRL+C to stop
+2012-08-07T03:27:06+00:00 heroku[web.1]: State changed from starting to up
+2012-08-07T03:27:07+00:00 app[web.1]: 
+2012-08-07T03:27:07+00:00 app[web.1]: 
+2012-08-07T03:27:07+00:00 app[web.1]: Started GET "/" for 67.198.104.185 at 2012-08-07 03:27:07 +0000
+2012-08-07T03:27:08+00:00 app[web.1]: DEPRECATION WARNING:
+2012-08-07T03:27:08+00:00 app[web.1]: Starting in Sass 3.2, "html" may only be used at the beginning of a selector.
+2012-08-07T03:27:08+00:00 app[web.1]: On line 1 of "", after "*"
+2012-08-07T03:27:08+00:00 app[web.1]: 
+2012-08-07T03:27:28+00:00 app[web.1]: 
+2012-08-07T03:27:28+00:00 app[web.1]: :             SELECT a.attname, format_type(a.atttypid, a.atttypmod), d.adsrc, a.attnotnull
+2012-08-07T03:27:28+00:00 app[web.1]: ActionView::Template::Error (PG::Error: ERROR:  relation "users" does not exist
+2012-08-07T03:27:28+00:00 app[web.1]:               FROM pg_attribute a LEFT JOIN pg_attrdef d
+2012-08-07T03:27:28+00:00 app[web.1]:                 ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+2012-08-07T03:27:28+00:00 app[web.1]:              WHERE a.attrelid = '"users"'::regclass
+2012-08-07T03:27:28+00:00 app[web.1]:                AND a.attnum > 0 AND NOT a.attisdropped
+2012-08-07T03:27:28+00:00 app[web.1]:              ORDER BY a.attnum
+2012-08-07T03:27:28+00:00 app[web.1]: ):
+2012-08-07T03:27:28+00:00 app[web.1]:     265: 			});
+2012-08-07T03:27:28+00:00 app[web.1]:     266: 			
+2012-08-07T03:27:28+00:00 app[web.1]:     267: 
+2012-08-07T03:27:28+00:00 app[web.1]:     268: <%if !current_project.nil?%>
+2012-08-07T03:27:28+00:00 app[web.1]:     269: 	<%if !current_project.phases.nil?%>
+2012-08-07T03:27:28+00:00 app[web.1]:     270: 		     <%@phases=current_project.phases.all%>
+2012-08-07T03:27:28+00:00 app[web.1]:     271: 				var data = {
+2012-08-07T03:27:28+00:00 app[web.1]:   app/helpers/sessions_helper.rb:26:in `user_from_remember_token'
+2012-08-07T03:27:28+00:00 app[web.1]:   app/models/user.rb:64:in `authenticate_with_salt'
+2012-08-07T03:27:28+00:00 app[web.1]:   app/helpers/sessions_helper.rb:14:in `current_user'
+2012-08-07T03:27:28+00:00 app[web.1]:   app/helpers/application_helper.rb:27:in `current_project'
+2012-08-07T03:27:28+00:00 app[web.1]:   app/views/layouts/application.html.erb:268:in `_app_views_layouts_application_html_erb__3953539219763760907_57030780'
+2012-08-07T03:27:28+00:00 app[web.1]: 
+2012-08-07T03:27:28+00:00 app[web.1]: 
+2012-08-07T03:27:28+00:00 app[web.1]: cache: [GET /] miss
+2012-08-07T03:27:28+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/ dyno=web.1 queue=0 wait=0ms service=20531ms status=500 bytes=728
+2012-08-07T03:27:28+00:00 app[web.1]: cache: [GET /favicon.ico] miss, store
+2012-08-07T03:27:28+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/favicon.ico dyno=web.1 queue=0 wait=0ms service=10ms status=200 bytes=0

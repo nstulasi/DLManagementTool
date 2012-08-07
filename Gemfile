@@ -21,7 +21,6 @@ gem 'awesome_nested_set'
 gem 'gon',git: 'https://github.com/gazay/gon.git'
 gem "paperclip", "~> 3.0"
 gem 'client_side_validations'
-gem 'mercury-rails', git: 'https://github.com/jejacks0n/mercury.git', ref: '6d9c99fe20958ed87e4f1a05e9de19825af702ef'
 gem 'best_in_place'
 gem 'nokogiri'
 
@@ -42,7 +41,6 @@ end
 group :assets do
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
-  gem 'chosen-rails'
 end
 
 gem 'jquery-rails'
