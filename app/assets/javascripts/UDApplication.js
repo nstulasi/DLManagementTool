@@ -17,6 +17,8 @@ var Application = function(a) {
     this.setXMLString(gon.scenario);
     }
 };
+
+ 
 var _acceptedDiagrams = [];
 var _acceptedElementsUML = [];
 var _genericMenu = [];

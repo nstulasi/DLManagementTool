@@ -9,10 +9,6 @@
 //= require best_in_place
 //= require rails.validations
 
-$(document).ready(function() {
-
-       var app = new Application( { id: 'umldiagram', width: 800, height: 500 } );  
-   });
  
 $(document).ready(function() { $("#user_id").select2({
 					placeholder: "Choose user to assign task to",
