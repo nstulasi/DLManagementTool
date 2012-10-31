@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/gazay/gon.git
-  revision: 147b3b57a60050932e90f8df275dd9f297859e4b
-  specs:
-    gon (3.0.4)
-      actionpack (>= 2.3.0)
-      json
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -66,6 +58,9 @@ GEM
     faker (0.3.1)
     formtastic (2.0.0)
       rails (~> 3.0)
+    gon (3.0.4)
+      actionpack (>= 2.3.0)
+      json
     gravatar_image_tag (0.1.0)
     hike (1.2.1)
     i18n (0.6.0)
@@ -173,6 +168,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  Ascii85 (= 1.0.1)
   acts_as_tree (~> 0.2.0)
   awesome_nested_set
   best_in_place
@@ -183,7 +179,7 @@ DEPENDENCIES
   execjs
   faker (= 0.3.1)
   formtastic (= 2.0.0)
-  gon!
+  gon
   gravatar_image_tag (= 0.1.0)
   jquery-rails
   meta_search
@@ -196,6 +192,7 @@ DEPENDENCIES
   rabl
   railroady
   rails (= 3.1.3)
+  rake (= 0.9.2.2)
   sass-rails (~> 3.1.5)
   sqlite3 (= 1.3.4)
   table_for_collection

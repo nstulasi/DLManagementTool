@@ -1,7 +1,8 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
-
+gem 'rake', '0.9.2.2'
+gem 'Ascii85', '1.0.1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
@@ -18,7 +19,7 @@ gem 'formtastic','2.0.0'
 gem 'event-calendar', :require => 'event_calendar'
 gem 'meta_search'
 gem 'awesome_nested_set'
-gem 'gon',git: 'https://github.com/gazay/gon.git'
+gem 'gon'
 gem "paperclip", "~> 3.0"
 gem 'client_side_validations'
 gem 'best_in_place'
