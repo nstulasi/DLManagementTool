@@ -8,6 +8,8 @@ class UsersController < ApplicationController
     @user = User.new
     #Creating a project user if unregistered user needs to be created. 
     1.times{@user.delegations.build} unless params[:project_user].nil?
+    @user=User.new(:invitation_token => params[:invitation_token])
+    @user.email=@user.invitation.recipient_email if @user.invitation
   end
   
   def rake_users

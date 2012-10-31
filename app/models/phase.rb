@@ -12,8 +12,8 @@ class Phase < ActiveRecord::Base
     csv << columns
     all.each do |phase|
       csv << phase.attributes.values_at(*columns)
+      end
     end
   end
-end
 
 end

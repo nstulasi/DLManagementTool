@@ -1,0 +1,187 @@
+<table border="0" cellpadding="0" cellspacing="0" cols="3" valign="top" style="direction:
+ ltr;border-collapse:collapse;border-width:0pt;margin-top:.3118in;margin-left:
+ .084in;width:9.1555in">
+ <tbody><tr>
+  <td valign="top" style="vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:1px;font-size:1pt">
+  <p style="font-size:1pt">&nbsp;</p>
+  </td>
+  <td valign="top" style="vertical-align:top;margin:0in;padding:0pt;width:6.6298in;
+  height:1px;font-size:1pt">
+  <p style="font-size:1pt"></p>
+  </td>
+  <td valign="top" style="vertical-align:top;margin:0in;padding:0pt;width:.2854in;
+  height:1px;font-size:1pt">
+  <p style="font-size:1pt"></p>
+  </td>
+  <td valign="top" style="vertical-align:top;margin:0in;padding:0pt;width:2.2395in;
+  height:1px;font-size:1pt">
+  <p style="font-size:1pt"></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign="top" style="vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:3.1812in;font-size:1pt">
+  <p style="font-size:1pt">&nbsp;</p>
+  </td>
+  <td rowspan="2" valign="top" style="vertical-align:top;margin:0in;padding:0pt;
+  width:6.6298in;height:8.1486in">
+  <ul style="margin-left:.2902in;direction:ltr;unicode-bidi:embed;margin-top:
+   0in;margin-bottom:0in">
+   <p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt"><span style="font-weight:bold">Definition</span></p>
+   <ul type="circle" style="margin-left:.75in;direction:ltr;unicode-bidi:embed;
+    margin-top:0in;margin-bottom:0in">
+    <li style="margin-top:0;margin-bottom:0;vertical-align:middle;color:black"><span style="font-family:Calibri;font-size:11.0pt">The collection development
+        policy provides information to the library's stakeholders about how the
+        collection is chosen, and it explains who is responsible for making
+        decisions about the collection.</span></li>
+   </ul>
+   <ul type="circle" style="margin-left:.75in;direction:ltr;unicode-bidi:embed;
+    margin-top:0in;margin-bottom:0in">
+    <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">The purpose of a
+        collection development policy is to create a collection of library
+        materials that supports the library's mission</span></li>
+   </ul>
+   <ul type="circle" style="margin-left:.75in;direction:ltr;unicode-bidi:embed;
+    margin-top:0in;margin-bottom:0in">
+    <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">Your collection
+        development policy provides information for people who are interested
+        in the library's collection. These people include:</span></li>
+    <ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;
+     margin-top:0in;margin-bottom:0in">
+     <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">the staff who have
+         responsibility for selecting and maintaining the collection under the
+         guidelines set by the governing body, </span></li>
+     <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">members of the public who
+         may want to know why certain material is or is not included in the
+         collection,</span></li>
+    </ul>
+    <ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;
+     margin-top:0in;margin-bottom:0in">
+     <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">and the library's
+         governing body (e.g. public library board, school board), which wants
+         to have a consistent position regarding the library's collection.</span></li>
+    </ul>
+    <ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;
+     margin-top:0in;margin-bottom:0in">
+     <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">One important function of
+         the collection development policy is to state the library's position
+         on intellectual freedom and to describe the library's policy and
+         procedures for dealing with complaints about its materials.</span></li>
+    </ul>
+   </ul>
+   <p style="margin:0in;margin-left:.75in;font-family:Calibri;font-size:9.0pt;
+   color:#595959">Pasted from &lt;<a href="http://lili.org/forlibs/ce/able/course1/03purpose.htm">http://lili.org/forlibs/ce/able/course1/03purpose.htm</a>&gt;
+   </p>
+   <p style="margin:0in;margin-left:.75in;font-family:Calibri;font-size:11.0pt">&nbsp;</p>
+   <ul type="circle" style="margin-left:.75in;direction:ltr;unicode-bidi:embed;
+    margin-top:0in;margin-bottom:0in">
+    <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">The primary goal of the
+        Library's Collection Development Policy is to provide guidance for the
+        selection and maintenance of collections that support and enhance the
+        curriculum and instructional programs of&nbsp;</span><a href="http://www.lanecc.edu/library/about/coldev.htm#"><span style="font-family:Verdana;font-size:9.75pt;background:white">Lane
+        Community College</span></a><span style="font-family:Calibri;
+        font-size:11.0pt">, as well as the general information needs of
+        students, faculty, and staff who comprise the College’s communit
+ of
+        lifelong learners.</span></li>
+   </ul>
+   <p style="margin:0in;margin-left:.75in;font-family:Calibri;font-size:11.0pt">&nbsp;</p>
+   <p style="margin:0in;margin-left:.75in;font-family:Calibri;font-size:9.0pt;
+   color:#595959">Pasted from &lt;<a href="http://www.lanecc.edu/library/about/coldev.htm">http://www.lanecc.edu/library/about/coldev.htm</a>&gt;
+   </p>
+   <p style="margin:0in;margin-left:.75in;font-family:Calibri;font-size:11.0pt">&nbsp;</p>
+   <p style="margin:0in;margin-left:.75in;font-family:Calibri;font-size:11.0pt">&nbsp;</p>
+   <p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt"><span style="font-weight:bold">Public library Links</span></p>
+   <ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;
+    margin-top:0in;margin-bottom:0in">
+    <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">Georgia public library: </span><a href="http://www.georgialibraries.org/lib/collection/shrl.pdf"><span style="font-family:Calibri;font-size:11.0pt">www.georgialibraries.org/lib/collection/shrl.pdf</span></a><span style="font-family:Calibri;font-size:11.0pt"> </span></li>
+   </ul>
+   <ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;
+    margin-top:0in;margin-bottom:0in">
+    <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">Denver public library: </span><a href="http://www.denverlibrary.org/content/collection-development-policies"><span style="font-family:Calibri;font-size:11.0pt">www.denverlibrary.org/content/collection-development-policies</span></a><span style="font-family:Calibri;font-size:11.0pt"> </span></li>
+   </ul>
+   <ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;
+    margin-top:0in;margin-bottom:0in">
+    <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">Newark public library: </span><a href="http://www.npl.org/Pages/AboutLibrary/colldevpol06.html"><span style="font-family:Calibri;font-size:11.0pt">http://www.npl.org/Pages/AboutLibrary/colldevpol06.html</span></a><span style="font-family:Calibri;font-size:11.0pt"> </span></li>
+   </ul>
+   <p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt">&nbsp;</p>
+   <p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt"><span style="font-weight:bold">Cultural digital libraries</span></p>
+   <ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;
+    margin-top:0in;margin-bottom:0in">
+    <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">Digital library of Georgia
+        </span><a href="http://dlg.galileo.usg.edu/AboutDLG/CollectionDevelopment.html?Welcome"><span style="font-family:Calibri;font-size:11.0pt">http://dlg.galileo.usg.edu/AboutDLG/CollectionDevelopment.html?Welcome</span></a></li>
+   </ul>
+   <p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt">&nbsp;</p>
+   <p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt"><span style="font-weight:bold">University digital libraries</span></p>
+   <ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;
+    margin-top:0in;margin-bottom:0in">
+    <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">Florida State university: </span><a href="http://www.lib.fsu.edu/files/pdfs/Digital_Initiatives%20Collection%20Development%20Policy%20Final.pdf"><span style="font-family:Calibri;font-size:11.0pt">http://www.lib.fsu.edu/files/pdfs/Digital_Initiatives%20Collection%20Development%20Policy%20Final.pdf</span></a></li>
+   </ul>
+   <ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;
+    margin-top:0in;margin-bottom:0in">
+    <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">University of Texas at
+        Austin: </span><a href="http://www.lib.utexas.edu/admin/cird/policies/subjects/framework.html"><span style="font-family:Calibri;font-size:11.0pt">http://www.lib.utexas.edu/admin/cird/policies/subjects/framework.html</span></a></li>
+   </ul>
+   <ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;
+    margin-top:0in;margin-bottom:0in">
+    <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">Columbia university: </span><a href="http://library.columbia.edu/services/collection_policies.html"><span style="font-family:Calibri;font-size:11.0pt">http://library.columbia.edu/services/collection_policies.html</span></a></li>
+   </ul>
+   <p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt">&nbsp;</p>
+  </ul>
+  </td>
+  <td valign="top" style="vertical-align:top;margin:0in;padding:0pt;width:.2854in;
+  height:3.1812in;font-size:1pt">
+  <p style="font-size:1pt"></p>
+  </td>
+  <td valign="top" style="vertical-align:top;margin:0in;padding:0pt;width:2.2395in;
+  height:3.1812in">
+  <p style="margin:0in;font-family:Calibri;font-size:11.0pt"><span style="font-weight:bold">Structure</span></p>
+  <ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;
+   margin-top:0in;margin-bottom:0in">
+   <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">Goals</span></li>
+  </ul>
+  <ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;
+   margin-top:0in;margin-bottom:0in">
+   <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">Objectives</span></li>
+  </ul>
+  <ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;
+   margin-top:0in;margin-bottom:0in">
+   <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">Responsibility for
+       collection development</span></li>
+  </ul>
+  <ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;
+   margin-top:0in;margin-bottom:0in">
+   <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">What will be collected,
+       what wont be collected</span></li>
+  </ul>
+  <ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;
+   margin-top:0in;margin-bottom:0in">
+   <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">Budget allocations</span></li>
+  </ul>
+  <ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;
+   margin-top:0in;margin-bottom:0in">
+   <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">General selection
+       guidelines</span></li>
+   <li style="margin-top:0;margin-bottom:0;vertical-align:middle"><span style="font-family:Calibri;font-size:11.0pt">Types and formats for
+       information : Audio visual, textual, reference, periodicals, children's
+       , recreational, maps, replacement policy,<span style="mso-spacerun:yes">&nbsp; </span></span></li><span style="font-family:Calibri;font-size:11.0pt">Criteria for material
+       selection</span>
+  </ul>
+  </td>
+ </tr>
+ <tr>
+  <td valign="top" style="vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:4.9673in;font-size:1pt">
+  <p style="font-size:1pt">&nbsp;</p>
+  </td>
+  <td valign="top" style="vertical-align:top;margin:0in;padding:0pt;width:.2854in;
+  height:4.9673in;font-size:1pt">
+  <p style="font-size:1pt"></p>
+  </td>
+  <td valign="top" style="vertical-align:top;margin:0in;padding:0pt;width:2.2395in;
+  height:4.9673in;font-size:1pt">
+  <p style="font-size:1pt"></p>
+  </td>
+ </tr>
+</tbody></table>

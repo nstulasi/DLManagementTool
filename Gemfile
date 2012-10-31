@@ -33,6 +33,7 @@ end
 group :development do
 gem 'sqlite3', "1.3.4"
 gem 'railroady'
+gem 'nifty-generators'
 end
 
   gem 'sass-rails',   '~> 3.1.5'
@@ -58,3 +59,4 @@ gem 'rabl'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+gem "mocha", :group => :test

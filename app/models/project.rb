@@ -3,7 +3,7 @@ class Project < ActiveRecord::Base
   has_many :users, :through=>:delegations
   has_many :tasks
   has_many :policies
-  has_one :metum
+  has_one  :metum
   
   validates :name, :presence => true,
                   :length => {:maximum => 50}

@@ -114,6 +114,7 @@ def generate_space
       xml.spaces{
        xml.indexingTool{
         xml.name{xml.text params[:indexing_name]}
+        }
         xml.ui{
          xml.ui_language{xml.text params[:ui_lang]}
          xml.ui_presentation{xml.text params[:ui_displang]}
@@ -123,7 +124,6 @@ def generate_space
            xml.stemming_algorithm{xml.text params[:stemming_algo]}
            xml.stopwords{xml.text params[:stopwords]}
          }
-       }
       }
     end
    @space= current_project.metum

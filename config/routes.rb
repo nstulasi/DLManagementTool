@@ -1,5 +1,7 @@
 SampleApp::Application.routes.draw do
 
+  resources :invitations
+
   resources :default_policies
 
   resources :meta do 
@@ -9,8 +11,6 @@ SampleApp::Application.routes.draw do
   resources :resources
 
   resources :phases
-
-
 
   resources :policies
 
@@ -59,6 +59,7 @@ SampleApp::Application.routes.draw do
   match '/about', :to => 'pages#about'
   match '/help', :to => 'pages#help'
   match '/signup', :to => 'users#new'
+  match '/signup/:invitation_token', :to=>'users#new'
   match '/signin', :to => 'pages#home'
   match '/signout', :to => 'sessions#destroy'
   

@@ -9,7 +9,7 @@ class TasksController < ApplicationController
     @tasks = current_project_tasks unless current_project.nil?
     pdf = TaskPdf.new(@tasks, view_context)
     respond_to do |format|
-     format.html # index.html.erb
+    format.html # index.html.erb
     format.json { render json: @tasks }
     format.csv { send_data @tasks.get_csv }
     format.xls

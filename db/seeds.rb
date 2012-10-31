@@ -25,3 +25,13 @@
 #@subphases_userstudies.each do|u|
  # Defaultphase.find_or_create_by_name(:name=>u,:parent_id=>2)
 #end
+
+#DefaultPolicy.delete_all
+
+  DefaultPolicy.create!(:name => "name", :sample=> File.read('PolicySamples/policy.txt'))
+
+
+#@policies = ["Sample1"]
+#@policies.each do |p|
+ # DefaultPolicy.find_or_create_by_name(:name=>p,:sample=>)
+#end

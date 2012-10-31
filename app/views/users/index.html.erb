@@ -2,9 +2,12 @@
 <%= render 'users_sidemenu'%>
 <%end%>
 <%content_for :main do%> 
+	
 	<%if !current_project.nil?%>
 		<h4 style="text-align: center;margin-top: 10px">People involved in the <%=link_to "#{current_project.name}",current_project%> project </h4>
-		<ul class="users">
+		<%=render 'user_invitation'%>
+		
+			<ul class="users">
 			<%= render 'users' %>
 		</ul>
 	<%else%>
