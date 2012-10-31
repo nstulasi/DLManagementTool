@@ -513,3 +513,104 @@ Exiting
 2012-10-31T06:09:35+00:00 heroku[web.1]: State changed from starting to crashed
 2012-10-31T06:09:36+00:00 heroku[router]: Error H10 (App crashed) -> GET radiant-escarpment-5330.herokuapp.com/ dyno= queue= wait= service= status=503 bytes=
 2012-10-31T06:09:36+00:00 heroku[router]: Error H10 (App crashed) -> GET radiant-escarpment-5330.herokuapp.com/favicon.ico dyno= queue= wait= service= status=503 bytes=
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.3/lib/active_support/dependencies.rb:234:in `load'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/config/initializers/client_side_validations.rb:4:in `<top (required)>'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.3/lib/active_support/dependencies.rb:234:in `load'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/engine.rb:556:in `block (2 levels) in <class:Engine>'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/engine.rb:555:in `each'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/engine.rb:555:in `block in <class:Engine>'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/initializable.rb:30:in `instance_exec'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/application.rb:96:in `initialize!'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/initializable.rb:30:in `run'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/initializable.rb:55:in `block in run_initializers'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/initializable.rb:54:in `each'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/initializable.rb:54:in `run_initializers'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.3/lib/active_support/dependencies.rb:225:in `load_dependency'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/thin-1.5.0/lib/rack/adapter/loader.rb:33:in `eval'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/thin-1.5.0/lib/rack/adapter/loader.rb:33:in `load'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/config/environment.rb:8:in `<top (required)>'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from config.ru:3:in `require'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from config.ru:3:in `block in <main>'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.3.6/lib/rack/builder.rb:51:in `instance_eval'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.3.6/lib/rack/builder.rb:51:in `initialize'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from config.ru:1:in `new'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from config.ru:1:in `<main>'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/bin/thin:19:in `load'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/bin/thin:19:in `<main>'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/thin-1.5.0/lib/thin/controllers/controller.rb:181:in `load_rackup_config'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/thin-1.5.0/lib/thin/controllers/controller.rb:71:in `start'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/thin-1.5.0/lib/thin/runner.rb:187:in `run_command'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/thin-1.5.0/bin/thin:6:in `<top (required)>'
+2012-10-31T06:40:06+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/thin-1.5.0/lib/thin/runner.rb:152:in `run!'
+2012-10-31T06:40:07+00:00 heroku[web.1]: Process exited with status 1
+2012-10-31T06:40:07+00:00 heroku[web.1]: State changed from starting to crashed
+2012-10-31T06:49:55+00:00 heroku[web.1]: Starting process with command `bundle exec thin start -R config.ru -e production -p 53891`
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/engine.rb:556:in `block (2 levels) in <class:Engine>'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.3/lib/active_support/dependencies.rb:234:in `load'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/engine.rb:555:in `block in <class:Engine>'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/engine.rb:555:in `each'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/initializable.rb:30:in `instance_exec'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/initializable.rb:30:in `run'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/initializable.rb:55:in `block in run_initializers'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/initializable.rb:54:in `each'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/initializable.rb:54:in `run_initializers'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/application.rb:96:in `initialize!'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.3/lib/active_support/dependencies.rb:234:in `load'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-3.1.3/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.3/lib/active_support/dependencies.rb:225:in `load_dependency'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/config/environment.rb:8:in `<top (required)>'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from config.ru:3:in `require'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from config.ru:3:in `block in <main>'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.3.6/lib/rack/builder.rb:51:in `initialize'
+2012-10-31T06:50:08+00:00 app[web.1]: /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.3/lib/active_support/dependencies.rb:240:in `require': no such file to load -- client_side_validations/formtastic (LoadError)
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.3/lib/active_support/dependencies.rb:240:in `block in require'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from config.ru:1:in `<main>'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.3/lib/active_support/dependencies.rb:225:in `load_dependency'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.3/lib/active_support/dependencies.rb:240:in `require'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/config/initializers/client_side_validations.rb:4:in `<top (required)>'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/thin-1.5.0/lib/rack/adapter/loader.rb:33:in `eval'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-3.1.3/lib/active_support/dependencies.rb:234:in `block in load'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/thin-1.5.0/lib/rack/adapter/loader.rb:33:in `load'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/thin-1.5.0/lib/thin/controllers/controller.rb:181:in `load_rackup_config'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/thin-1.5.0/lib/thin/runner.rb:187:in `run_command'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/thin-1.5.0/lib/thin/runner.rb:152:in `run!'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/thin-1.5.0/bin/thin:6:in `<top (required)>'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/bin/thin:19:in `load'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.3.6/lib/rack/builder.rb:51:in `instance_eval'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from config.ru:1:in `new'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/thin-1.5.0/lib/thin/controllers/controller.rb:71:in `start'
+2012-10-31T06:50:08+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/bin/thin:19:in `<main>'
+2012-10-31T06:50:09+00:00 heroku[web.1]: Process exited with status 1
+2012-10-31T06:50:09+00:00 heroku[web.1]: State changed from starting to crashed
+2012-10-31T06:53:53+00:00 heroku[slugc]: Slug compilation started
+2012-10-31T06:55:03+00:00 heroku[web.1]: State changed from crashed to down
+2012-10-31T06:55:06+00:00 heroku[web.1]: State changed from down to starting
+2012-10-31T06:55:07+00:00 heroku[slugc]: Slug compilation finished
+2012-10-31T06:55:11+00:00 heroku[web.1]: Starting process with command `bundle exec thin start -R config.ru -e production -p 33940`
+2012-10-31T06:55:26+00:00 app[web.1]: >> Listening on 0.0.0.0:33940, CTRL+C to stop
+2012-10-31T06:55:26+00:00 app[web.1]: >> Thin web server (v1.5.0 codename Knife)
+2012-10-31T06:55:26+00:00 app[web.1]: >> Maximum connections set to 1024
+2012-10-31T06:55:27+00:00 heroku[web.1]: State changed from starting to up
+2012-10-31T06:55:28+00:00 app[web.1]: 
+2012-10-31T06:55:28+00:00 app[web.1]: 
+2012-10-31T06:55:28+00:00 app[web.1]: Started GET "/" for 24.16.158.0 at 2012-10-31 06:55:28 +0000
+2012-10-31T06:55:29+00:00 app[web.1]: 
+2012-10-31T06:55:29+00:00 app[web.1]: ActionView::Template::Error (Invalid CSS after "*": expected "{", was "html .fileinput..."
+2012-10-31T06:55:29+00:00 app[web.1]: 
+2012-10-31T06:55:29+00:00 app[web.1]:     15: <%= stylesheet_link_tag 'UDStyle',:media=>'screen'%>
+2012-10-31T06:55:29+00:00 app[web.1]:     16: <%= stylesheet_link_tag 'jquery.fileupload-ui.css',:media=>'screen'%>
+2012-10-31T06:55:29+00:00 app[web.1]: "html" may only be used at the beginning of a selector.
+2012-10-31T06:55:29+00:00 app[web.1]:     17: <%= stylesheet_link_tag 'bootstrap-image-gallery.min.css',:media=>'screen'%>
+2012-10-31T06:55:29+00:00 app[web.1]:   (in /app/app/assets/stylesheets/jquery.fileupload-ui.css)):
+2012-10-31T06:55:29+00:00 app[web.1]:     18: <%= javascript_include_tag "application","jquery_rails.js" %>
+2012-10-31T06:55:29+00:00 app[web.1]:     14: <%= stylesheet_link_tag 'UDStyle',:media=>'screen'%>
+2012-10-31T06:55:29+00:00 app[web.1]:     13: <%= stylesheet_link_tag 'select2',:media=>'screen'%>
+2012-10-31T06:55:29+00:00 app[web.1]:     19: <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/smoothness/jquery-ui.css", :media=>'screen' %>
+2012-10-31T06:55:29+00:00 app[web.1]:   app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___2177419765005273836_56454960'
+2012-10-31T06:55:29+00:00 app[web.1]:   app/views/layouts/_stylesheets.html.erb:16:in `_app_views_layouts__stylesheets_html_erb___4202215699760517843_58874520'
+2012-10-31T06:55:29+00:00 app[web.1]: 
+2012-10-31T06:55:29+00:00 app[web.1]: 
+2012-10-31T06:55:29+00:00 app[web.1]: cache: [GET /] miss
+2012-10-31T06:55:29+00:00 app[web.1]: cache: [GET /favicon.ico] miss, store
+2012-10-31T06:55:29+00:00 heroku[router]: GET radiant-escarpment-5330.herokuapp.com/favicon.ico dyno=web.1 queue=0 wait=0ms service=9ms status=200 bytes=0
