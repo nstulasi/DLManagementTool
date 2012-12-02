@@ -6,7 +6,8 @@ gem 'Ascii85', '1.0.1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-
+gem 'heroku','2.32.14'
+gem 'sqlite3'
 gem 'table_for_collection'
 gem 'carrierwave'
 gem 'prawn'
@@ -32,7 +33,7 @@ gem 'execjs'
 end
 
 group :development do
-gem 'sqlite3', "1.3.4"
+#gem 'sqlite3', "1.3.4"
 gem 'railroady'
 gem 'nifty-generators'
 end
