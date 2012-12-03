@@ -10,3 +10,104 @@ Warning: Data in the app 'radiant-escarpment-5330' will be overwritten and will 
 Auto-detected local database: sqlite://db/development.sqlite3
 Warning: Data in the app 'radiant-escarpment-5330' will be overwritten and will not be recoverable.
 Sending schema
+2012-12-03T02:13:21+00:00 app[web.1]: 
+2012-12-03T02:13:21+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-image-gallery.min-df7fd0abd80c5449a1be22799c44106d.css"):
+2012-12-03T02:13:21+00:00 app[web.1]:   
+2012-12-03T02:13:21+00:00 app[web.1]: 
+2012-12-03T02:13:21+00:00 app[web.1]: cache: [GET /assets/bootstrap-image-gallery.min-df7fd0abd80c5449a1be22799c44106d.css] miss
+2012-12-03T02:13:21+00:00 app[web.1]: 
+2012-12-03T02:13:21+00:00 app[web.1]: cache: [GET /assets/application-11b320b05ef12ea3efa59d3760299442.js] miss
+2012-12-03T02:13:21+00:00 app[web.1]: 
+2012-12-03T02:13:21+00:00 app[web.1]: 
+2012-12-03T02:13:21+00:00 app[web.1]: Started GET "/assets/jquery_rails-5b09c88a0cae86f3b9f9d350740f8bed.js" for 24.16.158.0 at 2012-12-03 02:13:21 +0000
+2012-12-03T02:13:21+00:00 heroku[router]: at=info method=GET path=/assets/demo_table-870013297355b6b0677236ae58c5856c.css host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=23ms connect=53ms service=24ms status=304 bytes=0
+2012-12-03T02:13:21+00:00 app[web.1]: cache: [GET /assets/jquery_rails-5b09c88a0cae86f3b9f9d350740f8bed.js] miss
+2012-12-03T02:13:21+00:00 heroku[router]: at=info method=GET path=/assets/jquery_rails-5b09c88a0cae86f3b9f9d350740f8bed.js host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=1ms service=8ms status=304 bytes=0
+2012-12-03T02:13:21+00:00 heroku[router]: at=info method=GET path=/assets/jquery.fileupload-ui-38d3cb361a90b897d5e0506627565ebb.css host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=4ms service=24ms status=404 bytes=728
+2012-12-03T02:13:21+00:00 heroku[router]: at=info method=GET path=/assets/bootstrap-image-gallery.min-df7fd0abd80c5449a1be22799c44106d.css host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=1ms service=8ms status=404 bytes=728
+2012-12-03T02:13:21+00:00 app[web.1]: 
+2012-12-03T02:13:21+00:00 app[web.1]: 
+2012-12-03T02:13:21+00:00 app[web.1]: Started GET "/assets/event_calendar-57caa2ac48171ea8933f73f1b87ae44b.js" for 24.16.158.0 at 2012-12-03 02:13:21 +0000
+2012-12-03T02:13:21+00:00 app[web.1]: cache: [GET /assets/event_calendar-57caa2ac48171ea8933f73f1b87ae44b.js] miss
+2012-12-03T02:13:21+00:00 heroku[router]: at=info method=GET path=/assets/application-11b320b05ef12ea3efa59d3760299442.js host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=3ms service=18ms status=200 bytes=125196
+2012-12-03T02:13:21+00:00 heroku[router]: at=info method=GET path=/assets/event_calendar-57caa2ac48171ea8933f73f1b87ae44b.js host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=1ms service=5ms status=304 bytes=0
+2012-12-03T02:13:21+00:00 app[web.1]: 
+2012-12-03T02:13:21+00:00 app[web.1]: 
+2012-12-03T02:13:21+00:00 app[web.1]: Started GET "/assets/timeglider.min.js" for 24.16.158.0 at 2012-12-03 02:13:21 +0000
+2012-12-03T02:13:21+00:00 app[web.1]:   
+2012-12-03T02:13:21+00:00 app[web.1]: 
+2012-12-03T02:13:21+00:00 app[web.1]: 
+2012-12-03T02:13:21+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/timeglider.min.js"):
+2012-12-03T02:13:21+00:00 app[web.1]: 
+2012-12-03T02:13:21+00:00 app[web.1]: cache: [GET /assets/timeglider.min.js] miss
+2012-12-03T02:13:21+00:00 heroku[router]: at=info method=GET path=/assets/timeglider.min.js host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=4ms service=8ms status=404 bytes=728
+2012-12-03T02:13:21+00:00 app[web.1]: Started GET "/assets/serializelist-bf5e10766b9b36350f90312e7df22431.js" for 24.16.158.0 at 2012-12-03 02:13:21 +0000
+2012-12-03T02:13:21+00:00 app[web.1]: 
+2012-12-03T02:13:21+00:00 app[web.1]: 
+2012-12-03T02:13:21+00:00 app[web.1]: 
+2012-12-03T02:13:21+00:00 app[web.1]: cache: [GET /assets/serializelist-bf5e10766b9b36350f90312e7df22431.js] miss
+2012-12-03T02:13:21+00:00 app[web.1]: 
+2012-12-03T02:13:21+00:00 app[web.1]: Started GET "/assets/locale-23fab709d279260c3a1cb21f2f744e18.js" for 24.16.158.0 at 2012-12-03 02:13:21 +0000
+2012-12-03T02:13:21+00:00 app[web.1]: cache: [GET /assets/locale-23fab709d279260c3a1cb21f2f744e18.js] miss
+2012-12-03T02:13:21+00:00 app[web.1]: 
+2012-12-03T02:13:21+00:00 app[web.1]: Started GET "/assets/popup-6f57e8eca216630edc2baa6235f138eb.js" for 24.16.158.0 at 2012-12-03 02:13:21 +0000
+2012-12-03T02:13:21+00:00 app[web.1]: 
+2012-12-03T02:13:21+00:00 heroku[router]: at=info method=GET path=/assets/locale-23fab709d279260c3a1cb21f2f744e18.js host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=1ms service=12ms status=304 bytes=0
+2012-12-03T02:13:21+00:00 app[web.1]: cache: [GET /assets/popup-6f57e8eca216630edc2baa6235f138eb.js] miss
+2012-12-03T02:13:21+00:00 heroku[router]: at=info method=GET path=/assets/popup-6f57e8eca216630edc2baa6235f138eb.js host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=2ms service=11ms status=304 bytes=0
+2012-12-03T02:13:21+00:00 heroku[router]: at=info method=GET path=/assets/serializelist-bf5e10766b9b36350f90312e7df22431.js host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=9ms connect=22ms service=12ms status=304 bytes=0
+2012-12-03T02:13:23+00:00 app[web.1]: cache: [GET /assets/blueprint/print-d2906861201301d0dab5194f4f57d51e.css] miss
+2012-12-03T02:13:23+00:00 heroku[router]: at=info method=GET path=/assets/blueprint/print-d2906861201301d0dab5194f4f57d51e.css host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=7ms service=7ms status=200 bytes=776
+2012-12-03T02:13:25+00:00 app[web.1]: cache: [GET /assets/logo-3d64b2c8715c64bd3f6a704b8ab14f2e.png] miss
+2012-12-03T02:13:25+00:00 heroku[router]: at=info method=GET path=/assets/logo-3d64b2c8715c64bd3f6a704b8ab14f2e.png host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=4ms service=7ms status=200 bytes=3353
+2012-12-03T02:13:25+00:00 app[web.1]: 
+2012-12-03T02:13:25+00:00 app[web.1]: Started GET "/__history__.html?0" for 24.16.158.0 at 2012-12-03 02:13:25 +0000
+2012-12-03T02:13:25+00:00 app[web.1]: 
+2012-12-03T02:13:25+00:00 app[web.1]: 
+2012-12-03T02:13:25+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/__history__.html"):
+2012-12-03T02:13:25+00:00 app[web.1]: cache: [GET /__history__.html?0] miss
+2012-12-03T02:13:25+00:00 app[web.1]: 
+2012-12-03T02:13:25+00:00 app[web.1]: 
+2012-12-03T02:13:25+00:00 app[web.1]:   
+2012-12-03T02:13:25+00:00 heroku[router]: at=info method=GET path=/__history__.html?0 host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=3ms service=6ms status=404 bytes=728
+2012-12-03T02:13:25+00:00 app[web.1]: 
+2012-12-03T02:13:25+00:00 app[web.1]: Started GET "/" for 24.16.158.0 at 2012-12-03 02:13:25 +0000
+2012-12-03T02:13:25+00:00 app[web.1]: 
+2012-12-03T02:13:25+00:00 app[web.1]: cache: [GET /] miss
+2012-12-03T02:13:25+00:00 heroku[router]: at=info method=GET path=/ host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=1ms service=80ms status=304 bytes=0
+2012-12-03T02:13:25+00:00 app[web.1]: cache: [GET /assets/group-7abc96bdd1cd64e44494ac3038b21d71.png] miss
+2012-12-03T02:13:25+00:00 app[web.1]: cache: [GET /assets/timeline_marker-7ba99cb533b57ee61291c76a721b34ae.png] miss
+2012-12-03T02:13:25+00:00 app[web.1]: cache: [GET /assets/world-831cadb56144a3690f8370c9e1ee3700.png] miss
+2012-12-03T02:13:25+00:00 app[web.1]: cache: [GET /assets/table-34c3304155537d4b9ff57b45ccb8b038.png] miss
+2012-12-03T02:13:25+00:00 app[web.1]: cache: [GET /assets/lock-ec99724746dc8db767a77106b86edd72.png] miss
+2012-12-03T02:13:25+00:00 heroku[router]: at=info method=GET path=/assets/group-7abc96bdd1cd64e44494ac3038b21d71.png host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=1ms service=61ms status=200 bytes=753
+2012-12-03T02:13:25+00:00 heroku[router]: at=info method=GET path=/assets/lock-ec99724746dc8db767a77106b86edd72.png host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=1ms service=45ms status=200 bytes=749
+2012-12-03T02:13:25+00:00 heroku[router]: at=info method=GET path=/assets/timeline_marker-7ba99cb533b57ee61291c76a721b34ae.png host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=2ms service=62ms status=200 bytes=327
+2012-12-03T02:13:25+00:00 heroku[router]: at=info method=GET path=/assets/page_white_zip-2c421c0fb8a6c30a38620b8ad8c6614e.png host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=0ms service=3ms status=200 bytes=386
+2012-12-03T02:13:25+00:00 heroku[router]: at=info method=GET path=/assets/world-831cadb56144a3690f8370c9e1ee3700.png host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=1ms service=64ms status=200 bytes=923
+2012-12-03T02:13:25+00:00 heroku[router]: at=info method=GET path=/assets/table-34c3304155537d4b9ff57b45ccb8b038.png host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=5ms service=73ms status=200 bytes=566
+2012-12-03T02:13:25+00:00 app[web.1]: cache: [GET /assets/page_white_zip-2c421c0fb8a6c30a38620b8ad8c6614e.png] miss
+2012-12-03T02:14:41+00:00 app[web.1]: 
+2012-12-03T02:14:41+00:00 app[web.1]: Started GET "/users" for 24.16.158.0 at 2012-12-03 02:14:41 +0000
+2012-12-03T02:14:41+00:00 app[web.1]: 
+2012-12-03T02:14:42+00:00 app[web.1]: LINE 1: SELECT "delegations".* FROM "delegations"  WHERE (delegation...
+2012-12-03T02:14:42+00:00 app[web.1]: ActionView::Template::Error (PG::Error: ERROR:  column "delegations.id" must appear in the GROUP BY clause or be used in an aggregate function
+2012-12-03T02:14:42+00:00 app[web.1]:                ^
+2012-12-03T02:14:42+00:00 app[web.1]: 
+2012-12-03T02:14:42+00:00 app[web.1]: : SELECT "delegations".* FROM "delegations"  WHERE (delegations.role IS NOT NULL AND project_id=1) GROUP BY role):
+2012-12-03T02:14:42+00:00 app[web.1]:     1: <br/>
+2012-12-03T02:14:42+00:00 app[web.1]:   app/views/users/index.html.erb:1:in `_app_views_users_index_html_erb__2951877319094810049_58389440'
+2012-12-03T02:14:42+00:00 app[web.1]:     3: <%if !current_project.nil?%>
+2012-12-03T02:14:42+00:00 app[web.1]:     2: <div>People grouped by role <%=image_tag("group.png", :alt=>"People")%></div>
+2012-12-03T02:14:42+00:00 app[web.1]:     4: <%@uniq_roles = Delegation.find(:all,:group=>:role,:conditions=>["delegations.role IS NOT NULL AND project_id=?",current_project.id])%>
+2012-12-03T02:14:42+00:00 app[web.1]:     6: <%if !current_project.nil?%>
+2012-12-03T02:14:42+00:00 app[web.1]:     7: 	<%if !@uniq_roles.nil?%>
+2012-12-03T02:14:42+00:00 app[web.1]: 
+2012-12-03T02:14:42+00:00 app[web.1]:     5: <%end%>
+2012-12-03T02:14:42+00:00 app[web.1]:   app/views/users/_users_sidemenu.html.erb:4:in `_app_views_users__users_sidemenu_html_erb__1207219836580989232_58351580'
+2012-12-03T02:14:42+00:00 app[web.1]:   app/views/users/index.html.erb:2:in `block in _app_views_users_index_html_erb__2951877319094810049_58389440'
+2012-12-03T02:14:42+00:00 app[web.1]:   app/controllers/users_controller.rb:66:in `index'
+2012-12-03T02:14:42+00:00 app[web.1]: 
+2012-12-03T02:14:42+00:00 app[web.1]: cache: [GET /users] miss
+2012-12-03T02:14:42+00:00 heroku[router]: at=info method=GET path=/users host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=4ms service=165ms status=500 bytes=728
+2012-12-03T02:14:42+00:00 app[web.1]: cache: [GET /favicon.ico] miss
