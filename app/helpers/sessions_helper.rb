@@ -5,6 +5,7 @@ module SessionsHelper
   end
   def sign_out
     cookies.delete(:remember_token)
+    cookies.delete(:open_project)
     
   end
   def signed_in?
@@ -13,6 +14,8 @@ module SessionsHelper
   def current_user
     @current_user ||= user_from_remember_token
   end
+   
+  
   def deny_access
     store_location
     redirect_to signin_path, :notice => "Please sign in to access this page"

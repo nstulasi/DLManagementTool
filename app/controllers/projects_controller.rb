@@ -1,6 +1,9 @@
 class ProjectsController < ApplicationController
     helper_method :sort_column, :sort_direction
     before_filter :require_login
+    before_filter :authorize
+    delegate :allow?, to: :current_permission
+    helper_method :allow?
   # GET /projects
   # GET /projects.json
   def index
@@ -46,10 +49,23 @@ class ProjectsController < ApplicationController
     @project = Project.new(params[:project])
     respond_to do |format|
       if @project.save
+        #Create a Meta object
         @metum = Metum.new
         @metum.project_id=@project.id
         @metum.save!
+        
+        #Create a membership record
         @project.users<<current_user
+        current_user.memberships.first.level=0
+        @Projectuser= Membership.where(:project_id=>@project.id, :user_id=>current_user.id)
+        @Projectuser.first.level=0
+        @Projectuser.first.save!
+        
+        #Create a designation record
+        @designation = Designation.new
+        @designation.membership_id=@Projectuser.first.id
+        @designation.save!
+        
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render json: @project, status: :created, location: @project }
         cookies.permanent[:open_project] = @project.id
@@ -88,9 +104,9 @@ class ProjectsController < ApplicationController
     end
   end
   
-  def withdraw
-    user_delegations=current_project.delegations.find(:all,:conditions=>["id IN (?)",current_user.delegations.collect(&:id)])
-    Delegation.destroy_all(['id IN (?)',user_delegations.collect(&:id)])
+  def remove(user)
+    current_project.memberships.collect { |u| u.users}  
+    current_project.users.delete(current_) #deleting the project the user belongs to
     cookies.delete(:open_project)
     redirect_to projects_path
   end

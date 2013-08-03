@@ -1,12 +1,28 @@
 <%content_for :side do%>
-	<%= render 'users_sidemenu'%>
+	<%if !current_project.nil?%>
+		<%= render 'users_sidemenu'%>
+	<%end%>
 <%end%>
 
 <%content_for :main do%>
-	<%if params[:project_user].nil?%>
-	<%=render 'form'%>
-	<%else%>
-	<%=render 'project_user'%>
-	<%end%>
-</div>
+		<div class="outer_div">
+		<div class="bigger_inner_div clearfix">
+		<%= form_for @user, :url => {:controller => "users", :action => "update"},:validate=>true do |f| %>
+			<%if current_user.id==@user.id%>
+				<%= render 'profile_edit',:f=>f %>
+			<%end%>
+			<%if current_user.member_of(current_project) && current_user.member_of(current_project).admin?%>
+				<%= render 'designation_edit',:f=>f %>
+			<%end%>
+			<div class="actions">
+					<%= f.submit "Update",:class=>"custom_better_button"%>
+			</div>
+		<%end%>
+		<%if current_user.member_of(current_project) && current_user.member_of(current_project).admin?%>
+		<div>
+			<%= button_to "Remove user from project",
+			{ :action => "remove", :userid => @user },
+			:confirm => "Are you sure you want to withdraw from the project?", :class=>"custom_better_button righty"%>
+		</div>
+		<%end%>
 <%end%>

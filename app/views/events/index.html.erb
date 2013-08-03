@@ -7,7 +7,7 @@
 <h2>Calendar</h2>
 	<%if current_project.nil?%>
 		<%=empty_display("projects")%>
-	<%elsif current_project_events.nil?%>
+	<%elsif current_project_events.empty?%>
 		<%=empty_display("events")%>
 	<%end%>
 	<p>
@@ -21,7 +21,7 @@
 <%else%>
 <div class="outer_div">
 	<div class="bigger_inner_div clearfix">
-		<h4 style="text-align: center;">View project events in calendar format.</h4>
+		<h4 style="text-align: center;">Create/open a new project and add events to view them in calendar format.</h4>
 	</div>
 </div>
 <%end%>

@@ -5,7 +5,7 @@
 		 <%= include_gon%>
 		<%= render 'layouts/stylesheets'%>
 		<%= csrf_meta_tags %> <!--<%= javascript_include_tag :defaults %>-->
-		<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js","http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "jquery_rails.js", "event_calendar.js","http://datatables.net/download/build/jquery.dataTables.nightly.js",'jquery-ui.js','nestedsortables.js','serializelist.js','timeglider.min.js' %>
+		<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js","http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "jquery_rails.js", "event_calendar.js","http://datatables.net/download/build/jquery.dataTables.nightly.js",'jquery-ui.js','nestedsortables.js','serializelist.js' %>
 		<%= javascript_include_tag "http://static.simile.mit.edu/exhibit/api-2.0/exhibit-api.js?autoCreate=false",'jquery_jstree_new.js', "best_in_place.js","jquery_purr.js","http://trunk.simile-widgets.org/exhibit/api/extensions/time/time-extension.js"%>
     	<%= javascript_include_tag "select2.js"%>
     	<%= javascript_include_tag "raphael-min.js"%>
@@ -34,8 +34,6 @@
 		<!-- Bootstrap Image Gallery styles -->
 
 		<script>
-		
- 
 		    $(function () {
         // Initialize the jQuery File Upload widget:
         $('#fileupload').fileupload();
@@ -212,55 +210,7 @@
 				}
 				});
 
-			$('.text_submittable').live('change', function() {
-				if(document.getElementById('text').checked == true) {
-					$('#text_appender').addClass('disp_div');
-					$('#text_appender').removeClass('disp_none');
-				} else {
-					$('#text_appender').addClass('disp_none');
-					$('#text_appender').removeClass('disp_div');
-				}
-			});
-			//To be chaged to above format of addClass and removeClass
-			$('.audio_submittable').live('change', function() {
-				if(document.getElementById('audio').checked == true) {
-					document.getElementById("audio_appender").className = 
-   					document.getElementById("audio_appender").className.replace
-      					( /(?:^|\s)disp_none(?!\S)/ , ' ' )
-      				document.getElementById("audio_appender").className += "disp_div";
-				} else {
-					document.getElementById("audio_appender").className = 
-   					document.getElementById("audio_appender").className.replace
-      					( /(?:^|\s)disp_div(?!\S)/ , ' ' )
-      				document.getElementById("audio_appender").className += "disp_none";
-				}
-			});
-			$('.video_submittable').live('change', function() {
-				if(document.getElementById('video').checked == true) {
-					document.getElementById("video_appender").className = 
-   					document.getElementById("video_appender").className.replace
-      					( /(?:^|\s)disp_none(?!\S)/ , ' ' )
-      				document.getElementById("video_appender").className += "disp_div";
-				} else {
-					document.getElementById("video_appender").className = 
-   					document.getElementById("video_appender").className.replace
-      					( /(?:^|\s)disp_div(?!\S)/ , ' ' )
-      				document.getElementById("video_appender").className += "disp_none";
-				}
-			});
-			$('.image_submittable').live('change', function() {
-				if(document.getElementById('image').checked == true) {
-					document.getElementById("image_appender").className = 
-   					document.getElementById("image_appender").className.replace
-      					( /(?:^|\s)disp_none(?!\S)/ , ' ' )
-      				document.getElementById("image_appender").className += "disp_div";
-				} else {
-					document.getElementById("image_appender").className = 
-   					document.getElementById("image_appender").className.replace
-      					( /(?:^|\s)disp_div(?!\S)/ , ' ' )
-      				document.getElementById("image_appender").className += "disp_none";
-				}
-			});
+			
 
 
 <%if !current_project.nil?%>
@@ -331,18 +281,18 @@
 			<%@phases.each do |p|%>
 		    {
 		    "data": "<%=p.name%>",
-		    "metadata": {"href" : "http://localhost:3000/phases/"+<%=p.id%>},
+		    "metadata": {"href" : "#{request.protocol}#{request.host_with_port}#{request.fullpath}"+<%=p.id%>},
 
 		    "children": [
 		    <%p.children.each do |c|%>
 		    {
 		        "data": "<%=c.name%>",
-		        "metadata": {"href" : "http://localhost:3000/phases/"+<%=c.id%>},
+		        "metadata": {"href" : "#{request.protocol}#{request.host_with_port}#{request.fullpath}"+<%=c.id%>},
 		        "children": [
 		    	<%c.children.each do |cc|%>
 		    	{
 		        "data": "<%=cc.name%>",
-		        "metadata": {"href" : "http://localhost:3000/phases/"+<%=cc.id%>},
+		        "metadata": {"href" : "#{request.protocol}#{request.host_with_port}#{request.fullpath}"+<%=cc.id%>},
 		    	},<%end%>]
 		    },<%end%>]
 		    },
@@ -359,7 +309,7 @@
 			<%@policies.each do |p|%>
 		    {
 		    "data": "<%=p.name%>",
-		    "metadata": {"href" : "http://localhost:3000/policies/"+<%=p.id%>+"/edit"},
+		    "metadata": {"href" : "<%="#{request.protocol}#{request.host_with_port}"%>"+"<%=p.id%>"+"/edit"},
 		    },
 		    <%end%>
 			];
@@ -1376,7 +1326,7 @@ _specificMenu.UMLProfile = [["Metaclass", function(c, a, d) {
 	<%if !current_user.nil?%>
 		<%if !current_project.nil?%> 
 			<div class="custom_div" style="height:25px;background-color: #CCCFA4;padding:4px 4px;float:left;">
-			<div style="float: left;">Currently viewing project: <%=link_to current_project.name, current_project.name%></div>
+			<div style="float: left;">Currently viewing project: <%=link_to current_project.name, current_project%></div>
 			</div>
 		<%else%>
 			<div class="custom_div" style="height:25px;background-color: #CCCFA4;padding:4px 4px;float:left;">
@@ -1385,7 +1335,7 @@ _specificMenu.UMLProfile = [["Metaclass", function(c, a, d) {
 		<%end%>
 			<div class="custom_div" style="height:25px;background-color: #CCCFA4;padding:4px 4px;">
 				<%= link_to "Overview", projects_path,:style=>"float:right;margin: 0px 10px 0px 12px;padding: 2px;background-color: #9CB3A0;",:class=>"custom_button round"%>
-			<div style="float: right;">You are logged in as <%=current_user.name%>. <%= link_to "Sign out", signout_path, :method => :delete%></div>
+			<div style="float: right;"><%=link_to "My profile", user_path(current_user)%>|| <%= link_to "Sign out", signout_path, :method => :delete%></div>
 			</div>
 	<%end%>
 	</div>

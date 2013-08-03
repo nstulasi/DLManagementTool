@@ -7,39 +7,46 @@
 		<p id="notice">
 			<%= notice %>
 		</p>
-		<div>
+		<p>
 			<%= button_to "Withdraw from project", { :action => "withdraw", :id => current_user.id },
-          :confirm => "Are you sure?", :class=>"custom_better_button righty",:method => :delete %>
-		</div>
+          :confirm => "Are you sure you want to withdraw from the project?", :class=>"custom_better_button righty",:method => :delete %>
+		</p>
+		
 		<p>
 			<b><%= image_tag("folder.png",:alt=>"Project")%>&nbsp;Name:</b>
-			<%= best_in_place @project,:name %>
+			<%= @project.name %>
 		</p>
-		<%= form_for @project,:method=>"post",:validate=>true,:'data-remote'=>true,:multipart=>true do |f| %>
+		
 		<p>
 			<b><%= image_tag("folder.png",:alt=>"Project")%>&nbsp;Description:</b>
-			<%= f.text_area :description%>
+		<div class="field">
+			<%= raw(@project.description)%>
+		</div>
 		</p>
-		<%= submit_tag 'Save',:class=>"custom_button round righty submittable "%>
-		<%end%>
 		<p>
 			<b><%= image_tag("time.png",:alt=>"Project")%>&nbsp;Start date:</b>
-			<%= best_in_place @project,:start_at%>
+			<%= @project.start_at%>
 		</p>
 		<p>
 			<b><%= image_tag("time.png",:alt=>"Project")%>&nbsp;End date:</b>
-			<%= best_in_place @project,:end_at%>
+			<%= @project.end_at%>
 		</p>
 		<p>
 			<b><%= image_tag("money.png",:alt=>"Project")%>&nbsp;Money:</b>
-			<%= best_in_place @project,:money %>
+			<%= @project.money %>
 		</p>
 		<p>
 			<b><%= image_tag("house.png",:alt=>"Project")%>&nbsp;Funding agency:</b>
-			<%= best_in_place @project,:funding_agency %>
+			<%= @project.funding_agency %>
 		</p>
 		<!--<%= link_to 'Edit', edit_project_path(@project),:class=>"custom_button round righty" %> |-->
-		<%= link_to 'Back', projects_path,:class=>"custom_button round righty" %>
+		<% if current_user.member_of(current_project) && (current_user.member_of(current_project)).admin?%>
+			<%=link_to "Delete Project",@project, confirm: 'Deleting this project will delete all its related information. Are you sure?', method: :delete, :class=>"custom_better_button"%>
+			<%= link_to 'Edit',edit_project_path(@project), :class=>"custom_better_button submittable righty"%>
+		<%end%>
+		<%= link_to 'Back', projects_path,:class=>"custom_better_button" %>
+		
+		
 	</div>
 </div>
 

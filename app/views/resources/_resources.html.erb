@@ -8,7 +8,7 @@
 <% end %>-->
 <div class="outer_div">
 	<div class="bigger_inner_div">
-<h4 style="text-align: center;margin-top: 10px;">New upload</h4><br/>
+<h4 style="text-align: center;margin-top: 10px;">Upload resources for the project</h4><br/>
 <p> Select files to add to the project. Uploaded files are listed below. Click on a file to download it. </p>
 <%=form_for [@resourceable, Resource.new], :html => { :multipart => true, :id => "fileupload"  } do |f| %>
         <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
@@ -19,7 +19,7 @@
                     <i class="icon-plus icon-white"></i>
                     <span>Add files...</span>
                     <%= f.file_field :resourcer %>
-                </span>
+                </span>&nbsp;
                 <button type="submit" class="btn btn-primary start">
                     <i class="icon-upload icon-white"></i>
                     <span>Start upload</span>

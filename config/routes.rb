@@ -69,9 +69,9 @@ SampleApp::Application.routes.draw do
     resources :resources
   end
   
-  match '/projects/:id', :to=>"projects#update", :via=>:post
-  
+
   match '/projects/new_user', :to=>'projects#new_user'
+  match '/users/remove', :to=>'users#remove'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

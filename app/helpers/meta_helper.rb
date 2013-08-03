@@ -1,6 +1,6 @@
 module MetaHelper
   def xmler(xml,type,type_encoding)
-    type.each_with_index do |t,index|
+       type.each_with_index do |t,index|
       if !params[t].nil?
          xml.type{
            node = xml.name{
@@ -8,8 +8,9 @@ module MetaHelper
            }
            node['checked']='true'
            if !params[type_encoding[index]].nil?
-              for encoding in params[type_encoding[index]]
-                xml.encoding { xml.text encoding }
+             puts params[type_encoding[index]]
+              params[type_encoding[index]].each_pair do |key, value|
+                xml.encoding { xml.text value }
               end
            end
          }

@@ -8,7 +8,6 @@
 		<th>End date  <!--<%=image_tag("time.png",:alt=>"")%>--></th>
 		<th>Money(in dollars)  <!--<%=image_tag("money.png",:alt=>"")%>--></th>
 		<th>Funding agency  <!--<%=image_tag("house.png",:alt=>"")%>--></th>
-		<th></th>
 	</tr>
 	</thead>
 	<% @projects.each do |project| %>
@@ -18,10 +17,6 @@
 		<td><%= project.end_at %></td>
 		<td><%= project.money %></td>
 		<td><%= project.funding_agency %></td>
-		<td>
-		<%=link_to image_tag("page_edit.png", :alt=>"Edit"),edit_project_path(project)%>&nbsp;&nbsp;
-		<%=link_to image_tag("cross.png", :alt=>"Delete"),project, confirm: 'Deleting this project will delete all its related information. Are you sure?', method: :delete%>
-		</td>
 	</tr>
 	<% end %>
 </table>

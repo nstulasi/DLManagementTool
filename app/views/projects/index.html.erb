@@ -2,16 +2,18 @@
 <!--TO-DO Add custom_box class to all the divs -->
 <div class ="grid_16 layout box_1 " id="right_display">
 	<br/>
+	<%if !current_project.nil?%>
 	<h2 class="custom_text" style="margin-bottom:0em;">Digital Library projects<!-- <%= @open_project%>&nbsp;<%=current_user.name%>--></h2>
-	<div class="hint" style="text-align: center;">Listing projects you are participating in</div>
-	<%= form_tag projects_path, :method => 'get', :id => "projects_search" do %>
-	<%= hidden_field_tag :direction, params[:direction]%>
-	<%= hidden_field_tag :sort, params[:sort]%>
-	<% end %>
-
-	<%= render 'projects'%>
-
-	<%= link_to 'Create a new digital library project', new_project_path,:class=>"custom_better_button",:style=>"float:right;padding:3px 12px;" %>
+	
+		<div class="hint" style="text-align: center;">Listing projects you are participating in</div>
+		<%= form_tag projects_path, :method => 'get', :id => "projects_search" do %>
+		<%= hidden_field_tag :direction, params[:direction]%>
+		<%= hidden_field_tag :sort, params[:sort]%>
+		<% end %>
+	
+		<%= render 'projects'%>
+		<%= link_to 'Create a new digital library project', new_project_path,:class=>"custom_better_button",:style=>"float:right;padding:3px 12px;" %>
+	<%end%>
 </div>
 <%end%>
 

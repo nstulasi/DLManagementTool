@@ -33,12 +33,18 @@ module ApplicationHelper
     end
   end
   
-   def phases
+  def current_membership
+    if current_user && current_project
+      current_user.memberships.where(:project_id=>current_project.id).first
+    end
+  end
+  
+  def phases
     Defaultphase.all
   end
   
   def empty_display(entity)
-      ret="<p id='empty_entity'>You have not yet created a "+ entity.to_s.singularize+ "#{link_to ". Create it here", :controller=>"#{entity}",:action=>"new"}</p>"
+      ret="<p id='empty_entity'>You have not yet created any "+ entity.to_s.singularize+"#{link_to ". Create it here", :controller=>"#{entity}",:action=>"new"}</p>"
       ret.html_safe
   end
   
@@ -244,5 +250,9 @@ def soc
     end
     ret=@checked
   end
+  
+   def url_with_protocol(url)
+     /^http/.match(url) ? url : "http://#{url}"
+   end
 
 end 

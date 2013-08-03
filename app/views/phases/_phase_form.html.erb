@@ -12,32 +12,33 @@
 </style>
 <div class="outer_div">
 	<div class="bigger_inner_div clearfix">
-
-<%= form_tag phases_make_path do %>
-<ul id="sitemap">
-	<% for p in Defaultphase.roots%>
-	<li>
-			<a href="#">
-			<%=  check_box_tag "phases[]",p.name %>
-		<%= p.name %>:</a>
-		<span class="hint"><%=p.content%></span>
-		<ul>
-			<%for sp in p.children%>
+		<%names=current_project.phases.map {|x|x.name}%>
+		<%= form_tag phases_make_path do %>
+		<ul id="sitemap">
+			<% for p in Defaultphase.roots%>
 			<li>
-				<a href ="#">
-				<%= check_box_tag "phases[]",sp.name %>
-				<%= sp.name%>
-				<span class="hint"><%=sp.content%></span>
-				<a>
-			<li>
+				<a href="#">
+					<%=  check_box_tag "phases[]",p.name,checked = (names.include? p.name) ? true:false %>
+					<%= p.name %>
+				</a>
+				<span class="hint"><%=p.content%></span>
+				<ul>
+					<%for sp in p.children%>
+					<li> TODO: Unchecking something will not affect it in the phases list. Uncheck digitization and save, it will still show up.
+						<a href ="#">
+						<%= check_box_tag "phases[]",sp.name, (names.include? sp.name) ? true:false%>
+						<%= sp.name%>
+						<span class="hint"><%=sp.content%></span>
+						<a>
+					<li>
+					<%end%>
+				</ul>
+			</li>
 			<%end%>
 		</ul>
-	</li>
-	<%end%>
-</ul>
-<%= submit_tag "Save changes",:class=>"custom_better_button righty" %>
-<% end %> 
-</div>
+		<%= submit_tag "Save changes",:class=>"custom_better_button righty" %>
+		<% end %> 
+	</div>
 </div>
 <!--
 <h1>Category Sorting Example</h1>

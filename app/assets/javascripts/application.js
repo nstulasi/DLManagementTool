@@ -9,6 +9,11 @@
 //= require best_in_place
 //= require rails.validations
 
+$(function () {
+    $('.checkall').click(function () {
+        $(this).parents('fieldset:eq(0)').find(':checkbox').attr('checked', this.checked);
+    });
+});
  
 $(document).ready(function() { $("#user_id").select2({
 					placeholder: "Choose user to assign task to",

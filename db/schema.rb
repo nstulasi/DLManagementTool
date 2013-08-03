@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121209010851) do
+ActiveRecord::Schema.define(:version => 20130202194308) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -75,13 +75,12 @@ ActiveRecord::Schema.define(:version => 20121209010851) do
     t.string   "content"
   end
 
-  create_table "delegations", :force => true do |t|
-    t.integer  "project_id"
-    t.integer  "user_id"
+  create_table "designations", :force => true do |t|
     t.string   "role"
     t.string   "responsibility"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "membership_id"
   end
 
   create_table "events", :force => true do |t|
@@ -99,6 +98,15 @@ ActiveRecord::Schema.define(:version => 20121209010851) do
     t.string   "recipient_email"
     t.string   "token"
     t.datetime "sent_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "memberships", :force => true do |t|
+    t.integer  "project_id"
+    t.integer  "user_id"
+    t.integer  "level"
+    t.integer  "designation_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

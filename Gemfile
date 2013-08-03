@@ -10,6 +10,7 @@ gem 'table_for_collection'
 gem 'carrierwave'
 gem 'prawn'
 gem 'validates_timeliness', '~> 3.0.2'
+gem 'acts_as_privilege'
 #Extras
 gem 'gravatar_image_tag', '0.1.0'
 gem 'faker', '0.3.1'

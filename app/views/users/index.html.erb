@@ -1,10 +1,12 @@
 <%content_for :side do%>
-<%= render 'users_sidemenu'%>
+	<%if !current_project.nil?%>
+		<%= render 'users_sidemenu'%>
+	<%end%>
 <%end%>
 <%content_for :main do%> 
 	
 	<%if !current_project.nil?%>
-		<h4 style="text-align: center;margin-top: 10px">People involved in the <%=link_to "#{current_project.name}",current_project%> project </h4>
+		<h4 style="text-align: center;margin-top: 10px">People involved in <%=link_to "#{current_project.name}",current_project%> </h4>
 		<%=render 'user_invitation'%>
 		
 			<ul class="users">
@@ -12,7 +14,7 @@
 		</ul>
 	<%else%>
 		 <p id="empty_entity">Currently not viewing any project </p>
-	 	 <p class="add_link"><%= link_to "Add new project",new_project_path%>&nbsp;&nbsp;<%=link_to image_tag("add.png", :alt=>"Add project"),new_project_path%></p>
+	 	 <p class="add_link"><%= link_to "Add new project",new_project_path%>&nbsp;&nbsp;<!--<%=link_to image_tag("add.png", :alt=>"Add project"),new_project_path%>--></p>
 
 	<%end%>
 

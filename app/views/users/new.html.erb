@@ -1354,7 +1354,9 @@ li{
 
 <%else%>
 	<%content_for :side do%>
-		<%= render 'users_sidemenu'%>
+		<%if !current_project.nil?%>
+			<%= render 'users_sidemenu'%>
+		<%end%>
 	<%end%>
 
 	<%content_for :main do%>

@@ -1,33 +1,49 @@
 <%content_for :side do%>
-<%= render 'users_sidemenu'%>
+<%if !current_project.nil?%>
+	<%= render 'users_sidemenu'%>
+<%end%>
 <%end%>
 <%content_for :main do%>
 <div class="outer_div">
-	<div class="inner_div clearfix">
+	<div class="bigger_inner_div clearfix">
+		<%if @user.member_of(current_project) && (@user.member_of(current_project)).admin?%>
+			Admin user
+		<%end%>
 		<p>
-			<b><%= image_tag("user.png",:alt=>"User")%>&nbsp;Name:</b>
+			<b>Name:</b>
 			<%= best_in_place @user, :name %>
 		</p>
 		<p>
-			<b><%= image_tag("email.png",:alt=>"User")%>&nbsp;Email:</b>
+			<b>Email:</b>
 			<%= best_in_place @user, :email %>
 		</p>
 		<p>
-			<b><%= image_tag("email.png",:alt=>"User")%>&nbsp;Webpage:</b>
-			<%= best_in_place @user, :webpage %>
-		</p>
-		<p>
-			<b><%= image_tag("phone.png",:alt=>"User")%>&nbsp;Number:</b>
-			<%= best_in_place @user, :number %>
-		</p>
-		<p>
-			<%@user.delegations.each do |d|%>
-			<p><b><%= image_tag("user_suit.png",:alt=>"Role")%>&nbsp;Role:<%= d.role%></b></p>
-			<p><b><%= image_tag("vcard.png",:alt=>"Responsibility")%>&nbsp;Responsibility:<%= d.responsibility%></b></p>
+			<% if !@user.webpage.nil?%>
+			<b>Webpage:</b>
+			<%= link_to @user.webpage, url_with_protocol(@user.webpage)%>
 			<%end%>
 		</p>
-		<!--<%= link_to 'Edit', edit_user_path(@user),:class=>"custom_button round righty" %> |-->
-		<%= link_to 'Back', users_path,:class=>"custom_button round righty" %>
+		<p>
+			<% if !@user.number.nil?%>
+			<b>Number:</b>
+			<%= best_in_place @user, :number %>
+			<%end%>
+		</p>
+		<p>
+		 <table>
+			<%@user.memberships.where(:project_id=>current_project.id).each do |m|%>
+				<%m.designations.each do |d|%>
+					<tr><td style="vertical-align:top"><b>Role:</b></td><td><%= d.role%></td></tr>
+					<tr><td colspan="2" style="vertical-align:top"><b>Responsibilities</b><br/><%= d.responsibility%></td></tr>
+				<%end%>
+			<%end%>
+		 </table>
+		</p>
+		<!--Dont display edit button if user does not have permission. Combined current_permission and authorize methods in applicaion_controller-->
+		<%if Permission.new(current_membership).allow?("user", "edit",current_user, current_project,params[:id])%>
+			<%= link_to 'Edit', edit_user_path(@user),:class=>"custom_better_button round" %> 
+		<%end%>
+		<%= link_to 'Back', users_path,:class=>"custom_better_button round righty" %>
 	</div>
 </div>
 <%end%> 

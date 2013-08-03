@@ -1,11 +1,6 @@
 module UsersHelper
-  def gravatar_for(user, options={:size=>50})
-    gravatar_image_tag(user.email.downcase, :alt=>user.name,
-                                            :class=>"gravatar",
-                                            :gravatar=>options)
-  end
-  
-    def display_users(users)
+ 
+  def display_users(users)
            ret = '<ul CLASS ="mktree">'
      for category in categories
        if category.parent_id == nil

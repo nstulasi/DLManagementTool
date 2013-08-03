@@ -1,16 +1,15 @@
 require 'digest'
 class User < ActiveRecord::Base
-  has_many :delegations
-  has_many :projects, :through => :delegations
-  
+  has_many :memberships
+  has_many :projects, :through => :memberships
   has_many :sent_invitations, :class_name => 'Invitation', :foreign_key => 'sender_id'
   belongs_to :invitation
   
-  accepts_nested_attributes_for :delegations, :allow_destroy=>true
+  accepts_nested_attributes_for :memberships,:allow_destroy=>true
   
   attr_accessor :project_user,:password,:password_confirmation
   
-  attr_accessible :id,:name, :email,:delegations_attributes,:webpage, :number,:password,:password_confirmation, :invitation_token,:invitation_attributes
+  attr_accessible :id,:name, :user_attributes, :email,:designations_attributes,:memberships_attributes,:webpage, :number,:password,:password_confirmation, :invitation_token,:invitation_attributes
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :name, :presence => true,
@@ -76,6 +75,10 @@ end
     (user && user.salt==cookie_salt) ? user : nil 
   end
   
+  def member_of(project)
+    self.memberships.where(:project_id=>project.id).first
+  end
+   
 private
   def encrypt_password
     self.salt = make_salt if new_record?

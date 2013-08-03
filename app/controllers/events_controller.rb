@@ -6,7 +6,7 @@ class EventsController < ApplicationController
     @month = (params[:month] || (Time.zone || Time).now.month).to_i
     @year = (params[:year] || (Time.zone || Time).now.year).to_i
     @shown_month = Date.civil(@year, @month)
-    @events=current_project.events
+    @events=current_project.events unless current_project.nil?
     
     #Displaying only current project's events
     if !current_project.nil?
@@ -18,7 +18,7 @@ class EventsController < ApplicationController
       format.csv { send_data @events.get_csv }
       format.xls
       format.pdf {
-        pdf = EventPdf.new(current_project.events,view_context)
+        pdf = EventPdf.new(current_project.events,view_context) 
         send_data  pdf.render, filename: "events.pdf",
                               type: "application/pdf",
                               disposition: "inline"

@@ -23,6 +23,7 @@ class TaskPdf < Prawn::Document
 
   def line_item_rows
     [["Task name", "Priority","Status", "Start date", "End date"]] +
+   
    @tasks.all.map do |item|
       [item.name, priority_task(item.priority.to_i), status_name(item.status.to_i), to_date(item.start_at), to_date(item.end_at)]
     end

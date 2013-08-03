@@ -7,7 +7,7 @@ class TasksController < ApplicationController
   # GET /tasks.json
   def index
     @tasks = current_project_tasks unless current_project.nil?
-    pdf = TaskPdf.new(@tasks, view_context)
+    pdf = TaskPdf.new(@tasks, view_context) unless current_project.nil?
     respond_to do |format|
     format.html # index.html.erb
     format.json { render json: @tasks }

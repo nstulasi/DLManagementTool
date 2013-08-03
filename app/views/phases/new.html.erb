@@ -2,29 +2,26 @@
 	<%= render 'phases_sidemenu'%>
 <%end%>
 <%content_for :main do%> 
-	
-		<%if params[:custom_form].nil?%>
+	<%if params[:custom_form].nil?%>
 		<h4 class="headings" style="text-align: center;margin-top:10px">Creating/Editing phase list</h4>
 		<div class="hint" style="text-align: center;">Select phases to include in your digital library project by checking the box and saving</div>
-			<div class="custom_better_div" style="text-align: center;margin:5px 5px">
-			Select XML file to import phases
+		<div class="custom_better_div" style="text-align: center;margin:5px 5px">
+		Select XML file to import phases
 		<%= form_tag('/rake_phases', :method=>'post', :multipart => true,:class=>"clearfix") do%>
-
-			<%=file_field_tag :file%>
-			<%= submit_tag "Submit",:class=>"custom_better_button"%>
+				<%=file_field_tag :file%>
+				<%= submit_tag "Submit",:class=>"custom_better_button"%>
 		<%end%>
 		</div>
-
-			<%=render 'phase_form'%>
-		<%else%>
-		<h4 class="headings" style="text-align: center;margin-top:10px">Creating a new phase</h4>
-		<div class="custom_better_div" style="text-align: center;margin:5px 5px">
-		 Select XML file from which to import phases
-		 </div>
-		<%= form_tag('/rake_phases', :method=>'post', :multipart => true,:class=>"clearfix") do%>
-			<%=file_field_tag :file%>
-			<%= submit_tag "Submit",:class=>"custom_better_button"%>
-		<%end%>
+		<%=render 'phase_form'%>
+	<%else%>
+			<h4 class="headings" style="text-align: center;margin-top:10px">Creating a new phase</h4>
+			<div class="custom_better_div" style="text-align: center;margin:5px 5px">
+			Select XML file from which to import phases
+			</div>
+			<%= form_tag('/rake_phases', :method=>'post', :multipart => true,:class=>"clearfix") do%>
+				<%=file_field_tag :file%>
+				<%= submit_tag "Submit",:class=>"custom_better_button"%>
+			<%end%>
 			<%=render 'form'%>
-		<%end%>
+	<%end%>
 <%end%>  

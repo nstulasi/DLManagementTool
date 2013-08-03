@@ -27,20 +27,20 @@
 </div>
 
 <div class="field" id="project">
-	<%= f.label "Start date" %><span class="hint"> Select tentative start date for the project</span>
+	<%= f.label "Start date" %><span class="hint"> Select tentative start date for the project in MM/DD/YYYY format</span>
 	<%= field_set_tag nil, :class => 'field' do %>
 		<%= f.text_field :start_at %>
 	<%end%>
 </div>
 
 <div class="field" id="project">
-	<%= f.label "End date" %><span class="hint"> Select tentative end date for the project</span>
+	<%= f.label "End date" %><span class="hint"> Select tentative end date for the project in MM/DD/YYYY format</span>
 	<%= field_set_tag nil, :class => 'field' do %>
 		<%= f.text_field :end_at %>
 	<%end%>
 </div>
 <div class="field">
-	<%= f.label :money %>
+	<%= f.label "Funds" %><span class="hint"> Enter the amount of funding available for this project</span>
 	<%= field_set_tag nil, :class => 'field' do %>
 	<%= f.text_field :money %>
 	<%end%>

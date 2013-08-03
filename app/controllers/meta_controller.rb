@@ -48,7 +48,7 @@ class MetaController < ApplicationController
     builder = Nokogiri::XML::Builder.new do |xml|
     xml.streams{
      xml.content{
-       xmler(xml,type,type_encoding)
+        xmler(xml,type,type_encoding)
      }
     }
   end
@@ -236,8 +236,6 @@ def generate_society
   end
   
   def soc_del
-    puts "********in del"
-    puts params[:id]
     @society= current_project.metum
     @doc = Nokogiri::XML(current_project.metum.society_xml)
     @doc.xpath("//group")[params[:id].to_i].remove
@@ -250,7 +248,6 @@ def generate_society
   end
   
     def struc_del
-    puts "********in del"
     puts params[:id]
     @structure= current_project.metum
     @doc = Nokogiri::XML(current_project.metum.structure_xml)

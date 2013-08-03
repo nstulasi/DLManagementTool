@@ -1,101 +1,101 @@
-2012-12-09T01:27:03+00:00 app[web.1]: Started GET "/assets/jquery_fileupload-ui-c10350d777fc205c42f3d55df1704f56.js" for 131.107.192.121 at 2012-12-09 01:27:03 +0000
-2012-12-09T01:27:03+00:00 app[web.1]: cache: [GET /assets/jquery_fileupload-ui-c10350d777fc205c42f3d55df1704f56.js] miss
-2012-12-09T01:27:03+00:00 app[web.1]: 
-2012-12-09T01:27:03+00:00 heroku[router]: at=info method=GET path=/assets/jquery_fileupload-ui-c10350d777fc205c42f3d55df1704f56.js host=radiant-escarpment-5330.herokuapp.com fwd=131.107.192.121 dyno=web.1 queue=0 wait=4ms connect=27ms service=12ms status=304 bytes=0
-2012-12-09T01:27:03+00:00 app[web.1]: 
-2012-12-09T01:27:03+00:00 app[web.1]: 
-2012-12-09T01:27:03+00:00 app[web.1]: Started GET "/meta/__history__.html?0" for 131.107.192.121 at 2012-12-09 01:27:03 +0000
-2012-12-09T01:27:03+00:00 app[web.1]: ActiveRecord::RecordNotFound (Couldn't find Metum with id=__history__):
-2012-12-09T01:27:03+00:00 app[web.1]:   app/controllers/meta_controller.rb:17:in `show'
-2012-12-09T01:27:03+00:00 app[web.1]: 
-2012-12-09T01:27:03+00:00 app[web.1]: cache: [GET /meta/__history__.html?0] miss
-2012-12-09T01:27:03+00:00 app[web.1]: 
-2012-12-09T01:27:03+00:00 app[web.1]: 
-2012-12-09T01:27:03+00:00 heroku[router]: at=info method=GET path=/meta/__history__.html?0 host=radiant-escarpment-5330.herokuapp.com fwd=131.107.192.121 dyno=web.1 queue=0 wait=0ms connect=0ms service=18ms status=404 bytes=728
-2012-12-09T01:27:04+00:00 app[web.1]: 
-2012-12-09T01:27:04+00:00 app[web.1]: 
-2012-12-09T01:27:04+00:00 app[web.1]: Started GET "/meta/new" for 131.107.192.121 at 2012-12-09 01:27:04 +0000
-2012-12-09T01:27:04+00:00 heroku[router]: at=info method=GET path=/meta/new host=radiant-escarpment-5330.herokuapp.com fwd=131.107.192.121 dyno=web.1 queue=0 wait=18ms connect=18ms service=16ms status=200 bytes=160
-2012-12-09T01:27:04+00:00 heroku[router]: at=info method=GET path=/assets/vertical_flow.png host=radiant-escarpment-5330.herokuapp.com fwd=131.107.192.121 dyno=web.1 queue=0 wait=0ms connect=1ms service=4ms status=200 bytes=2768
-2012-12-09T01:27:04+00:00 heroku[router]: at=info method=GET path=/assets/import_export.png host=radiant-escarpment-5330.herokuapp.com fwd=131.107.192.121 dyno=web.1 queue=0 wait=1ms connect=2ms service=3ms status=200 bytes=349
-2012-12-09T01:27:04+00:00 heroku[router]: at=info method=GET path=/assets/delete_button.png host=radiant-escarpment-5330.herokuapp.com fwd=131.107.192.121 dyno=web.1 queue=0 wait=0ms connect=2ms service=4ms status=200 bytes=218
-2012-12-09T01:27:04+00:00 heroku[router]: at=info method=GET path=/assets/generate_image.png host=radiant-escarpment-5330.herokuapp.com fwd=131.107.192.121 dyno=web.1 queue=0 wait=0ms connect=0ms service=3ms status=200 bytes=363
-2012-12-09T01:27:04+00:00 app[web.1]: cache: [GET /meta/new] miss
-2012-12-09T01:27:04+00:00 heroku[router]: at=info method=GET path=/assets/delete_object.png host=radiant-escarpment-5330.herokuapp.com fwd=131.107.192.121 dyno=web.1 queue=0 wait=0ms connect=2ms service=3ms status=200 bytes=352
-2012-12-09T01:27:04+00:00 app[web.1]: cache: [GET /assets/import_export.png] miss
-2012-12-09T01:27:04+00:00 app[web.1]: cache: [GET /assets/delete_button.png] miss
-2012-12-09T01:27:04+00:00 app[web.1]: cache: [GET /assets/delete_object.png] miss
-2012-12-09T01:27:04+00:00 app[web.1]: cache: [GET /assets/modify_color.png] miss
-2012-12-09T01:27:04+00:00 heroku[router]: at=info method=GET path=/assets/modify_color.png host=radiant-escarpment-5330.herokuapp.com fwd=131.107.192.121 dyno=web.1 queue=0 wait=0ms connect=2ms service=4ms status=200 bytes=350
-2012-12-09T01:27:04+00:00 app[web.1]: cache: [GET /assets/generate_image.png] miss
-2012-12-09T01:27:04+00:00 heroku[router]: at=info method=GET path=/assets/UMLSequenceDiagram.png host=radiant-escarpment-5330.herokuapp.com fwd=131.107.192.121 dyno=web.1 queue=0 wait=1ms connect=1ms service=5ms status=200 bytes=314
-2012-12-09T01:27:04+00:00 heroku[router]: at=info method=GET path=/assets/UMLProfile.png host=radiant-escarpment-5330.herokuapp.com fwd=131.107.192.121 dyno=web.1 queue=0 wait=7ms connect=4ms service=4ms status=200 bytes=551
-2012-12-09T01:27:04+00:00 app[web.1]: cache: [GET /assets/vertical_flow.png] miss
-2012-12-09T01:27:04+00:00 app[web.1]: cache: [GET /assets/UMLSequenceDiagram.png] miss
-2012-12-09T01:27:04+00:00 app[web.1]: cache: [GET /assets/UMLProfile.png] miss
-2012-12-09T01:27:04+00:00 app[web.1]: Started GET "/meta/assets/add.png" for 131.107.192.121 at 2012-12-09 01:27:04 +0000
-2012-12-09T01:27:04+00:00 app[web.1]:   
-2012-12-09T01:27:04+00:00 app[web.1]: 
-2012-12-09T01:27:04+00:00 app[web.1]: cache: [GET /meta/assets/add.png] miss
-2012-12-09T01:27:04+00:00 app[web.1]: 
-2012-12-09T01:27:04+00:00 heroku[router]: at=info method=GET path=/meta/assets/add.png host=radiant-escarpment-5330.herokuapp.com fwd=131.107.192.121 dyno=web.1 queue=0 wait=0ms connect=0ms service=9ms status=404 bytes=728
-2012-12-09T01:27:04+00:00 app[web.1]: 
-2012-12-09T01:27:04+00:00 app[web.1]: 
-2012-12-09T01:27:04+00:00 app[web.1]: 
-2012-12-09T01:27:04+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/meta/assets/add.png"):
-2012-12-09T01:27:07+00:00 app[web.1]: cache: [GET /assets/select2.png] miss
-2012-12-09T01:27:10+00:00 app[web.1]: 
-2012-12-09T01:27:10+00:00 app[web.1]: 
-2012-12-09T01:27:10+00:00 app[web.1]: Started POST "/generate_stream" for 131.107.192.121 at 2012-12-09 01:27:10 +0000
-2012-12-09T01:27:10+00:00 app[web.1]: 
-2012-12-09T01:27:10+00:00 app[web.1]: ActiveRecord::StatementInvalid (PG::Error: ERROR:  value too long for type character varying(255)
-2012-12-09T01:27:10+00:00 app[web.1]:     <type>
-2012-12-09T01:27:10+00:00 app[web.1]:       <name checked="false">audio</name>
-2012-12-09T01:27:10+00:00 app[web.1]:     </type>
-2012-12-09T01:27:10+00:00 app[web.1]: : UPDATE "meta" SET "stream_xml" = '<?xml version="1.0"?>
-2012-12-09T01:27:10+00:00 app[web.1]: <streams>
-2012-12-09T01:27:10+00:00 app[web.1]:     <type>
-2012-12-09T01:27:10+00:00 app[web.1]:     </type>
-2012-12-09T01:27:10+00:00 app[web.1]:       <name checked="false">program</name>
-2012-12-09T01:27:10+00:00 app[web.1]:     </type>
-2012-12-09T01:27:10+00:00 app[web.1]:     <type>
-2012-12-09T01:27:10+00:00 app[web.1]:       <name checked="false">image</name>
-2012-12-09T01:27:10+00:00 app[web.1]:     </type>
-2012-12-09T01:27:10+00:00 app[web.1]:   app/controllers/meta_controller.rb:57:in `generate_stream'
-2012-12-09T01:27:10+00:00 app[web.1]:   <content>
-2012-12-09T01:27:10+00:00 app[web.1]:   </content>
-2012-12-09T01:27:10+00:00 app[web.1]: </streams>
-2012-12-09T01:27:10+00:00 app[web.1]:       <name checked="false">video</name>
-2012-12-09T01:27:10+00:00 app[web.1]:     </type>
-2012-12-09T01:27:10+00:00 app[web.1]: ', "updated_at" = '2012-12-09 01:27:10.803987' WHERE "meta"."id" = 2):
-2012-12-09T01:27:10+00:00 app[web.1]:     <type>
-2012-12-09T01:27:10+00:00 app[web.1]:     <type>
-2012-12-09T01:27:10+00:00 app[web.1]: cache: [POST /generate_stream] invalidate, pass
-2012-12-09T01:27:10+00:00 app[web.1]:       <name checked="true">character</name>
-2012-12-09T01:27:10+00:00 app[web.1]: 
-2012-12-09T01:27:10+00:00 app[web.1]:       <encoding>UTF-8</encoding>
-2012-12-09T01:27:10+00:00 app[web.1]:     </type>
-2012-12-09T01:27:10+00:00 app[web.1]:     <type>
-2012-12-09T01:27:10+00:00 heroku[router]: at=info method=POST path=/generate_stream host=radiant-escarpment-5330.herokuapp.com fwd=131.107.192.121 dyno=web.1 queue=0 wait=0ms connect=12ms service=21ms status=500 bytes=728
-2012-12-09T01:27:10+00:00 app[web.1]:       <name checked="false">text</name>
-2012-12-09T01:27:10+00:00 app[web.1]: 
-2012-12-09T01:27:11+00:00 app[web.1]: cache: [GET /favicon.ico] miss
-2012-12-09T01:27:17+00:00 app[web.1]: 
-2012-12-09T01:27:17+00:00 app[web.1]: 
-2012-12-09T01:27:17+00:00 app[web.1]: Started GET "/users/__history__.html?0" for 131.107.192.121 at 2012-12-09 01:27:17 +0000
-2012-12-09T01:27:17+00:00 app[web.1]: ActiveRecord::RecordNotFound (Couldn't find User with id=__history__):
-2012-12-09T01:27:17+00:00 app[web.1]: 
-2012-12-09T01:27:17+00:00 app[web.1]: cache: [GET /users/__history__.html?0] miss
-2012-12-09T01:27:17+00:00 app[web.1]:   app/controllers/users_controller.rb:81:in `show'
-2012-12-09T01:27:17+00:00 app[web.1]: 
-2012-12-09T01:27:17+00:00 app[web.1]: 
-2012-12-09T01:27:18+00:00 app[web.1]: cache: [GET /users/assets/add.png] miss
-2012-12-09T01:27:18+00:00 app[web.1]: 
-2012-12-09T01:27:18+00:00 app[web.1]: Started GET "/users/assets/add.png" for 131.107.192.121 at 2012-12-09 01:27:18 +0000
-2012-12-09T01:27:18+00:00 app[web.1]: 
-2012-12-09T01:27:18+00:00 app[web.1]: 
-2012-12-09T01:27:18+00:00 app[web.1]:   
-2012-12-09T01:27:18+00:00 app[web.1]: 
-2012-12-09T01:27:18+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/users/assets/add.png"):
-2012-12-09T01:27:18+00:00 app[web.1]: 
-2012-12-09T01:27:18+00:00 heroku[router]: at=info method=GET path=/users/assets/add.png host=radiant-escarpment-5330.herokuapp.com fwd=131.107.192.121 dyno=web.1 queue=0 wait=0ms connect=0ms service=6ms status=404 bytes=728
+2013-01-20T22:33:40+00:00 app[web.1]: 
+2013-01-20T22:33:40+00:00 app[web.1]: 
+2013-01-20T22:33:40+00:00 app[web.1]: Started GET "/assets/jquery.fileupload-ui-38d3cb361a90b897d5e0506627565ebb.css" for 24.16.158.0 at 2013-01-20 22:33:40 +0000
+2013-01-20T22:33:40+00:00 app[web.1]: 
+2013-01-20T22:33:40+00:00 app[web.1]: 
+2013-01-20T22:33:40+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/timeglider.min.js"):
+2013-01-20T22:33:40+00:00 app[web.1]:   
+2013-01-20T22:33:40+00:00 app[web.1]: 
+2013-01-20T22:33:40+00:00 app[web.1]: 
+2013-01-20T22:33:40+00:00 app[web.1]: cache: [GET /assets/timeglider.min.js] miss
+2013-01-20T22:33:40+00:00 app[web.1]: 
+2013-01-20T22:33:40+00:00 app[web.1]:   
+2013-01-20T22:33:41+00:00 app[web.1]: Started GET "/assets/bootstrap-image-gallery.min-df7fd0abd80c5449a1be22799c44106d.css" for 24.16.158.0 at 2013-01-20 22:33:41 +0000
+2013-01-20T22:33:41+00:00 app[web.1]: 
+2013-01-20T22:33:41+00:00 app[web.1]: 
+2013-01-20T22:33:41+00:00 app[web.1]: 
+2013-01-20T22:33:41+00:00 app[web.1]: 
+2013-01-20T22:33:41+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-image-gallery.min-df7fd0abd80c5449a1be22799c44106d.css"):
+2013-01-20T22:33:41+00:00 app[web.1]: 
+2013-01-20T22:33:41+00:00 app[web.1]: cache: [GET /assets/bootstrap-image-gallery.min-df7fd0abd80c5449a1be22799c44106d.css] miss
+2013-01-20T22:33:41+00:00 app[web.1]:   
+2013-01-20T22:33:43+00:00 app[web.1]: Started GET "/phases" for 24.16.158.0 at 2013-01-20 22:33:43 +0000
+2013-01-20T22:33:43+00:00 app[web.1]: 
+2013-01-20T22:33:43+00:00 app[web.1]: 
+2013-01-20T22:33:43+00:00 app[web.1]: cache: [GET /phases] miss
+2013-01-20T22:33:43+00:00 heroku[router]: at=info method=GET path=/phases host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=1ms service=180ms status=200 bytes=4
+2013-01-20T22:33:41+00:00 heroku[router]: at=info method=GET path=/assets/bootstrap-image-gallery.min-df7fd0abd80c5449a1be22799c44106d.css host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=1ms connect=2ms service=32ms status=404 bytes=728
+2013-01-20T22:33:44+00:00 app[web.1]: 
+2013-01-20T22:33:44+00:00 app[web.1]: cache: [GET /__history__.html?0] miss
+2013-01-20T22:33:44+00:00 heroku[router]: at=info method=GET path=/__history__.html?0 host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=5ms connect=10ms service=15ms status=404 bytes=728
+2013-01-20T22:33:44+00:00 app[web.1]: 
+2013-01-20T22:33:44+00:00 app[web.1]: 
+2013-01-20T22:33:44+00:00 app[web.1]: Started GET "/__history__.html?0" for 24.16.158.0 at 2013-01-20 22:33:44 +0000
+2013-01-20T22:33:44+00:00 app[web.1]: 
+2013-01-20T22:33:44+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/__history__.html"):
+2013-01-20T22:33:44+00:00 app[web.1]:   
+2013-01-20T22:33:44+00:00 app[web.1]: 
+2013-01-20T22:34:37+00:00 app[web.1]: 
+2013-01-20T22:34:37+00:00 app[web.1]: Started GET "/meta/new" for 24.16.158.0 at 2013-01-20 22:34:37 +0000
+2013-01-20T22:34:37+00:00 app[web.1]: 
+2013-01-20T22:34:37+00:00 app[web.1]: cache: [GET /meta/new] miss
+2013-01-20T22:34:37+00:00 heroku[router]: at=info method=GET path=/meta/new host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=5ms connect=7ms service=56ms status=200 bytes=53623
+2013-01-20T22:34:37+00:00 app[web.1]:   
+2013-01-20T22:34:37+00:00 app[web.1]: cache: [GET /assets/bootstrap-image-gallery.min-df7fd0abd80c5449a1be22799c44106d.css] miss
+2013-01-20T22:34:37+00:00 app[web.1]: 
+2013-01-20T22:34:37+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/bootstrap-image-gallery.min-df7fd0abd80c5449a1be22799c44106d.css"):
+2013-01-20T22:34:37+00:00 app[web.1]: 
+2013-01-20T22:34:37+00:00 app[web.1]: 
+2013-01-20T22:34:37+00:00 app[web.1]: 
+2013-01-20T22:34:37+00:00 app[web.1]: Started GET "/assets/bootstrap-image-gallery.min-df7fd0abd80c5449a1be22799c44106d.css" for 24.16.158.0 at 2013-01-20 22:34:37 +0000
+2013-01-20T22:34:37+00:00 app[web.1]: 
+2013-01-20T22:34:37+00:00 heroku[router]: at=info method=GET path=/assets/bootstrap-image-gallery.min-df7fd0abd80c5449a1be22799c44106d.css host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=7ms connect=37ms service=36ms status=404 bytes=728
+2013-01-20T22:34:38+00:00 app[web.1]: 
+2013-01-20T22:34:38+00:00 app[web.1]: Started GET "/assets/timeglider.min.js" for 24.16.158.0 at 2013-01-20 22:34:38 +0000
+2013-01-20T22:34:38+00:00 app[web.1]: 
+2013-01-20T22:34:38+00:00 app[web.1]:   
+2013-01-20T22:34:38+00:00 app[web.1]: 
+2013-01-20T22:34:38+00:00 app[web.1]: 
+2013-01-20T22:34:38+00:00 app[web.1]: 
+2013-01-20T22:34:38+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/timeglider.min.js"):
+2013-01-20T22:34:38+00:00 app[web.1]: cache: [GET /assets/timeglider.min.js] miss
+2013-01-20T22:34:38+00:00 heroku[router]: at=info method=GET path=/assets/timeglider.min.js host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=1ms service=10ms status=404 bytes=728
+2013-01-20T22:34:39+00:00 app[web.1]: Started GET "/assets/jquery.fileupload-ui-38d3cb361a90b897d5e0506627565ebb.css" for 24.16.158.0 at 2013-01-20 22:34:39 +0000
+2013-01-20T22:34:39+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/jquery.fileupload-ui-38d3cb361a90b897d5e0506627565ebb.css"):
+2013-01-20T22:34:39+00:00 app[web.1]: 
+2013-01-20T22:34:39+00:00 app[web.1]: cache: [GET /assets/jquery.fileupload-ui-38d3cb361a90b897d5e0506627565ebb.css] miss
+2013-01-20T22:34:39+00:00 app[web.1]:   
+2013-01-20T22:34:39+00:00 app[web.1]: 
+2013-01-20T22:34:39+00:00 heroku[router]: at=info method=GET path=/assets/jquery.fileupload-ui-38d3cb361a90b897d5e0506627565ebb.css host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=1ms connect=4ms service=11ms status=404 bytes=728
+2013-01-20T22:34:39+00:00 app[web.1]: 
+2013-01-20T22:34:39+00:00 app[web.1]: 
+2013-01-20T22:34:39+00:00 app[web.1]: 
+2013-01-20T22:34:40+00:00 app[web.1]: 
+2013-01-20T22:34:40+00:00 app[web.1]: Started GET "/meta/new" for 24.16.158.0 at 2013-01-20 22:34:40 +0000
+2013-01-20T22:34:40+00:00 app[web.1]: 
+2013-01-20T22:34:41+00:00 app[web.1]: cache: [GET /meta/new] miss
+2013-01-20T22:34:41+00:00 heroku[router]: at=info method=GET path=/meta/new host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=2ms connect=6ms service=87ms status=200 bytes=160
+2013-01-20T22:34:44+00:00 app[web.1]: Started GET "/tasks" for 24.16.158.0 at 2013-01-20 22:34:44 +0000
+2013-01-20T22:34:44+00:00 app[web.1]: 
+2013-01-20T22:34:44+00:00 app[web.1]: 
+2013-01-20T22:34:44+00:00 app[web.1]:   app/pdfs/task_pdf.rb:26:in `line_item_rows'
+2013-01-20T22:34:44+00:00 app[web.1]:   app/pdfs/task_pdf.rb:16:in `line_items'
+2013-01-20T22:34:44+00:00 app[web.1]:   app/controllers/tasks_controller.rb:10:in `index'
+2013-01-20T22:34:44+00:00 app[web.1]: 
+2013-01-20T22:34:44+00:00 app[web.1]: NoMethodError (undefined method `all' for nil:NilClass):
+2013-01-20T22:34:44+00:00 app[web.1]:   app/pdfs/task_pdf.rb:7:in `initialize'
+2013-01-20T22:34:44+00:00 app[web.1]: 
+2013-01-20T22:34:44+00:00 app[web.1]: 
+2013-01-20T22:34:44+00:00 app[web.1]:   app/controllers/tasks_controller.rb:10:in `new'
+2013-01-20T22:34:44+00:00 app[web.1]: cache: [GET /tasks] miss
+2013-01-20T22:34:44+00:00 heroku[router]: at=info method=GET path=/tasks host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=1ms service=84ms status=500 bytes=728
+2013-01-20T22:34:44+00:00 heroku[router]: at=info method=GET path=/meta/assets/add.png host=radiant-escarpment-5330.herokuapp.com fwd=24.16.158.0 dyno=web.1 queue=0 wait=0ms connect=3ms service=9ms status=404 bytes=728
+2013-01-20T22:34:44+00:00 app[web.1]: 
+2013-01-20T22:34:44+00:00 app[web.1]: 
+2013-01-20T22:34:44+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/meta/assets/add.png"):
+2013-01-20T22:34:44+00:00 app[web.1]: 
+2013-01-20T22:34:44+00:00 app[web.1]: Started GET "/meta/assets/add.png" for 24.16.158.0 at 2013-01-20 22:34:44 +0000
+2013-01-20T22:34:44+00:00 app[web.1]: 
+2013-01-20T22:34:44+00:00 app[web.1]: cache: [GET /meta/assets/add.png] miss
+2013-01-20T22:34:44+00:00 app[web.1]:   
+2013-01-20T22:34:44+00:00 app[web.1]: 

@@ -1,21 +1,29 @@
-<br/>
-<div>People grouped by role <%=image_tag("group.png", :alt=>"People")%></div>
 <%if !current_project.nil?%>
-<%@uniq_roles = Delegation.find(:all,:select=>:role,:conditions=>["delegations.role IS NOT NULL AND project_id=?",current_project.id])%>
-<%end%>
-<%if !current_project.nil?%>
-	<%if !@uniq_roles.nil?%>
+	<div>People grouped by role <%=image_tag("group.png", :alt=>"People")%></div>
+	<%current_project.memberships.collect{|m|m.designations}%>
+	<%@uniq_designations=current_project.designations.uniq_by(&:role)%>
+	<%@uniq_designations.delete_if{|x| x.role.blank?}%>
+	<%if !@uniq_designations.nil?%>
 	<div id="menu">       
 	 <ul class="navmenu">	
-	 <%@uniq_roles.each do |r|%>
-	   <li><div class="menutop"><a href="#"><%=r.role%></a><div class="toggle">+</div></div>
+	 <%@uniq_designations.each do |r|%>
+	   <li>
+	   	<div class="menutop">
+	   		<a href="#">
+	   			<%=r.role%>
+	   		</a>
+	   		<div class="toggle">+</div>
+	   	</div>
 	     <ul class="submenu">
-	     	<%@del = Delegation.find(:all,:conditions=>["role=? AND project_id=?",r.role,current_project.id])%>
-	     	<%@del.each do |d|%>
-	     	<%@u=User.find(:all,:conditions=>["id=?",d.user_id])%>
-	     	<%@u.each do |u|%>
-	       <li><a href="#"><%=u.name%></a></li>
-	       <%end%>
+	     	<%@designations=current_project.designations.find(:all, :conditions=>["role=?",r.role])%>
+			<%@designations.each do |d|%>
+				<%@members=Membership.find(:all, :conditions=>["id=?",d.membership_id])%>
+				<%@members.each do |m|%>
+					<%@u=User.find(:all, :conditions=>["id=?",m.user_id])%>
+						<%@u.each do |u|%>
+				       		<li><a href="#"><%=u.name%></a></li>
+				       <%end%>
+				<%end%>
 	       <%end%>
 	     </ul>
 	    </li>
@@ -24,10 +32,17 @@
 	 </div>
 	 <%else%>
 	 <p id="empty_entity">No roles assigned to users in the project <%=link_to current_project.name,current_project%></p><br/>
-	 <p class="add_link"><%= link_to "Add user to project",new_user_path(:project_user=>"true")%>&nbsp;&nbsp;<%=link_to image_tag("add.png", :alt=>"Add user"),new_user_path(:project_user=>"true")%></p>
+	 <p class="add_link">
+	 	<%= link_to "Add user to project",new_user_path(:project_user=>"true")%>
+	 </p>
 	<%end%>
 	<%else%>
 	 	 <p id="empty_entity">Currently not viewing any project </p>
-	 	 <p class="add_link"><%= link_to "Add new project",new_project_path%>&nbsp;&nbsp;<%=link_to image_tag("add.png", :alt=>"Add project"),new_project_path%></p>
+	 	 <p class="add_link"><%= link_to "Create a new DL project",new_project_path%></p>
   <%end%>
-	 <p class="add_link"><%= link_to "Add user to project",new_user_path(:project_user=>"true")%>&nbsp;&nbsp;<%=link_to image_tag("add.png", :alt=>"Add user"),new_user_path(:project_user=>"true")%></p>
+  <%if !current_project.nil?%>
+	 <p class="add_link">
+	 	<% if current_user.member_of(current_project) && (current_user.member_of(current_project)).admin?%>
+	 	<%= link_to "Add user to project",new_user_path(:project_user=>"true")%></p>
+	 	<%end%>
+	 <%end%>

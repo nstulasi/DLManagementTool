@@ -1,0 +1,20 @@
+<%admin_levels= { 1=> "Non-Admin", 0=> "Admin" }%>
+		<%= render 'shared/error_messages', :object => f.object%>
+		<div class="field">
+			<%= @user.name %>
+		</div>
+		<div class="field">
+			<%=f.fields_for :memberships, @user.member_of(current_project) do |builder|%>
+				<%= builder.label :level%>
+				<%= builder.collection_select(:level,admin_levels, :first, :last)%>
+			<%end%>
+		</div>
+		<div class="field">	
+				<%=f.fields_for :memberships, @user.member_of(current_project)  do |builder|%>
+				<%= builder.hidden_field :project_id,:value=>current_project.id%>
+				<%= builder.fields_for :designations do |b|%>
+					<%= render 'designation_fields', :f=>b%>
+					<%= link_to_add_fields "Add designation",builder,:designations%>
+				<%end%>
+				<%end%>
+		</div>

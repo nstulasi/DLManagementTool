@@ -3,7 +3,7 @@
 
 <br/>
 <%if current_project.nil?%>
-<p class="add_link"><%= link_to "Create a new DL project",new_project_path%>&nbsp;&nbsp;<%=link_to image_tag("add.png", :alt=>"Add project"),new_project_path%></p>
+<p class="add_link"><%= link_to "Create a new DL project",new_project_path%>&nbsp;&nbsp;<!--<%=link_to image_tag("add.png", :alt=>"Add project"),new_project_path%>--></p>
 <%else%>
-<p class="add_<link"> <%=link_to "Add policies to the project",new_policy_path%>&nbsp;&nbsp; <%=link_to image_tag("add.png", :alt=>"Add policies"),new_policy_path%></p>
+<p class="add_<link"> <%=link_to "Add policies to the project",new_policy_path%>&nbsp;&nbsp; <!--<%=link_to image_tag("add.png", :alt=>"Add policies"),new_policy_path%>--></p>
 <%end%>
