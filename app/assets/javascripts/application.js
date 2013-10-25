@@ -5,7 +5,7 @@
 // the compiled file.
 //
 //= require jquery_ujs
-//= require jquery
+//= require jquery-1.7.2min
 //= require twitter/bootstrap
 //= require best_in_place
 //= require rails.validations
