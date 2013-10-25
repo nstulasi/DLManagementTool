@@ -10,7 +10,7 @@
 //= require best_in_place
 //= require rails.validations
 
-$(function () {
+$(document).ready(function () {
     $('.checkall').click(function () {
         $(this).parents('fieldset:eq(0)').find(':checkbox').attr('checked', this.checked);
     });
@@ -42,7 +42,7 @@ $('.item').live('mouseover',function(){
         });
       });
 
-$(function() {
+$(document).ready(function() {
 		$( "#tabs" ).tabs();
 	});
 
@@ -96,7 +96,7 @@ $('#thing').css("color","yellow");
 // or add the updated thing to a list:
 $('#things').prepend('<%=escape_javascript render(@thing) %>');
 
-$(function (){
+$(document).ready(function (){
 	$('#project_start_at').datepicker({dateFormat: 'yy-mm-dd',changeMonth: true, changeYear: true});
 	$('#project_end_at').datepicker({dateFormat: 'yy-mm-dd', changeMonth: true, changeYear: true});
 	$('#task_start_at').datepicker({dateFormat: 'yy-mm-dd',changeMonth: true,changeYear: true});
@@ -126,7 +126,7 @@ $(document).ready(function() {
 
 
 
-$(function() {
+$(document).ready(function() {
 	$("#treeViewDiv_events").jstree({
 		"json_data" : {
 			"data" : data_events
@@ -135,7 +135,7 @@ $(function() {
 	});
 });
 
-$(function() {
+$(document).ready(function() {
 	$("#treeViewDiv_phases").jstree({
 		"json_data" : {
 			"data" : data_phases,
@@ -147,7 +147,7 @@ $(function() {
                     })
             });
 
-$(function() {
+$(document).ready(function() {
 	$("#treeViewDiv_policies").jstree({
 		"json_data" : {
 			"data" : data_policies,
@@ -192,7 +192,7 @@ $('.toggle') .click(function(){
  }
  })
  });
-$(function(){
+$(document).ready(function(){
   // Binds to the remove task link...
   $('.remove_phase').live('click', function(e){
     e.preventDefault();
@@ -216,7 +216,7 @@ function add_fields(link, association, content) {
   $(link).parent().before(content.replace(regexp, new_id));
 }
 
-    $(function() {
+    $(document).ready(function() {
       $("#sortable").nestedSortable({
         listType: 'ul',
         items: 'li',
