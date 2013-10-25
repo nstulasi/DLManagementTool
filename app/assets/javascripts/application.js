@@ -6,7 +6,6 @@
 //
 //= require jquery_ujs
 //= require jquery-1.7.2min
-//= require twitter/bootstrap
 //= require best_in_place
 //= require rails.validations
 
@@ -254,7 +253,7 @@ $(document).ready(function() {
 });
 
 var tl;
-function onLoad() {
+$(document).ready(function() {
 var eventSource = new Timeline.DefaultEventSource();
   var bandInfos = [
   
@@ -283,6 +282,6 @@ var eventSource = new Timeline.DefaultEventSource();
   tl = Timeline.create(document.getElementById("my-timeline"), bandInfos);
   eventSource.loadJSON(phases, '');
   
-}
+});
 
 
