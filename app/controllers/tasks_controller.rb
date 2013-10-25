@@ -6,7 +6,7 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = current_project_tasks unless current_project.nil?
+    @tasks = current_project_tasks unless current_project.nil? 
     pdf = TaskPdf.new(@tasks, view_context) unless current_project.nil?
     respond_to do |format|
     format.html # index.html.erb
@@ -35,6 +35,8 @@ class TasksController < ApplicationController
   # GET /tasks/1
   # GET /tasks/1.json
   def show
+    puts params
+    sleep(5)
     @task = Task.find(params[:id])
 
     respond_to do |format|
@@ -62,14 +64,16 @@ class TasksController < ApplicationController
   # POST /tasks
   # POST /tasks.json
   def create
-    @task = Task.new(:name=>params[:task][:name],:status=>params[:task][:status])
+    puts params
+    sleep(5)
+    @task = Task.new(:name=>params[:task][:name],:start_at=>params[:task][:start_at],:end_at=>params[:task][:end_at],:content=>params[:task][:content],:priority=>params[:task][:priority],:status=>params[:task][:status])
     respond_to do |format|
       if @task.save 
         @task.update_attribute(:project_id,current_project.id)
         @del=[]
         #Saving a task under a user.
         if !params[:user].nil?
-          @del = Delegation.find(:all,:conditions=>["user_id IN (?)", params[:user][:id].collect])
+          @del = Membership.find(:all,:conditions=>["user_id IN (?)", params[:user][:id].collect])
                     
           @del.uniq.each do |d|
             @a=Assignment.new(:delegation_id=>d,:task_id=>@task.id)
@@ -105,8 +109,7 @@ class TasksController < ApplicationController
           
           a_add= @a - @task.assignments#add
           a_des= @task.assignments - @a#delete
-          puts "des"
-          
+         
           a_des.each do |i|
             i.destroy
           end

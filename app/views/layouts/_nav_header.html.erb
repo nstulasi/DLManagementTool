@@ -1,26 +1,26 @@
 
 <%=logo%>
 <ul class="navlist">
-	<li class="title" id="users">
+	<li class="title <%= "highlighted" if params[:controller] == "users"%>  id="users">
 		<%= link_to "Users", users_path%>
 	</li>
-	<li class="title" id="phases">
+	<li class="title <%= "highlighted" if params[:controller] == "phases"%>  id="phases">
 		<%= link_to "Phases", phases_path%>
 	</li>
-	<li class="title" id="meta">
+	<li class="title <%= "highlighted" if params[:controller] == "meta"%>  id="meta">
 		<%= link_to "Metamodel", new_metum_path%>
 	</li>
-	<li class="title" id="tasks">
+	<li class="title <%= "highlighted" if params[:controller] == "tasks"%>  id="tasks">
 		<%= link_to "Tasks", tasks_path%>
 	</li>
-	<li class="title" id="policies">
+	<li class="title <%= if (params[:controller] == "policies"|| params[:controller] == "default_policies") then "highlighted" end %>  id="policies">
 			<%= link_to "Policies", default_policies_path%>		
 	</li>
-	<li class="title" id="events">
+	<li class="title <%= "highlighted" if params[:controller] == "events"%>  id="events">
 			<%= link_to "Events", events_path%>
 	</li>
 	<%if !current_project.nil?%>
-	<li class="title" id="resources">
+	<li class="title <%= "highlighted" if params[:controller] == "resources"%> id="resources">
 			<%= link_to "Resources", project_resources_path(current_project.id)%>
 	</li>
 	<%end%>

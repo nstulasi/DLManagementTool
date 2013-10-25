@@ -54,12 +54,12 @@
 	<%= f.text_field :email%> <!--<%=collection_select(:user,:id, User.all, :id, :name, {} )%>-->
 </div>
 <div class="field">
-	<%= f.label "Webpage"%> <!--Change it depending on whether adding a new user of assigning an existing user-->
-	<%= f.text_field :webpage%> <!--<%=collection_select(:user,:id, User.all, :id, :name, {} )%>-->
+	<%= f.label "homepage"%> <!--Change it depending on whether adding a new user of assigning an existing user-->
+	<%= f.text_field :homepage%> <!--<%=collection_select(:user,:id, User.all, :id, :name, {} )%>-->
 </div>
 <div class="field">
 	<%= f.label "Contact number"%> <!--Change it depending on whether adding a new user of assigning an existing user-->
-	<%= f.text_field :number%> <!--<%=collection_select(:user,:id, User.all, :id, :name, {} )%>-->
+	<%= f.text_field :contact%> <!--<%=collection_select(:user,:id, User.all, :id, :name, {} )%>-->
 </div>
 <div class="field">
 	<%=f.fields_for :delegations do |builder|%>

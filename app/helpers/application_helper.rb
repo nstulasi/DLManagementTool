@@ -24,7 +24,7 @@ module ApplicationHelper
   end
   
   def current_project
-    if current_user
+    if !current_user.nil?
       if current_user.projects
         Project.find_by_id(cookies.signed[:open_project])||current_user.projects.first||nil
       end

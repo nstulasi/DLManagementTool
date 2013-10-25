@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   
   attr_accessor :project_user,:password,:password_confirmation
   
-  attr_accessible :id,:name, :user_attributes, :email,:designations_attributes,:memberships_attributes,:webpage, :number,:password,:password_confirmation, :invitation_token,:invitation_attributes
+  attr_accessible :id,:name, :user_attributes, :email,:designations_attributes,:memberships_attributes,:homepage, :contact,:password,:password_confirmation, :invitation_token,:invitation_attributes
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :name, :presence => true,
@@ -43,10 +43,10 @@ class User < ActiveRecord::Base
   end
  
  def self.get_csv(options = {})
-    columns=["name","email","webpage","number"]
+    columns=["name","email","homepage","contact"]
   CSV.generate(options) do |csv|
-    csv << columns
-    all.each do |user|
+    csv << ["Name","E-mail","Homepage","Contact"]
+    all.each do |user|  
       csv << user.attributes.values_at(*columns)
     end
   end

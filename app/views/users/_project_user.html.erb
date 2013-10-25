@@ -1,6 +1,6 @@
 <%admin_levels= { 1=> "Non-Admin", 0=> "Admin" }%>
 <h4 style="text-align: center;margin-top: 10px;">Add user to <%=current_project.name%> </h4>
-<div class="hint" style="text-align: center;">Include users in the project or create a new unregsitered user. Assign roles and responsibilities arising from those roles.
+<div class="hint" style="text-align: center;">Include users in the project. Assign roles to users and describe their responsibilities. 
 	A user can have many roles</div>
 <div class="outer_div">
 	<div class="bigger_inner_div">
@@ -22,7 +22,7 @@
 				<%end%>
 			</div>
 			<div class="actions">
-				<%= f.submit "Create",:class=>"custom_better_button"%>
+				<%= f.submit "Add user",:class=>"custom_better_button"%>
 			</div>
 		<%end%>		
 		</div>

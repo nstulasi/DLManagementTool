@@ -95,6 +95,25 @@ $('#thing').css("color","yellow");
 // or add the updated thing to a list:
 $('#things').prepend('<%=escape_javascript render(@thing) %>');
 
+$(function (){
+	$('#project_start_at').datepicker({dateFormat: 'yy-mm-dd',changeMonth: true, changeYear: true});
+	$('#project_end_at').datepicker({dateFormat: 'yy-mm-dd', changeMonth: true, changeYear: true});
+	$('#task_start_at').datepicker({dateFormat: 'yy-mm-dd',changeMonth: true,changeYear: true});
+	$('#task_end_at').datepicker({dateFormat: 'yy-mm-dd',changeMonth: true, changeYear: true});
+	$('#event_start_at').datepicker({dateFormat: 'yy-mm-dd',changeMonth: true, changeYear: true});
+	$('#event_end_at').datepicker({dateFormat: 'yy-mm-dd',changeMonth: true, changeYear: true});
+	$("#phase_start").datepicker({
+		onSelect: function(dateText, inst) {
+        $("#phase_start").focusin();},
+     dateFormat: "yy-mm-dd",
+	  onClose: function(dateText, inst) { $(inst.input).focusout(); },
+	  changeMonth: true,
+	  changeYear: true
+	});
+	$('#phase_end').datepicker({dateFormat: 'yy-mm-dd', changeMonth: true,changeYear: true});
+});
+
+
 $(document).ready(function() {
   window.database = Exhibit.Database.create();
   if(data!=null){
@@ -139,16 +158,6 @@ $(function() {
                     })
             });
 	
-$(function (){
-	$('#project_start_at').datepicker({dateFormat: 'yy-mm-dd'});
-	$('#project_end_at').datepicker({dateFormat: 'yy-mm-dd'});
-	$('#task_start_at').datepicker({dateFormat: 'yy-mm-dd'});
-	$('#task_end_at').datepicker({dateFormat: 'yy-mm-dd'});
-	$('#event_start_at').datepicker({dateFormat: 'yy-mm-dd'});
-	$('#event_end_at').datepicker({dateFormat: 'yy-mm-dd'});
-	$('#phase_start').datepicker({dateFormat: 'yy-mm-dd'});
-	$('#phase_end').datepicker({dateFormat: 'yy-mm-dd'});
-});
 
 
 

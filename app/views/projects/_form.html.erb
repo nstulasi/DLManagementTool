@@ -13,8 +13,8 @@
 <% end %>
 <div class="outer_div">
 	<div class="bigger_inner_div clearfix">
-<div class="field">
-	<%= f.label :name %>
+<div class="field" id="project">
+	<%= f.label "Name of the project" %>
 	<%= field_set_tag nil, :class => 'field' do %>
 	<%= f.text_field :name %>
 	<%end%>

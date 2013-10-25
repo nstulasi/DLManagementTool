@@ -9,15 +9,15 @@
       <Row>
         <Cell><Data ss:Type="String">Name</Data></Cell>
         <Cell><Data ss:Type="String">Email</Data></Cell>
-        <Cell><Data ss:Type="String">Webpage</Data></Cell>
-        <Cell><Data ss:Type="String">Number</Data></Cell>
+        <Cell><Data ss:Type="String">Homepage</Data></Cell>
+        <Cell><Data ss:Type="String">Contact</Data></Cell>
       </Row>
     <% @users.each do |user| %>
       <Row>
         <Cell><Data ss:Type="String"><%= user.name %></Data></Cell>
         <Cell><Data ss:Type="String"><%= user.email %></Data></Cell>
-        <Cell><Data ss:Type="String"><%= user.webpage %></Data></Cell>
-        <Cell><Data ss:Type="String"><%= user.number%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= user.homepage %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= user.contact%></Data></Cell>
       </Row>
     <% end %>
     </Table>

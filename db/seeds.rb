@@ -5,6 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+require 'roo'
+DefaultPolicy.delete_all
+s = Roo::Excelx.new("default_policies.xlsx")  
+header = s.row(1)
+  (2..s.last_row).each do |i|
+    row = Hash[[header, s.row(i)].transpose]
+  DefaultPolicy.create!(row.to_hash)
+end
 #@phases = ["Planning","Initial user studies","Policy-making","Collection Development","Architecture design","User interface design","Metdata collection","Classification and indexing","Services","Preservation"]
 #@phases.each do |p|
  # Defaultphase.find_or_create_by_name(:name=>p)
@@ -28,7 +37,7 @@
 
 #DefaultPolicy.delete_all
 
-  DefaultPolicy.create!(:name => "name", :sample=> File.read('PolicySamples/policy.txt'))
+ # DefaultPolicy.create!(:name => "name", :sample=> File.read('PolicySamples/policy.txt'))
 
 
 #@policies = ["Sample1"]

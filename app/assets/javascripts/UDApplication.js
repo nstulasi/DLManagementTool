@@ -76,7 +76,7 @@ Application.prototype._generateStructure = function(b) {
     j.style.height = this._height + "px";
     this._diagram_div = j;
     l.appendChild(j);
-    g.appendChild(l);
+    if(g!=null){g.appendChild(l);}
     var c;
     c = document.createElement("canvas");
     c.setAttribute("class", "ud_diagram_canvas");
@@ -286,7 +286,8 @@ Application.prototype._generateGeneralMenu = function() {
         var p = this;
         this._active = true;
         var h = document.createElement("div");
-        document.getElementById("umldiagram").appendChild(h);
+        var u=document.getElementById("umldiagram")
+        if (u!=null){u.appendChild(h);}
         var j = document.createElement("form");
         var k = document.createElement("input");
         var q = document.createElement("input");

@@ -9,7 +9,7 @@
 		</p>
 		<div>
 			<%= button_to "Withdraw from project", { :action => "withdraw", :id => current_user.id },
-          :confirm => "Are you sure you want to withdraw from the project?", :class=>"custom_better_button righty",:method => :delete %>
+          :confirm => "Are you sure?", :class=>"custom_better_button righty",:method => :delete %>
 		</div>
 	
 		<%= form_for @project ,:validate=>true do |f| %>

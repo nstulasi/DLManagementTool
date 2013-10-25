@@ -24,7 +24,7 @@ class UserPdf < Prawn::Document
   def line_item_rows
     [["User Name","Email", "Number"]] +
     @users.map do |item|
-      [item.name, item.email, item.number]
+      [item.name, item.email, item.contact]
     end
   end
   

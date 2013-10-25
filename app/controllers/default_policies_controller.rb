@@ -13,7 +13,7 @@ class DefaultPoliciesController < ApplicationController
   # GET /default_policies/1
   # GET /default_policies/1.json
   def show
-    @default_policy = DefaultPolicy.find(params[:id])
+    @default_policy = DefaultPolicy.find(:first,:conditions=>["id IN (?)",params[:id]])
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @default_policy }

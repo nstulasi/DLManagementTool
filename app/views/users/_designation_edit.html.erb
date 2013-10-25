@@ -1,8 +1,6 @@
 <%admin_levels= { 1=> "Non-Admin", 0=> "Admin" }%>
 		<%= render 'shared/error_messages', :object => f.object%>
-		<div class="field">
-			<%= @user.name %>
-		</div>
+		
 		<div class="field">
 			<%=f.fields_for :memberships, @user.member_of(current_project) do |builder|%>
 				<%= builder.label :level%>

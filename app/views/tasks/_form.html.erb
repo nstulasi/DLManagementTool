@@ -30,7 +30,7 @@
 	<% end %>
 	
 	<div class="field">
-		<%= f.label :name %><span class="hint"> Eg:"Prepare metadata for museum collection"</span>
+		<%= f.label :name %><span class="hint"> E.g. "Prepare metadata for museum collection"</span>
 		<%= field_set_tag nil, :class => 'field' do %>
 			<%= f.text_field :name %> 
 		<%end%>
@@ -72,7 +72,7 @@
 	</div>
 	<div class="field" id="task">
 	<%@delegations=@task.delegations.collect(&:user_id)%>
-	<%= f.label :"Task Assignment" %><span class="hint"> Select people tassign the task to</span>
+	<%= f.label :"Task Assignment" %><span class="hint"> Select people to assign the task to</span>
 	<%= field_set_tag nil, :class => 'field' do %>
 	<%= collection_select(:user,:id, current_project.users.uniq, :id, :name, {:selected=>User.find(:all,:conditions=>["id IN (?)",@delegations]).collect(&:id)},{:multiple=>true} ) if !current_project.nil? && !current_project.users.nil?%>
 	<%end%>

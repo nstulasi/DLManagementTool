@@ -3,7 +3,7 @@ class PhasesController < ApplicationController
   # GET /phases
   # GET /phases.json
   def index
-    @phases = current_project.phases.all unless current_project.nil?
+    @phases = current_project.phases unless current_project.nil?
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @phases }

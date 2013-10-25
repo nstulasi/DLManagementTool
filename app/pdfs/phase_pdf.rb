@@ -22,7 +22,7 @@ class PhasePdf < Prawn::Document
   end
 
   def line_item_rows
-    [["Phase name","Start date", "End date"]] +
+    [["Phase name","Start date", "End date",]] +
     @phases.all.map do |item|
       [item.name, to_date(item.start), to_date(item.end)]
     end

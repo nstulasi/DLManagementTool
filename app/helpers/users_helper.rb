@@ -1,5 +1,10 @@
 module UsersHelper
- 
+
+  def current_project_users
+    current_project.users do |d|
+       return Array[d]    
+    end
+  end
   def display_users(users)
            ret = '<ul CLASS ="mktree">'
      for category in categories

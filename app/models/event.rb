@@ -3,9 +3,9 @@ class Event < ActiveRecord::Base
   belongs_to :project 
   
     def self.get_csv(options = {})
-    columns=["name","start_at","end_at"]
+    columns=["name","content","start_at","end_at"]
   CSV.generate(options) do |csv|
-    csv << columns
+    csv << ["Event name", "Description","Start Date", "End date"]
     all.each do |event|
       csv << event.attributes.values_at(*columns)
     end

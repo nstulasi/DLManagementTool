@@ -12,6 +12,7 @@ class EventsController < ApplicationController
     if !current_project.nil?
       @event_strips = current_project.events.event_strips_for_month(@shown_month) if !current_project.nil?
     end 
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @events }

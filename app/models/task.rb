@@ -21,9 +21,9 @@ class Task < ActiveRecord::Base
   end
   
   def self.get_csv(options = {})
-    columns=["name","content","start_at","end_at"]
+    columns=["name","content","status","priority","start_at","end_at"]
   CSV.generate(options) do |csv|
-    csv << columns
+    csv << ["Task Name","Description","Status","Priority","Start date","End date"]
     all.each do |task|
       csv << task.attributes.values_at(*columns)
     end

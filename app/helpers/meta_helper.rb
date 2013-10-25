@@ -8,8 +8,7 @@ module MetaHelper
            }
            node['checked']='true'
            if !params[type_encoding[index]].nil?
-             puts params[type_encoding[index]]
-              params[type_encoding[index]].each_pair do |key, value|
+               params[type_encoding[index]].each_pair do |key, value|
                 xml.encoding { xml.text value }
               end
            end

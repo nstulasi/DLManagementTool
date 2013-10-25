@@ -963,8 +963,9 @@ p{
 .dashboard_div ul li:before {
 }
 
-.active_link{
-/**background-color: #A7B47D;**/
+.highlighted{
+	background-color: #B3B3B3;
+	border: 2px solid gray;
 }
 
 

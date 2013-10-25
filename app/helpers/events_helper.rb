@@ -22,9 +22,10 @@ module EventsHelper
     end
   end
   
-  def current_project_events
-   current_project.events.each do |d|
-     return d
-    end
+    def current_project_events
+     current_project.events.each do |d|
+       return Array[d]
+       end
   end
+  
 end

@@ -30,12 +30,13 @@ class UsersController < ApplicationController
     #Returning all users assigned to the currently open project, using the Memberships model as the join
     #The results may contain duplicates as a user may have multiple entries in memberships depending on his roles
     #and responsibilities and so we return unique memberships.
-    @proj_users = current_project.users.uniq unless current_project.nil?
+    @proj_users = current_project.users unless current_project.nil?
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @proj_users }
       format.csv { send_data @proj_users.get_csv }
-      format.xls
+      format.xls 
       format.pdf {
         pdf=UserPdf.new(@proj_users,view_context)
         send_data pdf.render, filename: "users.pdf",
@@ -141,10 +142,10 @@ end
         doc.xpath("//user").each do |user|
           name = user.xpath("name").text
           email = user.xpath("email").text
-          webpage = user.xpath("webpage").text
-          number =  user.xpath("number").text
+          homepage = user.xpath("homepage").text
+          contact =  user.xpath("contact").text
           
-          @user=User.new(:name=>name,:email=>email,:webpage=>webpage,:number=>number)
+          @user=User.new(:name=>name,:email=>email,:homepage=>homepage,:contact=>contact)
           @user.project_user=true
           if @user.save
             flash[:notice]="Users created"

@@ -9,7 +9,7 @@ class Project < ActiveRecord::Base
   has_one  :metum
   
   validates :name, :presence => true,
-                  :length => {:maximum => 50}
+                  :length => {:maximum => 150}
 
   accepts_nested_attributes_for :designations, :allow_destroy=>true #All i had to do was add allow destroy to allow a delegation to be destroyed from project edit button!
   accepts_nested_attributes_for :memberships, :allow_destroy=>true

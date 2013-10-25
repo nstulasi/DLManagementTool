@@ -24,6 +24,7 @@ gem "paperclip", "~> 3.0"
 gem 'client_side_validations'
 gem 'best_in_place'
 gem 'nokogiri'
+gem 'roo'
 
 group :production do
 gem 'pg', "~> 0.13.2"

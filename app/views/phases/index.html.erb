@@ -10,13 +10,12 @@
 	<%else%>
 	<h4 class="headings" style="text-align: center;margin-top: 10px;">Timeline of phases</h4>
 		<div class="clearfix">
-			<p class="add_link" style="float:left;"> <%=link_to "Choose phases to add to project",new_phase_path,:class=>"custom_better_button",:style=>"float:left;"%></p>
-			<p class="add_link" style="float:right;"> <%=link_to "Add customized phases to the project",new_phase_path(:custom_form=>true),:class=>"custom_better_button"%></p>
+			<!--<p class="add_link" style="float:left;"> <%=link_to "Choose phases to add to project",new_phase_path,:class=>"custom_better_button",:style=>"float:left;"%></p>-->
+			<p class="add_link" style="float:right;"> <%=link_to "Add a new phase to the project",new_phase_path,:class=>"custom_better_button"%></p>
 		</div>
 		<p>
 		  Download:
-		  <%= link_to "CSV", phases_path(format: "csv") %> |
-		  <%= link_to "Excel", phases_path(format: "xls") %>
+		  <%= link_to "CSV", phases_path(format: "csv") %> 
 		  <%= link_to "Printable PDF", phases_path(format: "pdf"), :class=>"righty"%>
 		</p>
 		<%=render "timeline_exhibit"%>

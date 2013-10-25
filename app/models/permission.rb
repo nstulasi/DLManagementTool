@@ -3,7 +3,9 @@ class Permission < Struct.new(:membership)
   def allow?(controller, action,current_user,current_project, id)
    #Did not know what else to do
     if membership.nil?
-      return true if controller == "projects" && action=="index"
+      return true if controller == "projects" && action.in?(%w[new create index])
+      return true if controller == "users" && action.in?(%w[new create index show])
+     return true if controller == "users" && action.in?(%w[show]) &&!User.where(:id=>id).first==current_user
       return false
     end
     #If I try to access pages of users/project/... from other projects!

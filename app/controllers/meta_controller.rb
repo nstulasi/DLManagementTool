@@ -198,7 +198,7 @@ def generate_society
 
     respond_to do |format|
       if @metum.save
-        format.html { redirect_to @metum, notice: 'Metum was successfully created.' }
+        format.html { redirect_to @metum, notice: 'Metamodel was successfully created.' }
         format.json { render json: @metum, status: :created, location: @metum }
       else
         format.html { render action: "new" }

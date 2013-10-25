@@ -6,8 +6,9 @@
 <%content_for :main do%>
 <div class="outer_div">
 	<div class="bigger_inner_div clearfix">
-		<%if @user.member_of(current_project) && (@user.member_of(current_project)).admin?%>
-			Admin user
+		
+		<%if current_project && @user.member_of(current_project) && (@user.member_of(current_project)).admin?%>
+			You are an administrator on the current project
 		<%end%>
 		<p>
 			<b>Name:</b>
@@ -18,23 +19,29 @@
 			<%= best_in_place @user, :email %>
 		</p>
 		<p>
-			<% if !@user.webpage.nil?%>
-			<b>Webpage:</b>
-			<%= link_to @user.webpage, url_with_protocol(@user.webpage)%>
+			<% if !@user.homepage.nil?%>
+			<b>Homepage</b>
+			<%= link_to @user.homepage, url_with_protocol(@user.homepage)%>
 			<%end%>
 		</p>
 		<p>
-			<% if !@user.number.nil?%>
-			<b>Number:</b>
-			<%= best_in_place @user, :number %>
+			<% if !@user.contact.nil?%>
+			<b>Contact Number:</b>
+			<%= best_in_place @user, :contact %>
 			<%end%>
 		</p>
 		<p>
 		 <table>
-			<%@user.memberships.where(:project_id=>current_project.id).each do |m|%>
-				<%m.designations.each do |d|%>
-					<tr><td style="vertical-align:top"><b>Role:</b></td><td><%= d.role%></td></tr>
-					<tr><td colspan="2" style="vertical-align:top"><b>Responsibilities</b><br/><%= d.responsibility%></td></tr>
+		 	<%if current_project%>
+				<%@user.memberships.where(:project_id=>current_project.id).each do |m|%>
+					<%m.designations.each do |d|%>
+					<%if d.role%>
+						<tr><td style="vertical-align:top"><b>Role:</b></td><td><%= d.role%></td></tr>
+						<tr><td colspan="2" style="vertical-align:top"><b>Responsibilities</b><br/><%= d.responsibility%></td></tr>
+					<%else%>
+						      You have not been assigned a role yet. Click on the "Edit" button to add a role.
+						<%end%>
+					<%end%>
 				<%end%>
 			<%end%>
 		 </table>

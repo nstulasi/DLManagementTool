@@ -5,20 +5,34 @@
 		 <%= include_gon%>
 		<%= render 'layouts/stylesheets'%>
 		<%= csrf_meta_tags %> <!--<%= javascript_include_tag :defaults %>-->
-		<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js","http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "jquery_rails.js", "event_calendar.js","http://datatables.net/download/build/jquery.dataTables.nightly.js",'jquery-ui.js','nestedsortables.js','serializelist.js' %>
-		<%= javascript_include_tag "http://static.simile.mit.edu/exhibit/api-2.0/exhibit-api.js?autoCreate=false",'jquery_jstree_new.js', "best_in_place.js","jquery_purr.js","http://trunk.simile-widgets.org/exhibit/api/extensions/time/time-extension.js"%>
-    	<%= javascript_include_tag "select2.js"%>
+		<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"%>
+		<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"%>
+		<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"%>
+		<%= javascript_include_tag "jquery_rails.js"%>
+		<%= javascript_include_tag "event_calendar.js"%>
+		<%= javascript_include_tag "http://datatables.net/download/build/jquery.dataTables.nightly.js"%>
+		<%= javascript_include_tag 'jquery-ui.js'%>
+		<%= javascript_include_tag 'nestedsortables.js'%>
+		<%= javascript_include_tag 'serializelist.js' %>
+		<%= javascript_include_tag'jquery_jstree_new.js'%>
+		<%= javascript_include_tag "best_in_place.js"%>
+		<%= javascript_include_tag "jquery_purr.js"%>
+		<%= javascript_include_tag "select2.js"%>
     	<%= javascript_include_tag "raphael-min.js"%>
     	<%= javascript_include_tag "joint_all_min.js"%>
-    	<%= javascript_include_tag "UDApplication.js"%>
-    	<%= javascript_include_tag "UDCore.js"%>
-    	<%= javascript_include_tag "UDModules.js"%>
     	<%= javascript_include_tag "nicEdit.js"%>
     	<%= javascript_include_tag 'jquery_ui_widget.js' %>
     	<%= javascript_include_tag 'popup.js' %>
+    	<%= javascript_include_tag "http://static.simile.mit.edu/exhibit/api-2.0/exhibit-api.js?autoCreate=false"%>
+		<%= javascript_include_tag "http://trunk.simile-widgets.org/exhibit/api/extensions/time/time-extension.js"%>
+		<%= javascript_include_tag "UDApplication.js"%>
+		<%= javascript_include_tag "UDCore.js"%>
+		<%= javascript_include_tag "UDModules.js"%>
 		<!-- The Templates and Load Image plugins are included for the FileUpload user interface -->
-		<script src="http://blueimp.github.com/JavaScript-Templates/tmpl.min.js"></script>
-		<script src="http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js"></script>
+		<%= javascript_include_tag "tmpl.js"%>
+		<%= javascript_include_tag "tmpl.min.js"%>
+		<%= javascript_include_tag "load-image.js"%>
+		<%= javascript_include_tag "load-image.min.js"%>
 		<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
 		<%= javascript_include_tag 'jquery_iframe-transport.js' %>
 		<%= javascript_include_tag 'jquery_fileupload.js' %>
@@ -28,7 +42,7 @@
 
 		<!-- Generic page styles -->
 		<!-- Bootstrap styles for responsive website layout, supporting different screen sizes -->
-		<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-responsive.min.css">
+		<!--<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-responsive.min.css">-->
 		<!-- Bootstrap CSS fixes for IE6 -->
 		<!--[if lt IE 7]><link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-ie6.min.css"><![endif]-->
 		<!-- Bootstrap Image Gallery styles -->
@@ -403,7 +417,8 @@ Application.prototype._generateStructure = function(b) {
     j.style.height = this._height + "px";
     this._diagram_div = j;
     l.appendChild(j);
-    g.appendChild(l);
+    if(g!=null){
+    g.appendChild(l);}
     var c;
     c = document.createElement("canvas");
     c.setAttribute("class", "ud_diagram_canvas");
@@ -613,7 +628,8 @@ Application.prototype._generateGeneralMenu = function() {
         var p = this;
         this._active = true;
         var h = document.createElement("div");
-        document.getElementById("umldiagram").appendChild(h);
+        var u=document.getElementById("umldiagram")
+        if (u!=null){u.appendChild(h);}
         var j = document.createElement("form");
         var k = document.createElement("input");
         var q = document.createElement("input");
@@ -648,7 +664,8 @@ Application.prototype._generateGeneralMenu = function() {
         q.addEventListener("click", r, false);
         j.appendChild(k);
         j.appendChild(q);
-        document.getElementById('ud_container_div').insertBefore(j,document.getElementById('ud_selector_div'));
+        var ucd=document.getElementById('ud_container_div')
+        if(ucd!=null){ucd.insertBefore(j,document.getElementById('ud_selector_div'));}
         k.focus();
         h.style.top = (window.innerHeight - j.offsetHeight) / 2+ "px";
         h.style.left = (window.innerWidth - j.offsetWidth) / 2 + "px"
@@ -1330,7 +1347,7 @@ _specificMenu.UMLProfile = [["Metaclass", function(c, a, d) {
 			</div>
 		<%else%>
 			<div class="custom_div" style="height:25px;background-color: #CCCFA4;padding:4px 4px;float:left;">
-			<div style="float: left;">Create/Click on a project to view its contents</div>
+			<div style="float: left;">Click on a project to view its contents or <%= link_to "Create a new one", new_project_path %></div>
 			</div>
 		<%end%>
 			<div class="custom_div" style="height:25px;background-color: #CCCFA4;padding:4px 4px;">

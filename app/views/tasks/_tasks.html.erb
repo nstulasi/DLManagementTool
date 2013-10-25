@@ -8,8 +8,7 @@
 <%end%>-->
 <p>
   Download:
-  <%= link_to "CSV", tasks_path(format: "csv") %> |
-  <%= link_to "Excel", tasks_path(format: "xls") %>
+  <%= link_to "CSV", tasks_path(format: "csv") %>
   <%= link_to "Printable PDF", tasks_path(format: "pdf"), :class=>"righty"%>
 </p>
 <table class="display" id="dynamic_table">
@@ -43,7 +42,7 @@
 			<td>
 				<%@user_assignments=[]%>
 				<%task.assignments.each do |d| %>
-				<% @user_id=Delegation.find(:first,:conditions=>["id=?",d.delegation_id]).user_id%>
+				<% @user_id=Membership.find(:first,:conditions=>["id=?",d.delegation_id]).user_id%>
 				<%@user_assignments<<User.find(:first,:conditions=>["id=?",@user_id]).name%>
 				<%end%>
 				<%@user_assignments.uniq.each do |u|%>

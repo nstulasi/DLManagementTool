@@ -11,40 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130202194308) do
-
-  create_table "active_admin_comments", :force => true do |t|
-    t.string   "resource_id",   :null => false
-    t.string   "resource_type", :null => false
-    t.integer  "author_id"
-    t.string   "author_type"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "namespace"
-  end
-
-  add_index "active_admin_comments", ["author_type", "author_id"], :name => "index_active_admin_comments_on_author_type_and_author_id"
-  add_index "active_admin_comments", ["namespace"], :name => "index_active_admin_comments_on_namespace"
-  add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_admin_notes_on_resource_type_and_resource_id"
-
-  create_table "admin_users", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
-  add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
+ActiveRecord::Schema.define(:version => 20130831183654) do
 
   create_table "articles", :force => true do |t|
     t.string   "name"
@@ -62,9 +29,11 @@ ActiveRecord::Schema.define(:version => 20130202194308) do
   end
 
   create_table "default_policies", :force => true do |t|
-    t.string "name"
-    t.text   "sample", :limit => 255
-    t.text   "hint",   :limit => 255
+    t.string   "name"
+    t.text     "sample",     :limit => 255
+    t.text     "hint",       :limit => 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "defaultphases", :force => true do |t|
@@ -106,7 +75,6 @@ ActiveRecord::Schema.define(:version => 20130202194308) do
     t.integer  "project_id"
     t.integer  "user_id"
     t.integer  "level"
-    t.integer  "designation_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -143,6 +111,8 @@ ActiveRecord::Schema.define(:version => 20130202194308) do
     t.datetime "start"
     t.datetime "end"
     t.string   "site"
+    t.date     "planned_start_date"
+    t.date     "planned_end_date"
   end
 
   create_table "policies", :force => true do |t|
@@ -181,6 +151,14 @@ ActiveRecord::Schema.define(:version => 20130202194308) do
     t.string   "resourcer"
   end
 
+  create_table "shipping_logs", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.datetime "shipped_on"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "tasks", :force => true do |t|
     t.string   "name"
     t.string   "status"
@@ -200,8 +178,8 @@ ActiveRecord::Schema.define(:version => 20130202194308) do
     t.datetime "updated_at"
     t.string   "encrypted_password"
     t.string   "salt"
-    t.string   "webpage"
-    t.string   "number"
+    t.string   "homepage"
+    t.string   "contact"
     t.integer  "invitation_id"
   end
 
