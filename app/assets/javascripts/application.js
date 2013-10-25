@@ -238,7 +238,20 @@ function add_fields(link, association, content) {
       });
     });
     
-
+$(document).ready(function() {
+    // if text input field value is not empty show the "X" button
+    $("#custom_field").keyup(function() {
+        $("#x").fadeIn();
+        if ($.trim($("#field").val()) == "") {
+            $("#x").fadeOut();
+        }
+    });
+    // on click of "X", delete input field value and hide "X"
+    $("#x").click(function() {
+        $("#custom_field").val("");
+        $(this).hide();
+    });
+});
 
 var tl;
 function onLoad() {
@@ -273,17 +286,3 @@ var eventSource = new Timeline.DefaultEventSource();
 }
 
 
-$(document).ready(function() {
-    // if text input field value is not empty show the "X" button
-    $("#custom_field").keyup(function() {
-        $("#x").fadeIn();
-        if ($.trim($("#field").val()) == "") {
-            $("#x").fadeOut();
-        }
-    });
-    // on click of "X", delete input field value and hide "X"
-    $("#x").click(function() {
-        $("#custom_field").val("");
-        $(this).hide();
-    });
-});
