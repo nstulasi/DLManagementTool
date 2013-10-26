@@ -1,4 +1,68 @@
+			    $(function () {
+        // Initialize the jQuery File Upload widget:
+        $('#fileupload').fileupload();
+        // 
+        // Load existing files:
+        $.getJSON($('#fileupload').prop('action'), function (files) {
+          var fu = $('#fileupload').data('fileupload'), 
+            template;
+          template = fu._renderDownload(files)
+            .appendTo($('#fileupload .files'));
+          // Force reflow:
+          fu._reflow = fu._transition && template.length &&
+            template[0].offsetWidth;
+          template.addClass('in');
+          $('#loading').remove();
+        });
 
+    });
+		$("#creator").live('click',function(){
+		$("#new_policy_div").removeClass('disp_none');
+		$("#new_policy_div").addClass('disp');
+		$("#default_sample_div").removeClass('disp');
+		$("#default_sample_div").addClass('disp_none');
+		  $("#new_policy_div").animate({
+		    height: "auto",
+		  }, 1500 );
+		});
+	$(document).ready(function() {
+		$( "#accordion" ).accordion({ autoHeight: false , active:false});
+		$( "#society_accordion" ).accordion({ autoHeight: false , active:false});
+		$( "#project_user_accordion" ).accordion({ autoHeight: false , active:false});		
+		});
+			$(function() {
+				$("#tabs").tabs();
+			});
+			//TO-DO : Minify this
+			$('.character_submittable').live('change', function() {
+				if(document.getElementById('character').checked == true) {
+					$('#character_appender').addClass('disp_div');
+					$('#character_appender').removeClass('disp_none');
+				} else {
+					$('#character_appender').addClass('disp_none');
+					$('#character_appender').removeClass('disp_div');
+				}
+				});
+// Sets the fill attribute of the circle to red (#f00)
+		     $(document).ready(function() {
+				$(".type").select2({
+    				allowClear: true
+				});
+			});
+
+			$(document).ready(function() {
+				$("#task_priority").select2();
+			});
+			$(document).ready(function() {
+			var arr = [".sequences","#character_encoding","#audio_encoding","#video_encoding","#image_encoding","#text_encoding,#program_encoding"];
+			for (var i = 0; i < arr.length; i += 1){
+				$(arr[i]).select2({
+					placeholder: "Select the type of sequences",
+    				allowClear: true
+				});
+			}
+			});
+			
 $(document).ready(function () {
     $('.checkall').click(function () {
         $(this).parents('fieldset:eq(0)').find(':checkbox').attr('checked', this.checked);
