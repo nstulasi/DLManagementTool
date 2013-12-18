@@ -13,7 +13,7 @@ class InvitationsController < ApplicationController
         puts signup_url
         puts @invitation.token
         puts signup_url(@invitation.token)
-        sleep(5)
+      #sleep(5)
         flash[:notice] = "Thank you, invitation sent."
         redirect_to users_url
       else

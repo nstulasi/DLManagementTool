@@ -7,7 +7,7 @@ class Mailer < ActionMailer::Base
   #
  def invitation(invitation, signup_url)
    puts signup_url
-   sleep(5)
+  # sleep(5)
     subject    'Join the Digital Library Development Management tool'
     recipients invitation.recipient_email
     from       'foo@example.com'

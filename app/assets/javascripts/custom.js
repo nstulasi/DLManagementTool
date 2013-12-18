@@ -1,4 +1,4 @@
-			    $(function () {
+$(function () {
         // Initialize the jQuery File Upload widget:
         $('#fileupload').fileupload();
         // 
@@ -179,7 +179,7 @@ $(document).ready(function() {
 
 
 
-$(document).ready(function() {
+$(function() {
 	$("#treeViewDiv_events").jstree({
 		"json_data" : {
 			"data" : data_events
@@ -188,7 +188,7 @@ $(document).ready(function() {
 	});
 });
 
-$(document).ready(function() {
+$(function() {
 	$("#treeViewDiv_phases").jstree({
 		"json_data" : {
 			"data" : data_phases,
@@ -200,7 +200,7 @@ $(document).ready(function() {
                     })
             });
 
-$(document).ready(function() {
+$(function() {
 	$("#treeViewDiv_policies").jstree({
 		"json_data" : {
 			"data" : data_policies,
@@ -212,21 +212,6 @@ $(document).ready(function() {
                     })
             });
 	
-
-
-
-/**$(function() {
-  $("#task_div th a, #tasks .pagination a").live("click", function() {
-    $.getScript(this.href);
-    return false;
-  });
-  $("#task_div_search input").keyup(function() {
-    $.get($("#task_div_search").attr("action"), $("#task_div_search").serialize(), null, "script");
-    return false;
-  });
-});**/
-
-
 
 $(document).ready(function(){
 	$('#dynamic_table').dataTable();

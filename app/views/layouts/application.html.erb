@@ -9,12 +9,11 @@
 		<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"%>
 		<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"%>
 		<%= javascript_include_tag "jquery_rails.js"%>
-		<%= javascript_include_tag "custom.js"%>
+		<%= javascript_include_tag'jquery_jstree.js'%>
 		<%= javascript_include_tag "event_calendar.js"%>
 		<%= javascript_include_tag "http://datatables.net/download/build/jquery.dataTables.nightly.js"%>
 		<%= javascript_include_tag 'nestedsortables.js'%>
 		<%= javascript_include_tag 'serializelist.js' %>
-		<%= javascript_include_tag'jquery_jstree_new.js'%>
 		<%= javascript_include_tag "best_in_place.js"%>
 		<%= javascript_include_tag "jquery_purr.js"%>
 		<%= javascript_include_tag "select2.js"%>
@@ -28,8 +27,6 @@
 		<%= javascript_include_tag "UDCore.js"%>
 		<%= javascript_include_tag "UDModules.js"%>
 		<%= javascript_include_tag "UDApplication.js"%>
-		
-		
 		<!-- The Templates and Load Image plugins are included for the FileUpload user interface -->
 		<%= javascript_include_tag "tmpl.js"%>
 		<%= javascript_include_tag "tmplmin.js"%>
@@ -41,9 +38,10 @@
 		<%= javascript_include_tag 'jquery_fileupload-fp.js' %>
 		<%= javascript_include_tag 'jquery_fileupload-ui.js' %>
 		<%= javascript_include_tag 'locale.js' %>
+		<%= javascript_include_tag "custom.js"%>
 
-
-		<script>
+<script>
+		
 		bkLib.onDomLoaded(nicEditors.allTextAreas);
 		function setStyle(x)
 		{
@@ -187,79 +185,68 @@
       	};
     <%end%>
   <%end%>
-
-//Collect events information for calendar display
+  //Collect events information for jstree display
    <%if !current_project.nil?%>
-	<%if !current_project.events.nil?%>
-      		<%@events=current_project.events.all%>
-      		<%@events_months=@events.group_by{|t| t.start_at.beginning_of_month}%>
-      		<%@events_months=@events.group_by{|t| t.start_at.beginning_of_month}%>
-		var data_events = [
-			<%@events_months.each do |m,e|%>
-		    {
-		    "data": "<%=m.strftime("%B %Y")%>",
-		    "children": [
-		    <%e.each do |event|%>
-		    {
-		        "data": "<%=event.name%>",
-		    },<%end%>]
-		    },
-		    <%end%>
-			];
-	<%end%>
+        <%if !current_project.events.nil?%>
+                      <%@events=current_project.events.all%>
+                      <%@events_months=@events.group_by{|t| t.start_at.beginning_of_month}%>
+                      <%@events_months=@events.group_by{|t| t.start_at.beginning_of_month}%>
+                var data_events = [
+                        <%@events_months.each do |m,e|%>
+                    {
+                    "data": "<%=m.strftime("%B %Y")%>",
+                    "children": [
+                    <%e.each do |event|%>
+                    {
+                        "data": "<%=event.name%>",
+                    },<%end%>]
+                    },
+                    <%end%>
+                        ];
+        <%end%>
 <%end%>
 //Collect phases information for jsTree
 <%if !current_project.nil?%>
-	<%if !current_project.phases.nil?%>
-	<%@phases=current_project.phases.all(:conditions=>{:parent_id=>nil},:order=>"start")%>
-		var data_phases = [
-			<%@phases.each do |p|%>
-		    {
-		    "data": "<%=p.name%>",
-		    "metadata": {"href" : "#{request.protocol}#{request.host_with_port}#{request.fullpath}"+<%=p.id%>},
+        <%if !current_project.phases.nil?%>
+        <%@phases=current_project.phases.all(:conditions=>{:parent_id=>nil},:order=>"start")%>
+                var data_phases = [
+                        <%@phases.each do |p|%>
+                    {
+                    "data": "<%=p.name%>",
+                    "metadata": {"href" : "#{request.protocol}#{request.host_with_port}#{request.fullpath}"+<%=p.id%>},
 
-		    "children": [
-		    <%p.children.each do |c|%>
-		    {
-		        "data": "<%=c.name%>",
-		        "metadata": {"href" : "#{request.protocol}#{request.host_with_port}#{request.fullpath}"+<%=c.id%>},
-		        "children": [
-		    	<%c.children.each do |cc|%>
-		    	{
-		        "data": "<%=cc.name%>",
-		        "metadata": {"href" : "#{request.protocol}#{request.host_with_port}#{request.fullpath}"+<%=cc.id%>},
-		    	},<%end%>]
-		    },<%end%>]
-		    },
-		    <%end%>
-			];
-	<%end%>
+                    "children": [
+                    <%p.children.each do |c|%>
+                    {
+                        "data": "<%=c.name%>",
+                        "metadata": {"href" : "#{request.protocol}#{request.host_with_port}#{request.fullpath}"+<%=c.id%>},
+                        "children": [
+                            <%c.children.each do |cc|%>
+                            {
+                        "data": "<%=cc.name%>",
+                        "metadata": {"href" : "#{request.protocol}#{request.host_with_port}#{request.fullpath}"+<%=cc.id%>},
+                            },<%end%>]
+                    },<%end%>]
+                    },
+                    <%end%>
+                        ];
+        <%end%>
 <%end%>
 
 //Collect policies information for jstree display
 <%if !current_project.nil?%>
-	<%if !current_project.policies.nil?%>
-		<%@policies=current_project.policies.all%>
-		var data_policies = [
-			<%@policies.each do |p|%>
-		    {
-		    "data": "<%=p.name%>",
-		    "metadata": {"href" : "<%="#{request.protocol}#{request.host_with_port}"%>"+"<%=p.id%>"+"/edit"},
-		    },
-		    <%end%>
-			];
-		<%end%>
-	<%end%>
-
-		  var fileUploadErrors = {
-			    maxFileSize: 'File is too big',
-			    minFileSize: 'File is too small',
-			    acceptFileTypes: 'Filetype not allowed',
-			    maxNumberOfFiles: 'Max number of files exceeded',
-			    uploadedBytes: 'Uploaded bytes exceed file size',
-			    emptyResult: 'Empty file upload result'
-			  };
- 
+        <%if !current_project.policies.nil?%>
+                <%@policies=current_project.policies.all%>
+                var data_policies = [
+                        <%@policies.each do |p|%>
+                    {
+                    "data": "<%=p.name%>",
+                    "metadata": {"href" : "<%="#{request.protocol}#{request.host_with_port}"%>"+"<%=p.id%>"+"/edit"},
+                    },
+                    <%end%>
+                        ];
+                <%end%>
+        <%end%>
  window.onload = function() {
 
 				var width = window.innerWidth - 250;

@@ -1,7 +1,6 @@
 SampleApp::Application.routes.draw do
-
   resources :invitations
-
+  resources :password_resets
   resources :default_policies
 
   resources :meta do 

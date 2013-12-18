@@ -322,7 +322,9 @@ Application.prototype._generateGeneralMenu = function() {
         q.addEventListener("click", r, false);
         j.appendChild(k);
         j.appendChild(q);
-        document.getElementById('ud_container_div').insertBefore(j,document.getElementById('ud_selector_div'));
+        var x=document.getElementById('ud_container_div');
+        if(x=null){
+        x.insertBefore(j,document.getElementById('ud_selector_div'));}
         k.focus();
         h.style.top = (window.innerHeight - j.offsetHeight) / 2+ "px";
         h.style.left = (window.innerWidth - j.offsetWidth) / 2 + "px"

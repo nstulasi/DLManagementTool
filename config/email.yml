@@ -9,6 +9,6 @@ production:
   :address: smtp.gmail.com
   :port: 587
   :authentication: plain
-  :user_name: xxx
-  :password: yyy
+  :user_name: tulasi.neppali@gmail.com  
+  :password: nSaitulasi1!
   :enable_starttls_auto: true

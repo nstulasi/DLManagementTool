@@ -31,7 +31,7 @@ class User < ActiveRecord::Base
    validates :password_confirmation, :presence=>true,:on=>:create,:if=>:should_validate_user
    validates_confirmation_of :password,:on=>:create,:if=>:should_validate_user
                        
-  before_save :encrypt_password, :on=>:create,:if => :should_validate_user
+   before_save :encrypt_password, :on=>:create,:if => :should_validate_user
   
   
   def invitation_token
@@ -77,6 +77,19 @@ end
   
   def member_of(project)
     self.memberships.where(:project_id=>project.id).first
+  end
+  
+  def send_password_reset
+    generate_token(:password_reset_token)
+    self.password_reset_sent_at = Time.zone.now
+    save!
+    UserMailer.password_reset(self).deliver
+  end
+  
+  def generate_token(column)
+    begin
+      self[column] = SecureRandom.urlsafe_base64
+    end while User.exists?(column => self[column])
   end
    
 private

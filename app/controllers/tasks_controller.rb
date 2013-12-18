@@ -35,8 +35,6 @@ class TasksController < ApplicationController
   # GET /tasks/1
   # GET /tasks/1.json
   def show
-    puts params
-    sleep(5)
     @task = Task.find(params[:id])
 
     respond_to do |format|
@@ -64,8 +62,6 @@ class TasksController < ApplicationController
   # POST /tasks
   # POST /tasks.json
   def create
-    puts params
-    sleep(5)
     @task = Task.new(:name=>params[:task][:name],:start_at=>params[:task][:start_at],:end_at=>params[:task][:end_at],:content=>params[:task][:content],:priority=>params[:task][:priority],:status=>params[:task][:status])
     respond_to do |format|
       if @task.save 
