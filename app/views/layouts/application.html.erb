@@ -195,6 +195,7 @@
                         <%@events_months.each do |m,e|%>
                     {
                     "data": "<%=m.strftime("%B %Y")%>",
+                    "metadata": {"href" : "/events/"},
                     "children": [
                     <%e.each do |event|%>
                     {
