@@ -9,22 +9,22 @@
     <p>
 		<b>Indexer:</b><span class="hint"> Enter information about the indexing tool used. Examples: Apache Solr, Sphinx  </span>
 		<%= field_set_tag nil, :class => 'field' do %>
-		Name: <%= text_field_tag "indexer_name", sp.nil?||spaces["indexer"].nil? ? "": spaces["indexer"]["name"]%><br/>
-		Version: <%= text_field_tag "indexer_version", sp.nil?||spaces["indexer"].nil? ? "": spaces["indexer"]["version"]%>
+		<p>Name: <%= text_field_tag "indexer_name", sp.nil?||spaces["indexer"].nil? ? "": spaces["indexer"]["name"]%></p><br/>
+		<p>Version: <%= text_field_tag "indexer_version", sp.nil?||spaces["indexer"].nil? ? "": spaces["indexer"]["version"]%></p>
 		<%end%>
 	</p>
 	<p>
 		<b>Crawler:</b><span class="hint"> Enter information about the crawling tool used. Examples: Heritrix, Nutch </span>
 		<%= field_set_tag nil, :class => 'field' do %>
-		Name: <%= text_field_tag "crawler_name" , sp.nil?||spaces["crawler"].nil? ? "": spaces["crawler"]["name"]%> <br/>
-		Version: <%= text_field_tag "crawler_version",sp.nil?||spaces["crawler"].nil? ? "": spaces["crawler"]["version"] %>
+		<p>Name: <%= text_field_tag "crawler_name" , sp.nil?||spaces["crawler"].nil? ? "": spaces["crawler"]["name"]%></p> <br/>
+		<p>Version: <%= text_field_tag "crawler_version",sp.nil?||spaces["crawler"].nil? ? "": spaces["crawler"]["version"] %></p>
 		<%end%>
 	</p>
 	<p>
 		<b>Content Management System:</b><span class="hint"> Enter information about the content management system used. Example: Drupal </span>
 		<%= field_set_tag nil, :class => 'field' do %>
-		Name: <%= text_field_tag "cms_name",sp.nil?||spaces["cms"].nil? ? "": spaces["cms"]["name"] %><br/>
-		Version: <%= text_field_tag "cms_version",sp.nil?||spaces["cms"].nil? ? "": spaces["cms"]["version"] %>
+		<p>Name: <%= text_field_tag "cms_name",sp.nil?||spaces["cms"].nil? ? "": spaces["cms"]["name"] %></p> <br/>
+		<p>Version: <%= text_field_tag "cms_version",sp.nil?||spaces["cms"].nil? ? "": spaces["cms"]["version"] %></p>
 		<%end%>
 	</p>
 	<p>

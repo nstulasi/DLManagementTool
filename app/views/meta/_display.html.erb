@@ -84,7 +84,6 @@
 				['Gzip','gzip']
                 ],
                 ]%>
-<%sources=["Social media", "News", "Digitized objects","Print"]%>
 <%type.each_with_index do |type,i|%>
 	<%= field_set_tag nil, :class => 'field' do %> 
 		<p>
@@ -100,8 +99,4 @@
 		</p>
 	<%end%>
 <%end%>
-<%sources.each_with_index do |source,i|%>
-	<%=field_set_tag nil, :class=> 'field' do%>
-		<%=check_box_tag source, source, false, :class=>"submittable"%> <%=source%>
-	<%end%>
-<%end%>
+
