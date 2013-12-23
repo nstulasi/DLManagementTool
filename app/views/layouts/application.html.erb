@@ -199,6 +199,7 @@
                     <%e.each do |event|%>
                     {
                         "data": "<%=event.name%>",
+                        "metadata": {"href" : "/events/"+<%=event.id%>+"/edit"},
                     },<%end%>]
                     },
                     <%end%>
@@ -213,18 +214,18 @@
                         <%@phases.each do |p|%>
                     {
                     "data": "<%=p.name%>",
-                    "metadata": {"href" : "#{request.protocol}#{request.host_with_port}#{request.fullpath}"+<%=p.id%>},
+                    "metadata": {"href" : "/phases/"+<%=p.id%>+"/edit"},
 
                     "children": [
                     <%p.children.each do |c|%>
                     {
                         "data": "<%=c.name%>",
-                        "metadata": {"href" : "#{request.protocol}#{request.host_with_port}#{request.fullpath}"+<%=c.id%>},
+                        "metadata": {"href" : "/phases/"+<%=c.id%>+"/edit"},
                         "children": [
                             <%c.children.each do |cc|%>
                             {
                         "data": "<%=cc.name%>",
-                        "metadata": {"href" : "#{request.protocol}#{request.host_with_port}#{request.fullpath}"+<%=cc.id%>},
+                        "metadata": {"href" : "/phases/"+<%=cc.id%>+"/edit"},
                             },<%end%>]
                     },<%end%>]
                     },
@@ -241,7 +242,7 @@
                         <%@policies.each do |p|%>
                     {
                     "data": "<%=p.name%>",
-                    "metadata": {"href" : "<%="#{request.protocol}#{request.host_with_port}"%>"+"<%=p.id%>"+"/edit"},
+                    "metadata": {"href" : "/policies/"+<%=p.id%>+"/edit"},
                     },
                     <%end%>
                         ];

@@ -185,7 +185,10 @@ $(function() {
 			"data" : data_events
 		},
 		"plugins" : ["themes", "json_data", "ui"]
-	});
+	}).bind("select_node.jstree", function(e, data)
+                    {
+                        window.location= data.rslt.obj.data("href"); 
+                    })
 });
 
 $(function() {
