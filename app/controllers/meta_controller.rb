@@ -119,17 +119,21 @@ end
 def generate_space
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.spaces{
-       xml.indexingTool{
-        xml.name{xml.text params[:indexing_name]}
+       xml.indexer{
+        xml.name{xml.text params[:indexer_name]}
+        xml.version{xml.text params[:indexer_version]}
+        }
+        xml.crawler{
+        xml.name{xml.text params[:crawler_name]}
+        xml.version{xml.text params[:crawler_version]}
+        }
+        xml.cms{
+        xml.name{xml.text params[:cms_name]}
+        xml.version{xml.text params[:cms_version]}
         }
         xml.ui{
          xml.ui_language{xml.text params[:ui_lang]}
          xml.ui_presentation{xml.text params[:ui_displang]}
-         }
-         xml.ir_model{
-           xml.retrieval_space{xml.text params[:ir_space]}
-           xml.stemming_algorithm{xml.text params[:stemming_algo]}
-           xml.stopwords{xml.text params[:stopwords]}
          }
       }
     end

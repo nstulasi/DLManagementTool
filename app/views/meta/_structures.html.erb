@@ -113,6 +113,7 @@
 		</p>
 		<p>
 		<b>Database:</b><span class="hint"> Enter information about the database tool used. Example: PostgreSQL </span>
+		<%=strucs%>
 			<%= field_set_tag nil, :class => 'field' do %>
 			Name: <!--<%= text_field_tag "database_name" %><br/>-->
 			 <%= select_tag("database_name", options_for_select(databases.collect{ |u| u},s["database"].nil? ? "None" : s["database"]["name"]),:multiple=>false,:class=>"database_name")%>
@@ -202,6 +203,7 @@
 		</p>
 		<p>
 			<b>Database:</b><span class="hint"> Enter information about the database tool used. Example: PostgreSQL </span>
+			<%=strucs%>
 			<%= field_set_tag nil, :class => 'field' do %>
 			Name: <!--<%= text_field_tag "database_name" %><br/>-->
 			 <%= select_tag("database_name", options_for_select(databases.collect{ |u| u},s["database"].nil? ? "None" : s["database"]["name"]),:multiple=>false,:class=>"database_name")%>

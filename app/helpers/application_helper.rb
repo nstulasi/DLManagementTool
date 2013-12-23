@@ -196,6 +196,23 @@ def strucs
      ret=nil
   end 
 end
+
+def sp
+  if !current_project.nil?
+   if !current_project.metum.space_xml.nil?
+   @doc = Nokogiri::XML(current_project.metum.space_xml)
+      if(!@doc.xpath("//spaces").empty?)
+      ret= Hash.from_xml(@doc.to_s)
+      else
+        ret=nil
+      end
+    else
+      ret=nil
+    end
+   else
+     ret=nil
+  end 
+end
  
  def services
   if !current_project.nil?

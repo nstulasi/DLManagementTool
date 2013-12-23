@@ -2,44 +2,27 @@
 		<p class="custom_better_div" style="text-align: center;margin-bottom:5px">
 			A space is a set of objects along with operations on those objects. Describing digital library spaces constitutes description of the information retrieval and organization tools as well as information about the user-interface.
 		</p>
-<%= form_tag('/generate_space', :method=>'post', :multipart => true,:class=>"clearfix") do%>
+  <%= form_tag('/generate_space', :method=>'post', :multipart => true,:class=>"clearfix") do%>
+  <%spaces=sp["spaces"]%>
     <p>
 		<b>Indexer:</b><span class="hint"> Enter information about the indexing tool used. Examples: Apache Solr, Sphinx  </span>
 		<%= field_set_tag nil, :class => 'field' do %>
-		Name: <%= text_field_tag "indexing_name" %><br/>
-		Version: <%= text_field_tag "indexing_name" %>
+		Name: <%= text_field_tag "indexer_name", spaces["indexer"].nil? ? "": spaces["indexer"]["name"]%><br/>
+		Version: <%= text_field_tag "indexer_version", spaces["indexer"].nil? ? "": spaces["indexer"]["version"]%>
 		<%end%>
 	</p>
 	<p>
 		<b>Crawler:</b><span class="hint"> Enter information about the crawling tool used. Examples: Heritrix, Nutch </span>
 		<%= field_set_tag nil, :class => 'field' do %>
-		Name: <%= text_field_tag "indexing_name" %> <!--+ Add Contact person <%if !encodings.nil?%>
-				<%= select_tag("type", options_for_select([
-      ['Geographical', 'Geographical'],
-      ['Subject', 'Subject'],
-      ['Language','Language'],
-      ['General','General'],
-      ['Historical','Historical'],
-      ['Educational','Educational'],
-      ['Cultural','Cultural'],
-      ['Research','Research'],
-      ]),:class=>"type",:multiple=>true) %>
-      <%end%>--><br/>
-		Version: <%= text_field_tag "indexing_name" %>
+		Name: <%= text_field_tag "crawler_name" , spaces["crawler"].nil? ? "": spaces["crawler"]["name"]%> <br/>
+		Version: <%= text_field_tag "crawler_version",spaces["crawler"].nil? ? "": spaces["crawler"]["version"] %>
 		<%end%>
 	</p>
-	<!--<p>
-		<b>Database:</b><span class="hint"> Enter information about the database tool used. Example: PostgreSQL </span>
-		<%= field_set_tag nil, :class => 'field' do %>
-		Name: <%= text_field_tag "indexing_name" %><br/>
-		Version: <%= text_field_tag "indexing_name" %>
-		<%end%>
-	</p>-->
 	<p>
 		<b>Content Management System:</b><span class="hint"> Enter information about the content management system used. Example: Drupal </span>
 		<%= field_set_tag nil, :class => 'field' do %>
-		Name: <%= text_field_tag "indexing_name" %><br/>
-		Version: <%= text_field_tag "indexing_name" %>
+		Name: <%= text_field_tag "cms_name",spaces["cms"].nil? ? "": spaces["cms"]["name"] %><br/>
+		Version: <%= text_field_tag "cms_version",spaces["cms"].nil? ? "": spaces["cms"]["version"] %>
 		<%end%>
 	</p>
 	<p>
@@ -59,34 +42,6 @@
 			</p>
 			<%end%>
 	</p>
-	<!--<p>
-		<b>IR Model</b><span class="hint"> Information related to the information retrieval </span>
-		<%= field_set_tag nil, :class => 'field' do %>
-		<br/>
-		<p>
-			<b>Stemming Algorithm</b><span class="hint"> Select the stemming algorithm being used</span>
-				<p>
-				<%= select_tag("stemming_algo", options_for_select([
-			      ['Porter Stemming Algorithm', 'Porter Stemming Algorithm'],
-			      ['Lookup algorithms', 'Lookup algorithms'],
-			      ['Suffix-stripping algorithms','Suffix-stripping algorithms'],
-			      ['Lemmatisation algorithms','Lemmatisation algorithms'],
-			      ['Stochastic algorithms','Stochastic algorithms'],
-			      ['n-gram analysis','n-gram analysis'],
-			      ['Affix stemmers','Affix stemmers'],
-			      ['Matching algorithms','Matching algorithms']
-			      ]),:class=>"type") %>
-			    </p>
-		</p>
-		<br/>
-		<p>
-			<%= form_tag '/upload', :multipart => true do %>
-			  <label for="file">Select stopwords file</label> <%= file_field_tag "stopwords" %>
-			  <%= submit_tag %>
-			<% end %>
-		</p>
-		<%end%>
-	</p>-->
 		<p>
 			  <%= submit_tag 'Submit',:class=>"custom_better_button righty " %>
 		</p>
