@@ -44,6 +44,7 @@ class MetaController < ApplicationController
   
   def generate_stream
     type=["character","text","audio","video","image","program"]
+    source=["Social media","Digitized objects"]
     type_encoding=["character_encoding","text_encoding","audio_encoding","video_encoding","image_encoding","program_encoding"]
     builder = Nokogiri::XML::Builder.new do |xml|
     xml.streams{
@@ -81,7 +82,13 @@ class MetaController < ApplicationController
            xml.sequence{xml.text s}
            end
          }
-       }
+       
+       xml.database{
+          xml.name{xml.text params[:database_name]}
+          xml.version{xml.text params[:database_version]}
+        }
+       xml.stemming{xml.text params[:stemming_algo]}
+      }
       }
     end
    @structure= current_project.metum

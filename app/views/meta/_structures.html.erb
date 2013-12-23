@@ -1,3 +1,58 @@
+<!--From 
+	http://cs.fit.edu/~pbernhar/dbms.html-->
+<%databases=['Access (Jet, MSDE)','Access (Jet, MSDE)'],
+['Adabas D','Adabas D'],
+['Adaptive Server Anywhere','Adaptive Server Anywhere'],
+['Adaptive Server Enterprise','Adaptive Server Enterprise'],
+['Advantage Database Server','Advantage Database Server'],
+['Datacom','Datacom'],
+['DB2 Everyplace','DB2 Everyplace'],
+['Filemaker','Filemaker'],
+['IDMS','IDMS'],
+['Ingres ii','Ingres ii'],
+['Interbase','Interbase'],
+['MySQL','MySQL'],
+['NonStop SQL','NonStop SQL'],
+['Pervasive.SQL 2000 (Btrieve)','Pervasive.SQL 2000 (Btrieve)'],
+['Pervasive.SQL Workgroup','Pervasive.SQL Workgroup'],
+['Progress','Progress'],
+['Quadbase SQL Server','Quadbase SQL Server'],
+['R:Base','R:Base'],
+['Rdb','Rdb'],
+['Red Brick','Red Brick'],
+['SQL Server','SQL Server'],
+['SQLBase','SQLBase'],
+['SUPRA','SUPRA'],
+['Teradata','Teradata'],
+['YARD-SQL','YARD-SQL'],
+['TimesTen','TimesTen'],
+['Adabas','Adabas'],
+['Model 204','Model 204'],
+['UniData','UniData'],
+['UniVerse','UniVerse'],
+['Cache','Cache'],
+['Cloudscape','Cloudscape'],
+['DB2','DB2'],
+['Informix Dynamic Server 2000','Informix Dynamic Server 2000'],
+['Informix Extended Parallel Server','Informix Extended Parallel Server'],
+['Oracle Lite','Oracle Lite'],
+['Oracle 8I','Oracle 8I'],
+['PointBase Embedded','PointBase Embedded'],
+['PointBase Mobile','PointBase Mobile'],
+['PointBase Network Server','PointBase Network Server'],
+['PostgreSQL','PostgreSQL'],
+['UniSQL','UniSQL'],
+['Jasmine ii','Jasmine ii'],
+['Object Store','Object Store'],
+['Objectivity DB','Objectivity DB'],
+['POET Object Server Suite','POET Object Server Suite'],
+['Versant','Versant'],
+['Raima Database Manager','Raima Database Manager'],
+['Velocis','Velocis'],
+['Db.linux','Db.linux'],
+['Db.star','Db.star'],
+['IMS DB','IMS DB']
+%>
 <div id="structures">
 	<p class="custom_better_div" style="text-align: center;margin-bottom:5px">
 		Structures specify how streams are organized. Collections are commonly used structures in a digital library.
@@ -15,12 +70,14 @@
 			<%= hidden_field_tag :id, params[:id]%>
 			<p>
 				<p><b>Name:</b><span class="hint"> Enter the name of the collection</span></p>
+	  			<%= field_set_tag nil, :class => 'field' do %>
 	  			<p><%= text_field_tag 'name', s["name"],:onfocus=>"setStyle('form0')"%>
 	  				<span id="name_feedback0"></span> </p>
+	  			<%end%>
 			<br />
 			<p>
 				<p><b>Type:</b><span class="hint"> Select a category describing the nature of the collection </span></p>
-			
+			<%= field_set_tag nil, :class => 'field' do %>
 						<%= select_tag("type", options_for_select([
 				      ['Geographical', 'Geographical'],
 				      ['Subject', 'Subject'],
@@ -31,39 +88,68 @@
 				      ['Cultural','Cultural'],
 				      ['Research','Research'],
 				      ],s["categorization"]["type"]),:class=>"type") %>
-		
+			<%end%>
 			<p>	
 			<br/>
 			<p>
 			<p><b>Sequences:</b><span class="hint"> Select the content types in the collection</span></p>
+		<%= field_set_tag nil, :class => 'field' do %>
 			<%if !encodings.nil?%>
 				<%@seq=[]%>
 				 <%encodings.each_with_index do |en,i|%>
 				<%if checked[i].to_bool%>
 				   <%en.values.flatten.each do |e|%>
 				    	<%@seq<<en.keys.first.to_s.slice(0,1).capitalize+en.keys.first.slice(1..-1)+":"+e%>
-				   <%end%>
-			<%end%>
-		<%end%>
-		<%= select_tag("sequences", options_for_select(@seq.collect{ |u| [u, u] },:selected=>s["sequences"]["sequence"]),:multiple=>true,:class=>"sequences")%>
+				  		 <%end%>
+				<%end%>
+				<%end%>
+			
+			<%= select_tag("sequences", options_for_select(@seq.collect{ |u| [u, u] },:selected=>s["sequences"]["sequence"]),:multiple=>true,:class=>"sequences")%>
 	  			<span id="sequence_feedback0"></span>
 			<%else%>
 			<p>Enter some sequences first</p>
 			<%end%>
-			
+		<%end%>
 		</p>
 		<p>
-					  <%= submit_tag 'Save',:class=>"custom_better_button righty  submittable",:onclick=>"validateForm(this)" %>
-					  <span class="custom_better_button">		
-					   <%= link_to "Delete", :controller =>"meta",:action => 'struc_del',:id=>0%>
-					   </span>
-
-				</p>
-		
-			
+		<b>Database:</b><span class="hint"> Enter information about the database tool used. Example: PostgreSQL </span>
+			<%= field_set_tag nil, :class => 'field' do %>
+			Name: <!--<%= text_field_tag "database_name" %><br/>-->
+			 <%= select_tag("database_name", options_for_select(databases.collect{ |u| u},s["database"].nil? ? "None" : s["database"]["name"]),:multiple=>false,:class=>"database_name")%>
+			</br/>Version: <%= text_field_tag "database_version", s["database"].nil? ? "" : s["database"]["version"]%>
 			<%end%>
+		</p>
+		<p>
+		<b>IR Model:</b><span class="hint"> Select the information retrieval methods used</span>
+		<%= field_set_tag nil, :class => 'field' do %>
+		<br/>
+		<p>
+			<b>Stemming Algorithm</b><span class="hint"> Select the stemming algorithm being used</span>
+				<p>
+				<%= select_tag("stemming_algo", options_for_select([
+			      ['Porter Stemming Algorithm', 'Porter Stemming Algorithm'],
+			      ['Lookup algorithms', 'Lookup algorithms'],
+			      ['Suffix-stripping algorithms','Suffix-stripping algorithms'],
+			      ['Lemmatisation algorithms','Lemmatisation algorithms'],
+			      ['Stochastic algorithms','Stochastic algorithms'],
+			      ['n-gram analysis','n-gram analysis'],
+			      ['Affix stemmers','Affix stemmers'],
+			      ['Matching algorithms','Matching algorithms']
+			      ],s["stemming"]),:class=>"type") %>
+			    </p>
+		</p>
+       <br/>
 		<%end%>
-	<%else%>
+	</p>
+    <p>
+	  <%= submit_tag 'Save',:class=>"custom_better_button righty  submittable",:onclick=>"validateForm(this)" %>
+	   <span class="custom_better_button">		
+	 	  <%= link_to "Delete", :controller =>"meta",:action => 'struc_del',:id=>0%>
+	   </span>
+	</p>
+	<%end%>
+	<%end%>
+<%else%>
 	<%strucs["structures"]["collection"].each_with_index do |s,i|%>
 	<h3><a href="#"><%=s["name"]%></a></h3>
 		<%= form_tag('/generate_structure', :method=>'post', :multipart => true,:'data-remote'=>true,:id=>"form"+i.to_s) do%>
@@ -72,14 +158,15 @@
 		<%= hidden_field_tag :id, params[:id]%>
 		<p>
 			<p><b>Name:</b><span class="hint"> Enter the name of the collection</span></p>
-			
+			<%= field_set_tag nil, :class => 'field' do %>
 	  			<p><%= text_field_tag 'name', s["name"],:onfocus=>"setStyle(getParentByTagName(this,'form').getAttribute('id'))"%>
 	  				<span id=<%="name_feedback"+i.to_s%>></span></p>
-			
+			<%end%>
 			<br />
 		<p>
 		<p>
 			<p><b>Type:</b><span class="hint"> Select a category describing the nature of the collection </span></p>
+			<%= field_set_tag nil, :class => 'field' do %>
 			<%= select_tag("type", options_for_select([
 	      ['Geographical', 'Subject'],
 	      ['Subject', 'Subject'],
@@ -90,12 +177,13 @@
 	      ['Cultural','Cultural'],
 	      ['Research','Research'],
 	      ],s["categorization"]["type"]),:class=>"type") %>
-		
+		<%end%>
 		<p>	
 		<br/>
 		<p>
 			
 			<p><b>Sequences:</b><span class="hint">  Select the content types in the collection<n </span></p>
+		<%= field_set_tag nil, :class => 'field' do %>
 			<%if !encodings.nil?%>
 				<%@seq=[]%>
 				 <%encodings.each_with_index do |en,i|%>
@@ -104,17 +192,49 @@
 				    	<%@seq<<en.keys.first.to_s.slice(0,1).capitalize+en.keys.first.slice(1..-1)+":"+e%>
 				   <%end%>
 			<%end%>
-		<%end%>
-		<%= select_tag("sequences", options_for_select(@seq.collect{ |u| [u, u] },:selected=>s["sequences"]["sequence"]),:multiple=>true,:class=>"sequences")%>
-	  			<span id=<%="sequence_feedback"+i.to_s%>></span>
-			<%else%>
-			<p>Enter some sequences first</p>
 			<%end%>
-			
+			<%= select_tag("sequences", options_for_select(@seq.collect{ |u| [u, u] },:selected=>s["sequences"]["sequence"]),:multiple=>true,:class=>"sequences")%>
+		  			<span id=<%="sequence_feedback"+i.to_s%>></span>
+				<%else%>
+				<p>Enter some sequences first</p>
+				<%end%>
+		<%end%>
 		</p>
 		<p>
+			<b>Database:</b><span class="hint"> Enter information about the database tool used. Example: PostgreSQL </span>
+			<%= field_set_tag nil, :class => 'field' do %>
+			Name: <!--<%= text_field_tag "database_name" %><br/>-->
+			 <%= select_tag("database_name", options_for_select(databases.collect{ |u| u},s["database"].nil? ? "None" : s["database"]["name"]),:multiple=>false,:class=>"database_name")%>
+			</br/>Version: <%= text_field_tag "database_version", s["database"].nil? ? "" : s["database"]["version"]%>
+			<%end%>
+		</p>
+		<p>
+		<b>IR Model:</b><span class="hint"> Select the information retrieval methods used</span>
+		<%= field_set_tag nil, :class => 'field' do %>
+		<br/>
+		<p>
+			<b>Stemming Algorithm</b><span class="hint"> Select the stemming algorithm being used</span>
+				<p>
+				<%= select_tag("stemming_algo", options_for_select([
+			      ['Porter Stemming Algorithm', 'Porter Stemming Algorithm'],
+			      ['Lookup algorithms', 'Lookup algorithms'],
+			      ['Suffix-stripping algorithms','Suffix-stripping algorithms'],
+			      ['Lemmatisation algorithms','Lemmatisation algorithms'],
+			      ['Stochastic algorithms','Stochastic algorithms'],
+			      ['n-gram analysis','n-gram analysis'],
+			      ['Affix stemmers','Affix stemmers'],
+			      ['Matching algorithms','Matching algorithms']
+			      ],s["stemming"]),:class=>"type") %>
+			    </p>
+		</p>
+				<br/>
+		<%end%>
+	</p>
+		<p>
 					  <%= submit_tag 'Save',:class=>"custom_better_button righty submittable",:onclick=>"validateForm(this)" %>
-					  <%= link_to "delete", :controller =>"meta",:action => 'struc_del',:id=>i%>
+					  <span class="custom_better_button">	
+					  <%= link_to "Delete", :controller =>"meta",:action => 'struc_del',:id=>i%>
+					  </span>
 		</p> 
 		
 			<%end%>
@@ -176,47 +296,12 @@
 		<%end%>
 		<%end%>
 		</p><br/>
-		<!--</p>
-				<p><b>People involved:</b><span class="hint"> Select the people involved in building the collection </span></p>
-			<%if !encodings.nil?%>
-				<%= select_tag("type", options_for_select([
-      ['Geographical', 'Geographical'],
-      ['Subject', 'Subject'],
-      ['Language','Language'],
-      ['General','General'],
-      ['Historical','Historical'],
-      ['Educational','Educational'],
-      ['Cultural','Cultural'],
-      ['Research','Research'],
-      ]),:class=>"type",:multiple=>true) %>
-			<%else%>
-			<p>Enter some sequences first</p>
-			<%end%>
-			
-		</p>
-		<br/>
-		<p><b>Tasks:</b><span class="hint"> List the tasks related to building this collection. Select or add a new task </span></p>
-			<%if !encodings.nil?%>
-				<%= select_tag("type", options_for_select([
-      ['Geographical', 'Geographical'],
-      ['Subject', 'Subject'],
-      ['Language','Language'],
-      ['General','General'],
-      ['Historical','Historical'],
-      ['Educational','Educational'],
-      ['Cultural','Cultural'],
-      ['Research','Research'],
-      ]),:class=>"type",:multiple=>true) %>
-			<%else%>
-			<p>Enter some sequences first</p>
-			<%end%>
-			
-		</p>-->
 		<p>
 			<b>Database:</b><span class="hint"> Enter information about the database tool used. Example: PostgreSQL </span>
 			<%= field_set_tag nil, :class => 'field' do %>
-			Name: <%= text_field_tag "indexing_name" %><br/>
-			Version: <%= text_field_tag "indexing_name" %>
+			Name: <!--<%= text_field_tag "database_name" %><br/>-->
+			 <%= select_tag("database_name", options_for_select(databases.collect{ |u| u},"None"),:multiple=>false,:class=>"database_name")%>
+			</br/>Version: <%= text_field_tag "database_version" %>
 			<%end%>
 		</p>
 		<p>
@@ -235,16 +320,16 @@
 			      ['n-gram analysis','n-gram analysis'],
 			      ['Affix stemmers','Affix stemmers'],
 			      ['Matching algorithms','Matching algorithms']
-			      ]),:class=>"type") %>
+			      ],"None"),:class=>"type") %>
 			    </p>
 		</p>
 				<br/>
-		<p>
+	<!--	<p>
 			<%= form_tag '/upload', :multipart => true do %>
 			  <label for="file">Select stopwords file</label> <%= file_field_tag "stopwords" %>
 			  <%= submit_tag %>
 			<% end %>
-		</p>
+	</p>-->
 		<%end%>
 	</p>
 			<p>

@@ -62,7 +62,12 @@ $(function () {
 				});
 			}
 			});
-			
+			$(document).ready(function() {
+				$("#database_name").select2({
+    				placeholder: "Select a database",
+    				allowClear: true
+				});
+			});
 $(document).ready(function () {
     $('.checkall').click(function () {
         $(this).parents('fieldset:eq(0)').find(':checkbox').attr('checked', this.checked);
