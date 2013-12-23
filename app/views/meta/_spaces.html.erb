@@ -3,26 +3,28 @@
 			A space is a set of objects along with operations on those objects. Describing digital library spaces constitutes description of the information retrieval and organization tools as well as information about the user-interface.
 		</p>
   <%= form_tag('/generate_space', :method=>'post', :multipart => true,:class=>"clearfix") do%>
+  <%if sp%>
   <%spaces=sp["spaces"]%>
+  <%end%>
     <p>
 		<b>Indexer:</b><span class="hint"> Enter information about the indexing tool used. Examples: Apache Solr, Sphinx  </span>
 		<%= field_set_tag nil, :class => 'field' do %>
-		Name: <%= text_field_tag "indexer_name", spaces["indexer"].nil? ? "": spaces["indexer"]["name"]%><br/>
-		Version: <%= text_field_tag "indexer_version", spaces["indexer"].nil? ? "": spaces["indexer"]["version"]%>
+		Name: <%= text_field_tag "indexer_name", sp.nil?||spaces["indexer"].nil? ? "": spaces["indexer"]["name"]%><br/>
+		Version: <%= text_field_tag "indexer_version", sp.nil?||spaces["indexer"].nil? ? "": spaces["indexer"]["version"]%>
 		<%end%>
 	</p>
 	<p>
 		<b>Crawler:</b><span class="hint"> Enter information about the crawling tool used. Examples: Heritrix, Nutch </span>
 		<%= field_set_tag nil, :class => 'field' do %>
-		Name: <%= text_field_tag "crawler_name" , spaces["crawler"].nil? ? "": spaces["crawler"]["name"]%> <br/>
-		Version: <%= text_field_tag "crawler_version",spaces["crawler"].nil? ? "": spaces["crawler"]["version"] %>
+		Name: <%= text_field_tag "crawler_name" , sp.nil?||spaces["crawler"].nil? ? "": spaces["crawler"]["name"]%> <br/>
+		Version: <%= text_field_tag "crawler_version",sp.nil?||spaces["crawler"].nil? ? "": spaces["crawler"]["version"] %>
 		<%end%>
 	</p>
 	<p>
 		<b>Content Management System:</b><span class="hint"> Enter information about the content management system used. Example: Drupal </span>
 		<%= field_set_tag nil, :class => 'field' do %>
-		Name: <%= text_field_tag "cms_name",spaces["cms"].nil? ? "": spaces["cms"]["name"] %><br/>
-		Version: <%= text_field_tag "cms_version",spaces["cms"].nil? ? "": spaces["cms"]["version"] %>
+		Name: <%= text_field_tag "cms_name",sp.nil?||spaces["cms"].nil? ? "": spaces["cms"]["name"] %><br/>
+		Version: <%= text_field_tag "cms_version",sp.nil?||spaces["cms"].nil? ? "": spaces["cms"]["version"] %>
 		<%end%>
 	</p>
 	<p>

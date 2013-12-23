@@ -323,7 +323,7 @@ Application.prototype._generateGeneralMenu = function() {
         j.appendChild(k);
         j.appendChild(q);
         var x=document.getElementById('ud_container_div');
-        if(x=null){
+        if(x!=null){
         x.insertBefore(j,document.getElementById('ud_selector_div'));}
         k.focus();
         h.style.top = (window.innerHeight - j.offsetHeight) / 2+ "px";

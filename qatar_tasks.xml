@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<task>
+		<name>   Study the architecture and identify components that require modification</name>
+		<status>Medium</status>
+		<priority>In Progress</priority>
+		<start_date>2012-08-01</start_date>
+		<end_date>2012-05-31</end_date>
+	</task>
+	<task>
+		<name>   Extend SeerSuite with deep analysis of digital objects/collections (e.g., tables, references)</name>
+		<status>High</status>
+		<priority>Nearing Completion</priority>
+		<start_date>2014-12-31</start_date>
+		<end_date>2012-08-01</end_date>
+	</task>
+	<task>
+		<name>   Develop methods to extract government information</name>
+		<status>High</status>
+		<priority>Completed</priority>
+		<start_date>2014-12-31</start_date>
+		<end_date>2012-08-01</end_date>
+	</task>
+	<task>
+		<name>   Study CLIR literature and case studies</name>
+		<status>Low</status>
+		<priority>Completed</priority>
+		<start_date>2013-01-03</start_date>
+		<end_date>2012-09-14</end_date>
+	</task>
+	<task>
+		<name>   Redesign SeerSuite for Arabic support</name>
+		<status>Low</status>
+		<priority>In Progress</priority>
+		<start_date>2013-04-01</start_date>
+		<end_date>2013-01-03</end_date>
+	</task>
+	<task>
+		<name>   Redesign Seersuite for CLIR support</name>
+		<status>Medium</status>
+		<priority>In Progress</priority>
+		<start_date>2013-08-15</start_date>
+		<end_date>2013-04-01</end_date>
+	</task>
+	<task>
+		<name>   Develop first prototype of SeerSuite with CLIR and Arabic support</name>
+		<status>Medium</status>
+		<priority>In Progress</priority>
+		<start_date>2014-03-15</start_date>
+		<end_date>2013-08-12</end_date>
+	</task>
+	<task>
+		<name>   Develop a fully functional extension of SeerSuite for Qatar</name>
+		<status>High</status>
+		<priority>In Progress</priority>
+		<start_date>2014-12-31</start_date>
+		<end_date>2014-03-15</end_date>
+	</task>
+	<task>
+		<name>   Validate the new design by testing on crawled collections</name>
+		<status>Low</status>
+		<priority>In Progress</priority>
+		<start_date>2014-12-31</start_date>
+		<end_date>2014-05-20</end_date>
+	</task>
+	<task>
+		<name>   Crawl government information</name>
+		<status>Low</status>
+		<priority>In Progress</priority>
+		<start_date>2015-05-15</start_date>
+		<end_date>2013-04-01</end_date>
+	</task>
+	<task>
+		<name>   Crawl computing-related information</name>
+		<status>Medium</status>
+		<priority>Not Started</priority>
+		<start_date>2015-05-15</start_date>
+		<end_date>2013-07-01</end_date>
+	</task>
+	<task>
+		<name>   Crawl chemistry-related information</name>
+		<status>Medium</status>
+		<priority>Not Started</priority>
+		<start_date>2015-05-15</start_date>
+		<end_date>2013-09-01</end_date>
+	</task>
+	<task>
+		<name>   Crawl other scholarly information</name>
+		<status>High</status>
+		<priority>Nearing Completion</priority>
+		<start_date>2015-05-15</start_date>
+		<end_date>2014-01-01</end_date>
+	</task>
+	<task>
+		<name>   Develop infrastructure to cover Qatari culture and heritage</name>
+		<status>Low</status>
+		<priority>Not Started</priority>
+		<start_date>2014-12-31</start_date>
+		<end_date>2014-01-14</end_date>
+	</task>
+</root>
