@@ -2,13 +2,13 @@ development:
   :address: smtp.gmail.com
   :port: 587
   :authentication: plain
-  :user_name: tulasi.neppali@gmail.com #replace with the ID of the application if we can register the application
-  :password: nSaitulasi1!
+  :user_name: dlrltool@gmail.com #replace with the ID of the application if we can register the application
+  :password: VTechDLRL1!
   :enable_starttls_auto: true
 production:
   :address: smtp.gmail.com
   :port: 587
   :authentication: plain
-  :user_name: tulasi.neppali@gmail.com  
-  :password: nSaitulasi1!
+  :user_name: dlrltool@gmail.com  
+  :password: VTechDLRL1!
   :enable_starttls_auto: true
