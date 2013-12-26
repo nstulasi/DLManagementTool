@@ -10,7 +10,7 @@
 		<%if current_project && @user.member_of(current_project) && (@user.member_of(current_project)).admin?%>
 			You are an administrator on the current project
 		<%end%>
-		<p> <%=link_to "Change Password",edit_password_reset_path(@user) %></p>
+		<!--<p> <%=link_to "Change Password",edit_password_reset_path(@user) %></p>-->
 		<p>
 			<b>Name:</b>
 			<%= best_in_place @user, :name %>
